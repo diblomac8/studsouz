@@ -1,0 +1,240 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Studsouz MGIMO//Digest//RU
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Дайджест Студсоюза МГИМО
+X-WR-CALDESC:Мероприятия студенческих объедин
+ ений МГИМО. Обновляется с каждым выпуско
+ м дайджеста.
+X-WR-TIMEZONE:Europe/Moscow
+REFRESH-INTERVAL;VALUE=DURATION:PT6H
+X-PUBLISHED-TTL:PT6H
+BEGIN:VTIMEZONE
+TZID:Europe/Moscow
+BEGIN:STANDARD
+DTSTART:19700101T000000
+TZOFFSETFROM:+0300
+TZOFFSETTO:+0300
+TZNAME:MSK
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:e-2026-10-12-uvphlp@studsouz-mgimo
+DTSTAMP:20261026T011934Z
+DTSTART;TZID=Europe/Moscow:20261012T160000
+DTEND;TZID=Europe/Moscow:20261012T173000
+SUMMARY:Open Talk со Стефанией Маликовой
+LOCATION:ауд. 214
+DESCRIPTION:от Бизнес клуба\nРегистрация: https://m
+ gimobc.timepad.ru/event/4239286/\nПодробнее: https://t.me/bcmgimo
+ /2781
+URL:https://t.me/bcmgimo/2781
+END:VEVENT
+BEGIN:VEVENT
+UID:e-2026-10-12-34y6nd@studsouz-mgimo
+DTSTAMP:20261026T011934Z
+DTSTART;TZID=Europe/Moscow:20261012T180000
+DTEND;TZID=Europe/Moscow:20261012T193000
+SUMMARY:Старт программы ПК «Спортивные сооб
+ щества и объединения. Опыт зарубежных ст
+ ран»
+DESCRIPTION:от ШБИМК\nИдёт до 17 октября\nРегист
+ рация закрыта\nПодробнее: https://t.me/mgimo_sbip/621
+ 0
+URL:https://t.me/mgimo_sbip/6210
+END:VEVENT
+BEGIN:VEVENT
+UID:e-2026-10-12-hzhvc1@studsouz-mgimo
+DTSTAMP:20261026T011934Z
+DTSTART;TZID=Europe/Moscow:20261012T223000
+DTEND;TZID=Europe/Moscow:20261013T000000
+SUMMARY:Просмотр игроков в ХК "Дипломаты" МГИ
+ МО
+LOCATION:СК "Чемпион"\, Балаклавский пр-т\, 33
+DESCRIPTION:Регистрация: https://docs.google.com/spreadsheets/d/
+ 10DcS1YnVePWQYN2CkZPL3pOdhtaxcanctXFMHhnZsV4/edit?usp=drivesdk\nПодро
+ бнее: https://t.me/mgimodiplomats/2213
+URL:https://t.me/mgimodiplomats/2213
+END:VEVENT
+BEGIN:VEVENT
+UID:e-2026-10-13-dbdq4w@studsouz-mgimo
+DTSTAMP:20261026T011934Z
+DTSTART;TZID=Europe/Moscow:20261013T160000
+DTEND;TZID=Europe/Moscow:20261013T173000
+SUMMARY:Научная дискуссия о многовекторной 
+ внешней политике Казахстана
+LOCATION:ауд. 215
+DESCRIPTION:от Negotiation Club\nПодробнее: https://vk.ru/wall-8
+ 9928414_3806
+URL:https://vk.ru/wall-89928414_3806
+END:VEVENT
+BEGIN:VEVENT
+UID:e-2026-10-13-xahdld@studsouz-mgimo
+DTSTAMP:20261026T011934Z
+DTSTART;TZID=Europe/Moscow:20261013T170000
+DTEND;TZID=Europe/Moscow:20261013T183000
+SUMMARY:Лекция историка-корееведа\, к.и.н.\, ди
+ ректора Международного центра кореевед
+ ения МГУ имени М.В. Ломоносова Ким Наталь
+ и Николаевны
+LOCATION:ауд. 511
+DESCRIPTION:от Корейского клуба\nПодробнее: https
+ ://t.me/koreanclubMGIMO/1051
+URL:https://t.me/koreanclubMGIMO/1051
+END:VEVENT
+BEGIN:VEVENT
+UID:e-2026-10-14-nretp7@studsouz-mgimo
+DTSTAMP:20261026T011934Z
+DTSTART;TZID=Europe/Moscow:20261014T160000
+DTEND;TZID=Europe/Moscow:20261014T173000
+SUMMARY:Интеллектуальная игра "Грань Разума"
+LOCATION:Атриум МП
+DESCRIPTION:от Клуба политического консалтинг
+ а МГИМО\nРегистрация: https://docs.google.com/forms/d/e/1
+ FAIpQLScXagt7Hx8yvYfjdVWNcvQALq0xRzf_zioZu99iEXnvfDPpmg/viewform?usp=dialo
+ g\nПодробнее: https://t.me/cpcmgimo/949
+URL:https://t.me/cpcmgimo/949
+END:VEVENT
+BEGIN:VEVENT
+UID:e-2026-10-15-angeqh@studsouz-mgimo
+DTSTAMP:20261026T011934Z
+DTSTART;TZID=Europe/Moscow:20261015T110000
+DTEND;TZID=Europe/Moscow:20261015T123000
+SUMMARY:День финтеха от Альфа-Банка
+LOCATION:Конференц-зал
+DESCRIPTION:от Факультета МЭО\nРегистрация: https
+ ://disk.360.yandex.ru/i/O2sHegFvxGM7hA\nПодробнее: https://t.me/m
+ eomgimo/1441
+URL:https://t.me/meomgimo/1441
+END:VEVENT
+BEGIN:VEVENT
+UID:e-2026-10-15-smivee@studsouz-mgimo
+DTSTAMP:20261026T011934Z
+DTSTART;TZID=Europe/Moscow:20261015T160000
+DTEND;TZID=Europe/Moscow:20261015T173000
+SUMMARY:Завтрак с Дипломатом - Дмитрием Юрье
+ вичем Цветковым
+LOCATION:Шахматная гостиная КЦ
+DESCRIPTION:от Студенческого союза\nРегистрац
+ ия закрыта\nПодробнее: https://t.me/studsouzmgimo/10407
+URL:https://t.me/studsouzmgimo/10407
+END:VEVENT
+BEGIN:VEVENT
+UID:e-2026-10-15-p0swbu@studsouz-mgimo
+DTSTAMP:20261026T011934Z
+DTSTART;TZID=Europe/Moscow:20261015T160000
+DTEND;TZID=Europe/Moscow:20261015T173000
+SUMMARY:Корпоративно-инвестиционный бизнес 
+ изнутри: Open Talk с экспертами Альфа-Банка
+LOCATION:Малая сцена КЦ
+DESCRIPTION:от Экономического клуба Oeconomicus им 
+ А.В. Макаренко\nПодробнее: https://t.me/oeconomicus/39
+ 59
+URL:https://t.me/oeconomicus/3959
+END:VEVENT
+BEGIN:VEVENT
+UID:e-2026-10-15-xy9lqf@studsouz-mgimo
+DTSTAMP:20261026T011934Z
+DTSTART;TZID=Europe/Moscow:20261015T160000
+DTEND;TZID=Europe/Moscow:20261015T173000
+SUMMARY:Open Talk с Пелагеей
+LOCATION:9 зал
+DESCRIPTION:от Let's Talk MGIMO\nПодробнее: https://t.me/letstal
+ kmgimo/3311
+URL:https://t.me/letstalkmgimo/3311
+END:VEVENT
+BEGIN:VEVENT
+UID:e-2026-10-15-679xp9@studsouz-mgimo
+DTSTAMP:20261026T011934Z
+DTSTART;VALUE=DATE:20261015
+DTEND;VALUE=DATE:20261016
+SUMMARY:Окончание приёма заявок для вступле
+ ния в центр поддержки волонтёрского дви
+ жения
+DESCRIPTION:Регистрация: https://vk.ru/away.php?to=https%3A%2F%2
+ Fforms.gle%2FZQFP3YxqB7hEnsEr8&utf=1\nПодробнее: https://vk.ru/wa
+ ll-31188434_4975
+URL:https://vk.ru/wall-31188434_4975
+END:VEVENT
+BEGIN:VEVENT
+UID:e-2026-10-16-yl6w4h@studsouz-mgimo
+DTSTAMP:20261026T011934Z
+DTSTART;TZID=Europe/Moscow:20261016T160000
+DTEND;TZID=Europe/Moscow:20261016T173000
+SUMMARY:Открытие регистрации на модель выбо
+ ров в Палату представителей Конгресса С
+ ША
+LOCATION:Зал 8
+DESCRIPTION:от АСК НСО МГИМО\n29 октября\nПодроб
+ нее: https://t.me/anglosaxon_club/338\nРегистрация: для 
+ внутренних гостей: https://forms.gle/vNUy5J4t3f7xorYcA\nР
+ егистрация: для внешних гостей: https://forms.gl
+ e/K7Qy3NDfs1gzwx3i7
+URL:https://t.me/anglosaxon_club/338
+END:VEVENT
+BEGIN:VEVENT
+UID:e-2026-10-16-5txae6@studsouz-mgimo
+DTSTAMP:20261026T011934Z
+DTSTART;TZID=Europe/Moscow:20261016T173000
+DTEND;TZID=Europe/Moscow:20261016T190000
+SUMMARY:Экскурсия по открытому хранению Муз
+ ея современного искусства «Гараж»
+LOCATION:Музей современного искусства «Гара
+ ж»\, м. Парк культуры
+DESCRIPTION:от ART LAB\nРегистрация: https://forms.gle/iRkYM5j
+ 127EE3qyR7\nПодробнее: https://t.me/artlab_mgimo/7294
+URL:https://t.me/artlab_mgimo/7294
+END:VEVENT
+BEGIN:VEVENT
+UID:e-2026-10-16-gehjfz@studsouz-mgimo
+DTSTAMP:20261026T011934Z
+DTSTART;VALUE=DATE:20261016
+DTEND;VALUE=DATE:20261019
+SUMMARY:Осенний старостат 2026
+LOCATION:Калужская область\, Этномир
+DESCRIPTION:от Студенческого союза\nИдёт до 18 о
+ ктября\nРегистрация закрыта\nПодробнее: h
+ ttps://t.me/studsouzmgimo/10403
+URL:https://t.me/studsouzmgimo/10403
+END:VEVENT
+BEGIN:VEVENT
+UID:e-2026-10-16-qgej3f@studsouz-mgimo
+DTSTAMP:20261026T011934Z
+DTSTART;VALUE=DATE:20261016
+DTEND;VALUE=DATE:20261018
+SUMMARY:Конференция «Россия и АСЕАН в АТР: ди
+ намика взаимодействия\, региональные пр
+ оцессы и глобальный контекст»
+DESCRIPTION:от ASEAN centre in MGIMO\nИдёт до 17 октября\nР
+ егистрация: https://forms.gle/bBKKm4CQF1Sv25xk6\nПодробн
+ ее: https://t.me/aseancentremgimo/1570
+URL:https://t.me/aseancentremgimo/1570
+END:VEVENT
+BEGIN:VEVENT
+UID:e-2026-10-16-evtvrf@studsouz-mgimo
+DTSTAMP:20261026T011934Z
+DTSTART;VALUE=DATE:20261016
+DTEND;VALUE=DATE:20261017
+SUMMARY:Спецкурс «Актуальные проблемы рынка
+  ценных бумаг»
+DESCRIPTION:от Юридического клуба\nИдёт до 27 но
+ ября\nРегистрация: https://forms.gle/xATu1MrTahdn4Hpa7 (д
+ о 15 октября)\nПодробнее: https://t.me/law_club_mgimo/134
+ 1
+URL:https://t.me/law_club_mgimo/1341
+END:VEVENT
+BEGIN:VEVENT
+UID:e-2026-10-16-jg43rp@studsouz-mgimo
+DTSTAMP:20261026T011934Z
+DTSTART;VALUE=DATE:20261016
+DTEND;VALUE=DATE:20261017
+SUMMARY:Открытие регистрации на Молодежный 
+ форум Россия-Африка «на полях» III Саммит
+ а Россия-Африка
+DESCRIPTION:28-29 октября\nРегистрация: https://forms.yan
+ dex.ru/u/6ac4bb9484227cb974f98755 (до 20 октября)\nПодробн
+ ее: https://t.me/forumrussiaafricawhatisnextMGIMO/1196
+URL:https://t.me/forumrussiaafricawhatisnextMGIMO/1196
+END:VEVENT
+END:VCALENDAR

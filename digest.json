@@ -1,0 +1,399 @@
+{
+  "title": "",
+  "intro": "",
+  "contact": {
+    "name": "Олеся Рудакова",
+    "tg": "Billy_Foxx",
+    "name_en": "Olesya Rudakova"
+  },
+  "updated": "2026-10-12",
+  "events": [
+    {
+      "date": "2026-10-12",
+      "end": "",
+      "time": "16:00",
+      "title": "Open Talk со Стефанией Маликовой",
+      "title_en": "Open Talk with Stefania Malikova",
+      "url": "https://t.me/bcmgimo/2781",
+      "org": "Бизнес клуба",
+      "place": "ауд. 214",
+      "online": false,
+      "note": "",
+      "cat": "talk",
+      "reg": {
+        "state": "open",
+        "url": "https://mgimobc.timepad.ru/event/4239286/",
+        "until": ""
+      },
+      "links": [],
+      "org_en": "Business Club",
+      "place_en": "Room 214",
+      "note_en": ""
+    },
+    {
+      "date": "2026-10-12",
+      "end": "2026-10-17",
+      "time": "18:00",
+      "title": "Старт программы ПК «Спортивные сообщества и объединения. Опыт зарубежных стран»",
+      "title_en": "Launch of the professional development programme “Sports Communities and Associations: International Experience”",
+      "url": "https://t.me/mgimo_sbip/6210",
+      "org": "ШБИМК",
+      "place": "",
+      "online": false,
+      "note": "",
+      "cat": "career",
+      "reg": {
+        "state": "closed",
+        "url": "",
+        "until": ""
+      },
+      "links": [],
+      "org_en": "School of Business and International Competencies",
+      "place_en": "",
+      "note_en": ""
+    },
+    {
+      "date": "2026-10-12",
+      "end": "",
+      "time": "22:30",
+      "title": "Просмотр игроков в ХК \"Дипломаты\" МГИМО",
+      "title_en": "Tryouts for MGIMO's “Diplomats” hockey team",
+      "url": "https://t.me/mgimodiplomats/2213",
+      "org": "",
+      "place": "СК \"Чемпион\", Балаклавский пр-т, 33",
+      "online": false,
+      "note": "",
+      "cat": "sport",
+      "reg": {
+        "state": "open",
+        "url": "https://docs.google.com/spreadsheets/d/10DcS1YnVePWQYN2CkZPL3pOdhtaxcanctXFMHhnZsV4/edit?usp=drivesdk",
+        "until": ""
+      },
+      "links": [],
+      "org_en": "",
+      "place_en": "Champion Sports Centre, 33 Balaklavsky Prospekt",
+      "note_en": ""
+    },
+    {
+      "date": "2026-10-13",
+      "end": "",
+      "time": "16:00",
+      "title": "Научная дискуссия о многовекторной внешней политике Казахстана",
+      "title_en": "Academic discussion on Kazakhstan's multi-vector foreign policy",
+      "url": "https://vk.ru/wall-89928414_3806",
+      "org": "Negotiation Club",
+      "place": "ауд. 215",
+      "online": false,
+      "note": "",
+      "cat": "talk",
+      "reg": {
+        "state": "none",
+        "url": "",
+        "until": ""
+      },
+      "links": [],
+      "org_en": "Negotiation Club",
+      "place_en": "Room 215",
+      "note_en": ""
+    },
+    {
+      "date": "2026-10-13",
+      "end": "",
+      "time": "17:00",
+      "title": "Лекция историка-корееведа, к.и.н., директора Международного центра корееведения МГУ имени М.В. Ломоносова Ким Натальи Николаевны",
+      "title_en": "Lecture by Natalia Nikolaevna Kim, historian of Korea, PhD, Director of the International Centre for Korean Studies at Lomonosov Moscow State University",
+      "url": "https://t.me/koreanclubMGIMO/1051",
+      "org": "Корейского клуба",
+      "place": "ауд. 511",
+      "online": false,
+      "note": "",
+      "cat": "talk",
+      "reg": {
+        "state": "none",
+        "url": "",
+        "until": ""
+      },
+      "links": [],
+      "org_en": "Korean Club",
+      "place_en": "Room 511",
+      "note_en": ""
+    },
+    {
+      "date": "2026-10-14",
+      "end": "",
+      "time": "16:00",
+      "title": "Интеллектуальная игра \"Грань Разума\"",
+      "title_en": "Quiz game “Edge of Reason”",
+      "url": "https://t.me/cpcmgimo/949",
+      "org": "Клуба политического консалтинга МГИМО",
+      "place": "Атриум МП",
+      "online": false,
+      "note": "",
+      "cat": "contest",
+      "reg": {
+        "state": "open",
+        "url": "https://docs.google.com/forms/d/e/1FAIpQLScXagt7Hx8yvYfjdVWNcvQALq0xRzf_zioZu99iEXnvfDPpmg/viewform?usp=dialog",
+        "until": ""
+      },
+      "links": [],
+      "org_en": "MGIMO Political Consulting Club",
+      "place_en": "Atrium MP",
+      "note_en": ""
+    },
+    {
+      "date": "2026-10-15",
+      "end": "",
+      "time": "11:00",
+      "title": "День финтеха от Альфа-Банка",
+      "title_en": "Fintech Day with Alfa-Bank",
+      "url": "https://t.me/meomgimo/1441",
+      "org": "Факультета МЭО",
+      "place": "Конференц-зал",
+      "online": false,
+      "note": "",
+      "cat": "career",
+      "reg": {
+        "state": "open",
+        "url": "https://disk.360.yandex.ru/i/O2sHegFvxGM7hA",
+        "until": ""
+      },
+      "links": [],
+      "org_en": "Faculty of International Economic Relations",
+      "place_en": "Conference Hall",
+      "note_en": ""
+    },
+    {
+      "date": "2026-10-15",
+      "end": "",
+      "time": "16:00",
+      "title": "Завтрак с Дипломатом - Дмитрием Юрьевичем Цветковым",
+      "title_en": "Breakfast with a Diplomat: Dmitry Yuryevich Tsvetkov",
+      "url": "https://t.me/studsouzmgimo/10407",
+      "org": "Студенческого союза",
+      "place": "Шахматная гостиная КЦ",
+      "online": false,
+      "note": "",
+      "cat": "talk",
+      "reg": {
+        "state": "closed",
+        "url": "",
+        "until": ""
+      },
+      "links": [],
+      "org_en": "Student Union",
+      "place_en": "Chess Lounge, Cultural Centre",
+      "note_en": ""
+    },
+    {
+      "date": "2026-10-15",
+      "end": "",
+      "time": "16:00",
+      "title": "Корпоративно-инвестиционный бизнес изнутри: Open Talk с экспертами Альфа-Банка",
+      "title_en": "Corporate and investment banking from the inside: Open Talk with Alfa-Bank experts",
+      "url": "https://t.me/oeconomicus/3959",
+      "org": "Экономического клуба Oeconomicus им А.В. Макаренко",
+      "place": "Малая сцена КЦ",
+      "online": false,
+      "note": "",
+      "cat": "talk",
+      "reg": {
+        "state": "none",
+        "url": "",
+        "until": ""
+      },
+      "links": [],
+      "org_en": "Oeconomicus Economic Club named after A.V. Makarenko",
+      "place_en": "Small Stage, Cultural Centre",
+      "note_en": ""
+    },
+    {
+      "date": "2026-10-15",
+      "end": "",
+      "time": "16:00",
+      "title": "Open Talk с Пелагеей",
+      "title_en": "Open Talk with Pelageya",
+      "url": "https://t.me/letstalkmgimo/3311",
+      "org": "Let's Talk MGIMO",
+      "place": "9 зал",
+      "online": false,
+      "note": "",
+      "cat": "talk",
+      "reg": {
+        "state": "none",
+        "url": "",
+        "until": ""
+      },
+      "links": [],
+      "org_en": "Let's Talk MGIMO",
+      "place_en": "Hall 9",
+      "note_en": ""
+    },
+    {
+      "date": "2026-10-15",
+      "end": "",
+      "time": "",
+      "title": "Окончание приёма заявок для вступления в центр поддержки волонтёрского движения",
+      "title_en": "Last day to apply to the Volunteer Movement Support Centre",
+      "url": "https://vk.ru/wall-31188434_4975",
+      "org": "",
+      "place": "",
+      "online": false,
+      "note": "",
+      "cat": "volunteer",
+      "reg": {
+        "state": "open",
+        "url": "https://vk.ru/away.php?to=https%3A%2F%2Fforms.gle%2FZQFP3YxqB7hEnsEr8&utf=1",
+        "until": ""
+      },
+      "links": [],
+      "org_en": "",
+      "place_en": "",
+      "note_en": ""
+    },
+    {
+      "date": "2026-10-16",
+      "end": "",
+      "time": "16:00",
+      "title": "Открытие регистрации на модель выборов в Палату представителей Конгресса США",
+      "title_en": "Registration opens for the US House of Representatives election simulation",
+      "url": "https://t.me/anglosaxon_club/338",
+      "org": "АСК НСО МГИМО",
+      "place": "Зал 8",
+      "online": false,
+      "note": "29 октября",
+      "cat": "contest",
+      "reg": {
+        "state": "open",
+        "url": "",
+        "until": ""
+      },
+      "links": [
+        {
+          "label": "Регистрация: для внутренних гостей",
+          "url": "https://forms.gle/vNUy5J4t3f7xorYcA",
+          "label_en": "Registration: internal guests"
+        },
+        {
+          "label": "Регистрация: для внешних гостей",
+          "url": "https://forms.gle/K7Qy3NDfs1gzwx3i7",
+          "label_en": "Registration: external guests"
+        }
+      ],
+      "org_en": "Anglo-Saxon Club of the MGIMO Student Research Society",
+      "place_en": "Hall 8",
+      "note_en": "29 October"
+    },
+    {
+      "date": "2026-10-16",
+      "end": "",
+      "time": "17:30",
+      "title": "Экскурсия по открытому хранению Музея современного искусства «Гараж»",
+      "title_en": "Tour of the open storage at the Garage Museum of Contemporary Art",
+      "url": "https://t.me/artlab_mgimo/7294",
+      "org": "ART LAB",
+      "place": "Музей современного искусства «Гараж», м. Парк культуры",
+      "online": false,
+      "note": "",
+      "cat": "culture",
+      "reg": {
+        "state": "open",
+        "url": "https://forms.gle/iRkYM5j127EE3qyR7",
+        "until": ""
+      },
+      "links": [],
+      "org_en": "ART LAB",
+      "place_en": "Garage Museum of Contemporary Art, Park Kultury metro",
+      "note_en": ""
+    },
+    {
+      "date": "2026-10-16",
+      "end": "2026-10-18",
+      "time": "",
+      "title": "Осенний старостат 2026",
+      "title_en": "Autumn Starostat 2026",
+      "url": "https://t.me/studsouzmgimo/10403",
+      "org": "Студенческого союза",
+      "place": "Калужская область, Этномир",
+      "online": false,
+      "note": "",
+      "cat": "trip",
+      "reg": {
+        "state": "closed",
+        "url": "",
+        "until": ""
+      },
+      "links": [],
+      "org_en": "Student Union",
+      "place_en": "Etnomir, Kaluga Region",
+      "note_en": ""
+    },
+    {
+      "date": "2026-10-16",
+      "end": "2026-10-17",
+      "time": "",
+      "title": "Конференция «Россия и АСЕАН в АТР: динамика взаимодействия, региональные процессы и глобальный контекст»",
+      "title_en": "Conference “Russia and ASEAN in the Asia-Pacific: Dynamics of Interaction, Regional Processes and Global Context”",
+      "url": "https://t.me/aseancentremgimo/1570",
+      "org": "ASEAN centre in MGIMO",
+      "place": "",
+      "online": false,
+      "note": "",
+      "cat": "talk",
+      "reg": {
+        "state": "open",
+        "url": "https://forms.gle/bBKKm4CQF1Sv25xk6",
+        "until": ""
+      },
+      "links": [],
+      "org_en": "ASEAN centre in MGIMO",
+      "place_en": "",
+      "note_en": ""
+    },
+    {
+      "date": "2026-10-16",
+      "end": "2026-11-27",
+      "time": "",
+      "title": "Спецкурс «Актуальные проблемы рынка ценных бумаг»",
+      "title_en": "Special course “Current Issues of the Securities Market”",
+      "url": "https://t.me/law_club_mgimo/1341",
+      "org": "Юридического клуба",
+      "place": "",
+      "online": false,
+      "note": "",
+      "cat": "career",
+      "reg": {
+        "state": "open",
+        "url": "https://forms.gle/xATu1MrTahdn4Hpa7",
+        "until": "15 октября"
+      },
+      "links": [],
+      "org_en": "Law Club",
+      "place_en": "",
+      "note_en": ""
+    },
+    {
+      "date": "2026-10-16",
+      "end": "",
+      "time": "",
+      "title": "Открытие регистрации на Молодежный форум Россия-Африка «на полях» III Саммита Россия-Африка",
+      "title_en": "Registration opens for the Russia–Africa Youth Forum on the sidelines of the 3rd Russia–Africa Summit",
+      "url": "https://t.me/forumrussiaafricawhatisnextMGIMO/1196",
+      "org": "",
+      "place": "",
+      "online": false,
+      "note": "28-29 октября",
+      "cat": "trip",
+      "reg": {
+        "state": "open",
+        "url": "https://forms.yandex.ru/u/6ac4bb9484227cb974f98755",
+        "until": "20 октября"
+      },
+      "links": [],
+      "org_en": "",
+      "place_en": "",
+      "note_en": "28–29 October"
+    }
+  ],
+  "title_en": "",
+  "intro_en": ""
+}
