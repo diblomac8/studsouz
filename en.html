@@ -180,7 +180,7 @@ p{margin:0}
 .ch-body{display:flex;flex-direction:column;gap:22px;min-width:0;max-width:640px}
 .ch-index{font:600 12px/1 var(--f-mono);letter-spacing:.18em;text-transform:uppercase;color:var(--mute)}
 .ch-index b{color:var(--hue);font-weight:600}
-.ch-name{margin:0;font:800 clamp(28px,4.1vw,58px)/1.02 var(--f-display);text-transform:uppercase;color:var(--hue);letter-spacing:-.01em;overflow-wrap:anywhere;hyphens:auto}
+.ch-name{margin:0;font:800 clamp(28px,4.1vw,58px)/1.02 var(--f-display);text-transform:uppercase;color:var(--hue);letter-spacing:-.01em;overflow-wrap:normal;hyphens:manual;text-wrap:balance}
 .ch-head{font-size:16px;color:var(--mute)}
 .ch-head b{display:block;margin-top:2px;font:600 clamp(19px,1.8vw,23px)/1.3 var(--f-body);color:var(--paper)}
 .ch-motto{font:600 clamp(19px,2vw,26px)/1.3 var(--f-display);letter-spacing:-.005em}
@@ -221,6 +221,11 @@ html[lang="en"] .ch-motto::before{content:"“"}html[lang="en"] .ch-motto::after
 .krug.playing .krug-ico .play{display:none}
 .krug.playing .krug-ico .pause{display:block}
 .krug-btn:hover .krug-ico{transform:scale(1.08)}
+.krug-snd{position:absolute;right:0;bottom:0;width:36px;height:36px;border-radius:50%;display:none;place-items:center;background:var(--hue);color:var(--ink);box-shadow:0 0 0 3px var(--ink)}
+.krug-snd svg{width:17px;height:17px;fill:currentColor}
+.krug.muted .krug-snd{display:grid}
+.krug.muted .krug-ico{opacity:0}
+.krug.muted .krug-label span{color:var(--hue)}
 .krug-label{display:grid;gap:4px;min-width:0}
 .krug-label b{font:600 16px/1.3 var(--f-body)}
 .krug-label span{font:500 11px/1.4 var(--f-mono);letter-spacing:.12em;text-transform:uppercase;color:var(--mute)}
@@ -305,6 +310,11 @@ html[lang="en"] .ch-motto::before{content:"“"}html[lang="en"] .ch-motto::after
 .vid-cover b{font:600 15px/1.35 var(--f-body);max-width:28ch}
 .vid-cover span{font:500 11px/1 var(--f-mono);letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}
 .mv.on .vid-cover{display:none}
+.vid-cover .snd{display:none;align-items:center;gap:8px;align-self:flex-start;padding:10px 14px;background:var(--hue);color:var(--ink);font:700 13px/1 var(--f-body);letter-spacing:0;text-transform:none}
+.vid-cover .snd svg{width:16px;height:16px;fill:currentColor}
+.mv.auto .vid-cover{background:linear-gradient(180deg,transparent 58%,rgba(6,8,28,.72))}
+.mv.auto .vid-cover .play{display:none}
+.mv.auto .vid-cover .snd{display:inline-flex}
 .mv .parts{position:absolute;top:12px;right:12px;z-index:2;display:none;gap:6px}
 .mv.on .parts{display:flex}
 .mv .parts button{padding:7px 10px;border:1px solid rgba(241,243,255,.28);background:rgba(6,8,28,.72);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);font:600 11px/1 var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--paper);cursor:pointer}
@@ -388,16 +398,17 @@ a.soc:hover{border-color:var(--neon);background:rgba(69,255,46,.06)}
 .crew ol{list-style:none;margin:0;padding:10px var(--gut-r) 12px var(--gut-l);display:flex;gap:clamp(8px,1.2vw,16px);overflow-x:auto;scroll-snap-type:x proximity;scrollbar-width:none;overscroll-behavior-x:contain}
 .crew ol::-webkit-scrollbar{display:none}
 .crew li{flex:none;scroll-snap-align:start;scroll-margin-left:var(--gut-l)}
-.crew a{display:grid;justify-items:center;align-content:start;gap:9px;width:94px;padding:4px 0;text-align:center;text-decoration:none}
+.crew a{display:grid;justify-items:center;align-content:start;gap:9px;width:96px;padding:4px 0;text-align:center;text-decoration:none}
 .crew .av{display:block;width:76px;height:76px;padding:3px;border-radius:50%;border:1.5px solid color-mix(in srgb,var(--hue) 55%,transparent);transition:border-color .3s,box-shadow .3s,transform .4s var(--ease)}
 .crew img{width:100%;height:100%;border-radius:50%;object-fit:cover;filter:grayscale(.2) brightness(.96);transition:filter .3s}
 .crew a:hover .av,.crew a:focus-visible .av{border-color:var(--hue);box-shadow:0 0 22px -2px var(--hue);transform:translateY(-4px)}
 .crew a:hover img,.crew a:focus-visible img{filter:none}
-.crew b{font:600 10px/1.3 var(--f-mono);letter-spacing:.07em;text-transform:uppercase;color:var(--paper);overflow-wrap:anywhere}
-.crew .who{margin-top:-5px;font-size:12px;line-height:1.2;color:var(--mute)}
+.crew b{font:600 10px/1.3 var(--f-mono);letter-spacing:.03em;text-transform:uppercase;color:var(--paper);overflow-wrap:normal;hyphens:manual;text-wrap:balance}
+.crew .who{display:grid;margin-top:-5px;font-size:12px;line-height:1.25;color:var(--mute)}
+.crew .who span{white-space:nowrap}
 .js .crew li{opacity:0;transform:translateY(18px) scale(.92);transition:opacity .6s var(--ease),transform .7s var(--ease);transition-delay:calc(var(--k) * 55ms + 200ms)}
 .js .crew.in li{opacity:1;transform:none}
-@media (min-width:1200px){.crew{margin-inline:0}.crew ol{padding-inline:0;overflow:visible;justify-content:space-between}}
+@media (min-width:1360px){.crew{margin-inline:0}.crew ol{gap:4px;padding-inline:0;overflow:visible;justify-content:space-between}}
 
 /* боковой счётчик отделов */
 .tcount{position:fixed;z-index:15;right:max(20px,env(safe-area-inset-right,0px));top:50%;display:flex;flex-direction:column;align-items:center;gap:10px;pointer-events:none;opacity:0;transform:translate(14px,-50%);transition:opacity .4s,transform .5s var(--ease)}
@@ -432,6 +443,9 @@ a.soc:hover{border-color:var(--neon);background:rgba(69,255,46,.06)}
 .tl-item.on .tl-dot,.tl:not(.tl-h) .tl-dot{background:var(--hue);box-shadow:0 0 14px var(--hue)}
 .tl-ph{margin:6px 0 0;overflow:hidden;aspect-ratio:16/10;background:var(--ink-2);max-width:560px}
 .tl-ph img{width:100%;height:100%;object-fit:cover}
+.tl-arch{position:relative}
+.tl-arch img{filter:grayscale(.3) sepia(.12) contrast(1.04)}
+.tl-arch figcaption{position:absolute;left:10px;bottom:10px;padding:5px 8px;background:rgba(6,8,28,.82);font:600 12px/1 var(--f-body);color:var(--paper)}
 .tl-type{position:relative;display:grid;place-content:center;justify-items:center;gap:6px;border:1px solid color-mix(in srgb,var(--hue) 50%,transparent);background:radial-gradient(70% 80% at 50% 50%,color-mix(in srgb,var(--hue) 22%,transparent),transparent 70%),var(--ink-2)}
 .tl-type b{font:900 clamp(54px,6vw,92px)/1 var(--f-display);color:var(--hue);text-shadow:0 0 28px color-mix(in srgb,var(--hue) 60%,transparent)}
 .tl-type span{font:600 12px/1 var(--f-mono);letter-spacing:.3em;color:var(--paper)}
@@ -798,7 +812,7 @@ a.wb-day.today:hover{background:#6dff58}
 <nav class="nav" aria-label="Site sections">
   <div class="wrap">
     <a class="mark" href="#top" aria-label="MGIMO Student Union — back to top"><svg class="logo" viewBox="0 0 392 198.2" aria-hidden="true" focusable="false"><path d="M69,46.7l20.8,1c-1.4,8.8-5.8,15.4-13,20-7.2,4.5-17.1,6.8-29.7,6.8s-26.5-3.3-34.8-9.8C4.1,58.1,0,49,0,37.2S4,16.4,12,9.8C20.1,3.3,31.3,0,45.8,0s21.5,2.3,28.9,6.8c7.4,4.6,11.9,10.8,13.6,18.6l-20.6,1.3c-1.2-2.8-3.7-5.1-7.7-6.8-4-1.7-8.7-2.6-14.2-2.6-7.8,0-13.8,1.8-18,5.4s-6.3,8.4-6.3,14.4,2.2,10.9,6.6,14.5c4.4,3.6,10.8,5.3,19.1,5.3s10.8-1,14.5-2.9c3.7-1.9,6.2-4.4,7.4-7.5Z"/><path d="M94.3,18.7V1.2h82.1v17.5h-30.3v54.5h-21.4V18.7h-30.3Z"/><path d="M249.4,1.2h23.1l-25.1,48.1c-3.2,6-6.1,10.7-8.9,14s-6.2,5.9-10.1,7.7c-4,1.8-8.8,2.7-14.4,2.7s-8.7-.3-14-.9v-16.7c4.9.4,8.7.6,11.6.6,6.2,0,10.3-1.8,12.1-5.2h-9.4L180.3,1.2h23.9l26.2,42L249.4,1.2Z"/><path d="M351.7,55.7h9.6v33.8h-20v-16.3h-56.5v16.3h-20v-33.8h8.5c2.5-2.6,4.6-8,6.2-16.2,1.6-8.2,2.7-21,3.1-38.3h69.1v54.5h0ZM330.3,55.7V18.7h-28.5c-1,10.3-2.2,18.4-3.8,24.4-1.4,5.7-2.9,9.9-4.4,12.7h36.7Z"/><path d="M369.7,73.2v-19.8h22.2v19.8h-22.2Z"/><path d="M288.2,149.6c-2.3-1.8-5.6-2.7-9.7-2.7s-7.4.9-9.7,2.7-3.5,4.2-3.5,7.2,1.2,5.4,3.5,7.2,5.6,2.7,9.7,2.7,7.4-.9,9.7-2.7c2.3-1.8,3.5-4.2,3.5-7.2s-1.2-5.4-3.5-7.2Z"/><path d="M0,114.2v84h335.4v-84H0ZM91.2,174.8h-10.2v-30.2l-10.6,30.2h-14.4l-10.6-30.2v30.2h-10.2v-36h18.7l9.5,29.7,9.3-29.7h18.7v36h0ZM133.9,147.6h-23.3v27.2h-10.7v-36h34v8.7ZM183.2,174.8h-10.4v-28.4l-16.5,28.4h-16.4v-36h10.4v28.4l16.5-28.4h16.4v36ZM248,174.8h-10.2v-30.2l-10.6,30.2h-14.4l-10.6-30.2v30.2h-10.2v-36h18.7l9.5,29.7,9.3-29.7h18.7v36h0ZM296,170.5c-4.2,3.3-10.1,4.9-17.6,4.9s-13.4-1.6-17.6-4.9-6.3-7.8-6.3-13.7,2.1-10.4,6.3-13.7c4.2-3.3,10.1-4.9,17.6-4.9s13.4,1.6,17.6,4.9c4.2,3.3,6.3,7.8,6.3,13.7s-2.1,10.4-6.3,13.7Z"/></svg></a>
-    <span class="ncount" aria-hidden="true"><b>00</b><span class="of">/ 10</span><span class="nm"></span></span>
+    <span class="ncount" aria-hidden="true"><b>00</b><span class="of">/ 11</span><span class="nm"></span></span>
     <ul class="nav-links">
       <li class="hm"><a href="#chair">Team</a></li>
       <li class="hm"><a href="#projects">Projects</a></li>
@@ -821,7 +835,7 @@ a.wb-day.today:hover{background:#6dff58}
       <p>The university&#x27;s leading student organisation. This is where MGIMO&#x27;s brightest events are born — along with memories that last a lifetime.</p>
       <div class="right">
         <a class="scroll-cue" href="#about"><i aria-hidden="true"></i>Scroll</a>
-        <span class="barcode" aria-hidden="true">4607 1944 2026</span>
+        <span class="barcode" aria-hidden="true">1944 2004 2026</span>
       </div>
     </div>
   </div>
@@ -855,40 +869,46 @@ a.wb-day.today:hover{background:#6dff58}
     </li><li class="tl-item" data-hue="neon" data-reveal>
       <p class="tl-top"><span class="tl-year">2003</span><span class="tl-when">Autumn</span></p>
       <span class="tl-dot" aria-hidden="true"></span>
-      <figure class="tl-ph tl-type tl-quote"><blockquote>On that first trip everyone suddenly realised that MGIMO is one team</blockquote><figcaption>I.A. Loginov, Adviser to the Rector</figcaption></figure>
+      <figure class="tl-ph"><img src="img/tl-2003.jpg" alt="Adviser to the Rector I.A. Loginov with Student Union press office activists, 2024" loading="lazy"></figure>
       <h3>The first Autumn Starostat</h3>
-      <p class="tl-text">First-years seemed disconnected back then, so on the advice of Rector A.V. Torkunov it was decided to start with a retreat for group leaders. That is where the idea of the Student Union was born.</p>
+      <p class="tl-text">“On that first trip everyone suddenly realised that MGIMO is one team,” recalls Adviser to the Rector I.A. Loginov. First-years seemed disconnected back then, so on the advice of Rector A.V. Torkunov it was decided to start with a retreat for group leaders. That is where the idea of the Student Union was born.</p>
     </li><li class="tl-item" data-hue="flare" data-reveal>
       <p class="tl-top"><span class="tl-year">2004</span><span class="tl-when">24 February</span></p>
       <span class="tl-dot" aria-hidden="true"></span>
-      <div class="tl-ph tl-type" aria-hidden="true"><b>24.02</b><span>2004</span></div>
+      <figure class="tl-ph tl-arch"><img src="img/tl-2004.jpg" alt="An early Student Union stand with the motto “First together! Best together!”" loading="lazy"><figcaption>Student Union archive</figcaption></figure>
       <h3>The Student Union is founded</h3>
-      <p class="tl-text">Activists from the university&#x27;s youth organisations, supported by I.A. Loginov, decided to make student life more useful and more interesting. The motto back then: “First together, best together”.</p>
+      <p class="tl-text">Activists from the university&#x27;s youth organisations, supported by I.A. Loginov, decided to make student life more useful and more interesting. The motto back then: “First together, best together”. One of the highlights of the early years was the “Embassy Invasion”: humanitarian teams to Posolsky Monastery and Severobaikalsk.</p>
     </li><li class="tl-item" data-hue="neon" data-reveal>
+      <p class="tl-top"><span class="tl-year">2014</span><span class="tl-when">MGIMO anniversary</span></p>
+      <span class="tl-dot" aria-hidden="true"></span>
+      <figure class="tl-ph tl-arch"><img src="img/tl-2014.jpg" alt="Students with a flag for MGIMO&#x27;s 70th anniversary" loading="lazy"><figcaption>Student Union archive</figcaption></figure>
+      <h3>The university turns 70, the Student Union 10</h3>
+      <p class="tl-text">The university&#x27;s anniversary year. It also saw the first MGIMO Summer School, a retreat for student community leaders that still runs today.</p>
+    </li><li class="tl-item" data-hue="flare" data-reveal>
       <p class="tl-top"><span class="tl-year">2017</span><span class="tl-when">27 October</span></p>
       <span class="tl-dot" aria-hidden="true"></span>
       <figure class="tl-ph"><img src="img/tl-2017.jpg" alt="Awards at one of the first Battles of the Faculties" loading="lazy"></figure>
       <h3>The first Battle of the Faculties</h3>
       <p class="tl-text">The show was called “Battle of the Faculties: Time of the First”. Besides a video introduction and a creative performance, teams competed in a quiz. Today it is the Student Union&#x27;s main cultural and creative project.</p>
-    </li><li class="tl-item" data-hue="flare" data-reveal>
+    </li><li class="tl-item" data-hue="neon" data-reveal>
       <p class="tl-top"><span class="tl-year">2022</span><span class="tl-when">11–13 November</span></p>
       <span class="tl-dot" aria-hidden="true"></span>
       <figure class="tl-ph"><img src="img/tl-2022.jpg" alt="Participants of the first MGIMO Exchange at Ethnomir" loading="lazy"></figure>
       <h3>The first MGIMO Exchange</h3>
       <p class="tl-text">International students from 12 countries and activists went to Ethnomir together for the first time. The retreat was launched under the Priority 2030 programme.</p>
-    </li><li class="tl-item" data-hue="neon" data-reveal>
+    </li><li class="tl-item" data-hue="flare" data-reveal>
       <p class="tl-top"><span class="tl-year">2023</span><span class="tl-when">28 August</span></p>
       <span class="tl-dot" aria-hidden="true"></span>
       <figure class="tl-ph"><img src="img/tl-2023.jpg" alt="International applicants after the first STUDWAY quest" loading="lazy"></figure>
       <h3>The first STUDWAY</h3>
       <p class="tl-text">International applicants were the first to complete the quest, and on 8 September the StudWay “spaceship” toured MGIMO with all the first-years.</p>
-    </li><li class="tl-item" data-hue="flare" data-reveal>
+    </li><li class="tl-item" data-hue="neon" data-reveal>
       <p class="tl-top"><span class="tl-year">2024</span><span class="tl-when">Anniversary</span></p>
       <span class="tl-dot" aria-hidden="true"></span>
       <figure class="tl-ph"><img src="img/tl-2024.jpg" alt="Final meeting in the Student Union&#x27;s 20th anniversary year" loading="lazy"></figure>
       <h3>20 years of the Student Union</h3>
-      <p class="tl-text">The anniversary coincided with MGIMO&#x27;s 80th. At the Spring Starostat students met alumni activists, among them the first chair, Dmitry Starostin.</p>
-    </li><li class="tl-item" data-hue="neon" data-reveal>
+      <p class="tl-text">The anniversary coincided with MGIMO&#x27;s 80th. At the Spring Starostat students met alumni activists, among them Dmitry Starostin, who led the Student Union in the 2000s.</p>
+    </li><li class="tl-item" data-hue="flare" data-reveal>
       <p class="tl-top"><span class="tl-year">2026</span><span class="tl-when">26 February</span></p>
       <span class="tl-dot" aria-hidden="true"></span>
       <figure class="tl-ph"><img src="img/p9401.jpg" alt="Rector A.V. Torkunov opens the first STUD EXPO" loading="lazy"></figure>
@@ -899,7 +919,7 @@ a.wb-day.today:hover{background:#6dff58}
       <span class="tl-dot" aria-hidden="true"></span>
       <div class="tl-ph tl-type tl-you" aria-hidden="true"><b>?</b><span>2026/27</span></div>
       <h3>A new season — yours?</h3>
-      <p class="tl-text">10 departments, 300+ applications per recruitment round and hundreds of events ahead. The next line in this story could be yours.</p>
+      <p class="tl-text">11 departments, 300+ applications per recruitment round and hundreds of events ahead. The next line in this story could be yours.</p>
       <a class="tl-link" href="#team">Meet the team →</a>
     </li>
       </ol>
@@ -914,7 +934,7 @@ a.wb-day.today:hover{background:#6dff58}
     <p class="eyebrow" data-reveal>Team of the 2026/27 season</p>
     <h2 id="team-title" data-reveal style="--i:1">The Chair and heads of departments</h2>
     <p data-reveal style="--i:2">Every department has its own rhythm, tasks and atmosphere. Scroll: first the head&#x27;s cover, then what the department is about. Tap the circle to hear from the head.</p>
-    <nav class="crew" data-reveal style="--i:3" aria-label="Team: jump to a department"><ol><li style="--k:0"><a href="#chair" data-hue="neon" aria-label="Chair — Mikhail Mosunov"><span class="av"><img src="img/av-chair.jpg" alt="" loading="lazy" width="240" height="240"></span><b>Chair</b><span class="who">Mikhail</span></a></li><li style="--k:1"><a href="#press" data-hue="flare" aria-label="Press Office — Anastasia Shakhorskaya"><span class="av"><img src="img/av-press.jpg" alt="" loading="lazy" width="240" height="240"></span><b>Press Office</b><span class="who">Anastasia</span></a></li><li style="--k:2"><a href="#hr" data-hue="flare" aria-label="HR Department — Anya (Dao Van Anh)"><span class="av"><img src="img/av-hr.jpg" alt="" loading="lazy" width="240" height="240"></span><b>HR Department</b><span class="who">Anya</span></a></li><li style="--k:3"><a href="#event" data-hue="neon" aria-label="Events Department — Aliya Saetova"><span class="av"><img src="img/av-event.jpg" alt="" loading="lazy" width="240" height="240"></span><b>Events Department</b><span class="who">Aliya</span></a></li><li style="--k:4"><a href="#design" data-hue="neon" aria-label="Design Department — Anastasia Khudyakova"><span class="av"><img src="img/av-design.jpg" alt="" loading="lazy" width="240" height="240"></span><b>Design Department</b><span class="who">Anastasia</span></a></li><li style="--k:5"><a href="#docs" data-hue="flare" aria-label="Documentation — Maria Titova"><span class="av"><img src="img/av-docs.jpg" alt="" loading="lazy" width="240" height="240"></span><b>Documentation</b><span class="who">Maria</span></a></li><li style="--k:6"><a href="#patriot" data-hue="flare" aria-label="Patriotic Affairs — Yuri Tosunyan"><span class="av"><img src="img/av-patriot.jpg" alt="" loading="lazy" width="240" height="240"></span><b>Patriotic Affairs</b><span class="who">Yuri</span></a></li><li style="--k:7"><a href="#integration" data-hue="neon" aria-label="Integration — Ekaterina Barsukova"><span class="av"><img src="img/av-integration.jpg" alt="" loading="lazy" width="240" height="240"></span><b>Integration</b><span class="who">Ekaterina</span></a></li><li style="--k:8"><a href="#internal" data-hue="neon" aria-label="Internal Relations — Olesya Rudakova"><span class="av"><img src="img/av-internal.jpg" alt="" loading="lazy" width="240" height="240"></span><b>Internal Relations</b><span class="who">Olesya</span></a></li><li style="--k:9"><a href="#resources" data-hue="neon" aria-label="Resource Development — Alexey Abramov"><span class="av"><img src="img/av-resources.jpg" alt="" loading="lazy" width="240" height="240"></span><b>Resource Development</b><span class="who">Alexey</span></a></li><li style="--k:10"><a href="#external" data-hue="flare" aria-label="External Relations — Anay Nasrutdinova"><span class="av"><img src="img/av-external.jpg" alt="" loading="lazy" width="240" height="240"></span><b>External Relations</b><span class="who">Anay</span></a></li></ol></nav>
+    <nav class="crew" data-reveal style="--i:3" aria-label="Team: jump to a department"><ol><li style="--k:0"><a href="#chair" data-hue="neon" aria-label="Chair — Mikhail Mosunov"><span class="av"><img src="img/av-chair.jpg" alt="" loading="lazy" width="240" height="240"></span><b>Chair</b><span class="who"><span>Mikhail</span><span>Mosunov</span></span></a></li><li style="--k:1"><a href="#press" data-hue="flare" aria-label="Press Office — Anastasia Shakhorskaya"><span class="av"><img src="img/av-press.jpg" alt="" loading="lazy" width="240" height="240"></span><b>Press Office</b><span class="who"><span>Anastasia</span><span>Shakhorskaya</span></span></a></li><li style="--k:2"><a href="#hr" data-hue="flare" aria-label="HR Department — Anya Dao (Dao Van Anh)"><span class="av"><img src="img/av-hr.jpg" alt="" loading="lazy" width="240" height="240"></span><b>HR Department</b><span class="who"><span>Anya</span><span>Dao</span></span></a></li><li style="--k:3"><a href="#event" data-hue="neon" aria-label="Events Department — Aliya Saetova"><span class="av"><img src="img/av-event.jpg" alt="" loading="lazy" width="240" height="240"></span><b>Events Department</b><span class="who"><span>Aliya</span><span>Saetova</span></span></a></li><li style="--k:4"><a href="#design" data-hue="neon" aria-label="Design Department — Anastasia Khudyakova"><span class="av"><img src="img/av-design.jpg" alt="" loading="lazy" width="240" height="240"></span><b>Design Department</b><span class="who"><span>Anastasia</span><span>Khudyakova</span></span></a></li><li style="--k:5"><a href="#docs" data-hue="flare" aria-label="Documentation — Maria Titova"><span class="av"><img src="img/av-docs.jpg" alt="" loading="lazy" width="240" height="240"></span><b>Documentation</b><span class="who"><span>Maria</span><span>Titova</span></span></a></li><li style="--k:6"><a href="#patriot" data-hue="flare" aria-label="Patriotic Affairs — Yuri Tosunyan"><span class="av"><img src="img/av-patriot.jpg" alt="" loading="lazy" width="240" height="240"></span><b>Patriotic Affairs</b><span class="who"><span>Yuri</span><span>Tosunyan</span></span></a></li><li style="--k:7"><a href="#integration" data-hue="neon" aria-label="Integration — Ekaterina Barsukova"><span class="av"><img src="img/av-integration.jpg" alt="" loading="lazy" width="240" height="240"></span><b>Integration</b><span class="who"><span>Ekaterina</span><span>Barsukova</span></span></a></li><li style="--k:8"><a href="#internal" data-hue="neon" aria-label="Internal Relations — Olesya Rudakova"><span class="av"><img src="img/av-internal.jpg" alt="" loading="lazy" width="240" height="240"></span><b>Internal Relations</b><span class="who"><span>Olesya</span><span>Rudakova</span></span></a></li><li style="--k:9"><a href="#resources" data-hue="neon" aria-label="Resource Development — Alexey Abramov"><span class="av"><img src="img/av-resources.jpg" alt="" loading="lazy" width="240" height="240"></span><b>Resource Development</b><span class="who"><span>Alexey</span><span>Abramov</span></span></a></li><li style="--k:10"><a href="#external" data-hue="flare" aria-label="External Relations — Anay Nasrutdinova"><span class="av"><img src="img/av-external.jpg" alt="" loading="lazy" width="240" height="240"></span><b>External Relations</b><span class="who"><span>Anay</span><span>Nasrutdinova</span></span></a></li><li style="--k:11"><a href="#da" data-hue="neon" aria-label="Dip. Academy — Anastasia Zherebkova"><span class="av"><img src="img/av-da.jpg" alt="" loading="lazy" width="240" height="240"></span><b>Dip. Academy</b><span class="who"><span>Anastasia</span><span>Zherebkova</span></span></a></li></ol></nav>
   </div>
   <article class="ch chair wrap" id="chair" data-hue="neon" data-n="00" data-label="Chair">
   <figure class="ch-cover" data-reveal>
@@ -933,6 +953,7 @@ a.wb-day.today:hover{background:#6dff58}
     <video data-solo playsinline preload="none" poster="img/krug-chair.jpg"></video>
     <svg class="krug-ring" viewBox="0 0 100 100" aria-hidden="true"><circle class="t" cx="50" cy="50" r="48"/><circle class="p" cx="50" cy="50" r="48"/></svg>
     <span class="krug-ico"><svg class="play" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 1.5v13l11-6.5z"/></svg><svg class="pause" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 1.5h3.5v13H3zM9.5 1.5H13v13H9.5z"/></svg></span>
+    <span class="krug-snd" aria-hidden="true"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M1.5 5.5h3L8.5 2v12l-4-3.5h-3z"/><path d="M10.5 5.5l4 5m0-5l-4 5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></span>
   </button>
   <span class="krug-label"><b>A word from the head</b><span>Video note · 0:27</span></span>
 </div>
@@ -943,7 +964,7 @@ a.wb-day.today:hover{background:#6dff58}
     <div class="frame"><img src="img/head-press.jpg" alt="Anastasia Shakhorskaya, head of the Press Office" loading="lazy" width="960" height="960"></div>
   </figure>
   <div class="ch-body">
-    <p class="ch-index" data-reveal style="--i:0"><b>01</b> / 10 · department</p>
+    <p class="ch-index" data-reveal style="--i:0"><b>01</b> / 11 · department</p>
     <h3 class="ch-name" data-reveal style="--i:1">Press Office</h3>
     <p class="ch-head" data-reveal style="--i:2">Head of department<b>Anastasia Shakhorskaya</b></p>
     <p class="ch-motto" data-reveal style="--i:3">A voice heard all the way to the Foreign Ministry</p>
@@ -955,6 +976,7 @@ a.wb-day.today:hover{background:#6dff58}
     <video data-solo playsinline preload="none" poster="img/krug-press.jpg"></video>
     <svg class="krug-ring" viewBox="0 0 100 100" aria-hidden="true"><circle class="t" cx="50" cy="50" r="48"/><circle class="p" cx="50" cy="50" r="48"/></svg>
     <span class="krug-ico"><svg class="play" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 1.5v13l11-6.5z"/></svg><svg class="pause" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 1.5h3.5v13H3zM9.5 1.5H13v13H9.5z"/></svg></span>
+    <span class="krug-snd" aria-hidden="true"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M1.5 5.5h3L8.5 2v12l-4-3.5h-3z"/><path d="M10.5 5.5l4 5m0-5l-4 5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></span>
   </button>
   <span class="krug-label"><b>A word from the head</b><span>Video note · 0:34</span></span>
 </div>
@@ -965,7 +987,7 @@ a.wb-day.today:hover{background:#6dff58}
     <div class="frame"><img src="img/head-hr.jpg" alt="Dao Van Anh, head of the HR Department" loading="lazy" width="960" height="960"></div>
   </figure>
   <div class="ch-body">
-    <p class="ch-index" data-reveal style="--i:0"><b>02</b> / 10 · department</p>
+    <p class="ch-index" data-reveal style="--i:0"><b>02</b> / 11 · department</p>
     <h3 class="ch-name" data-reveal style="--i:1">HR Department</h3>
     <p class="ch-head" data-reveal style="--i:2">Head of department<b>Dao Van Anh</b></p>
     <p class="ch-motto" data-reveal style="--i:3">Skills that give you an edge on the job market</p>
@@ -977,6 +999,7 @@ a.wb-day.today:hover{background:#6dff58}
     <video data-solo playsinline preload="none" poster="img/krug-hr.jpg"></video>
     <svg class="krug-ring" viewBox="0 0 100 100" aria-hidden="true"><circle class="t" cx="50" cy="50" r="48"/><circle class="p" cx="50" cy="50" r="48"/></svg>
     <span class="krug-ico"><svg class="play" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 1.5v13l11-6.5z"/></svg><svg class="pause" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 1.5h3.5v13H3zM9.5 1.5H13v13H9.5z"/></svg></span>
+    <span class="krug-snd" aria-hidden="true"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M1.5 5.5h3L8.5 2v12l-4-3.5h-3z"/><path d="M10.5 5.5l4 5m0-5l-4 5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></span>
   </button>
   <span class="krug-label"><b>A word from the head</b><span>Video note · 0:37</span></span>
 </div>
@@ -987,7 +1010,7 @@ a.wb-day.today:hover{background:#6dff58}
     <div class="frame"><img src="img/head-event.jpg" alt="Aliya Saetova, head of the Events Department" loading="lazy" width="960" height="960"></div>
   </figure>
   <div class="ch-body">
-    <p class="ch-index" data-reveal style="--i:0"><b>03</b> / 10 · department</p>
+    <p class="ch-index" data-reveal style="--i:0"><b>03</b> / 11 · department</p>
     <h3 class="ch-name" data-reveal style="--i:1">Events Department</h3>
     <p class="ch-head" data-reveal style="--i:2">Head of department<b>Aliya Saetova</b></p>
     <p class="ch-motto" data-reveal style="--i:3">We create events that become part of university history</p>
@@ -999,6 +1022,7 @@ a.wb-day.today:hover{background:#6dff58}
     <video data-solo playsinline preload="none" poster="img/krug-event.jpg"></video>
     <svg class="krug-ring" viewBox="0 0 100 100" aria-hidden="true"><circle class="t" cx="50" cy="50" r="48"/><circle class="p" cx="50" cy="50" r="48"/></svg>
     <span class="krug-ico"><svg class="play" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 1.5v13l11-6.5z"/></svg><svg class="pause" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 1.5h3.5v13H3zM9.5 1.5H13v13H9.5z"/></svg></span>
+    <span class="krug-snd" aria-hidden="true"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M1.5 5.5h3L8.5 2v12l-4-3.5h-3z"/><path d="M10.5 5.5l4 5m0-5l-4 5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></span>
   </button>
   <span class="krug-label"><b>A word from the head</b><span>Video note · 1:00</span></span>
 </div>
@@ -1009,7 +1033,7 @@ a.wb-day.today:hover{background:#6dff58}
     <div class="frame"><img src="img/head-design.jpg" alt="Anastasia Khudyakova, head of the Design Department" loading="lazy" width="960" height="960"></div>
   </figure>
   <div class="ch-body">
-    <p class="ch-index" data-reveal style="--i:0"><b>04</b> / 10 · department</p>
+    <p class="ch-index" data-reveal style="--i:0"><b>04</b> / 11 · department</p>
     <h3 class="ch-name" data-reveal style="--i:1">Design Department</h3>
     <p class="ch-head" data-reveal style="--i:2">Head of department<b>Anastasia Khudyakova</b></p>
     <p class="ch-motto" data-reveal style="--i:3">Visual code: design as the language of a new generation</p>
@@ -1021,6 +1045,7 @@ a.wb-day.today:hover{background:#6dff58}
     <video data-solo playsinline preload="none" poster="img/krug-design.jpg"></video>
     <svg class="krug-ring" viewBox="0 0 100 100" aria-hidden="true"><circle class="t" cx="50" cy="50" r="48"/><circle class="p" cx="50" cy="50" r="48"/></svg>
     <span class="krug-ico"><svg class="play" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 1.5v13l11-6.5z"/></svg><svg class="pause" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 1.5h3.5v13H3zM9.5 1.5H13v13H9.5z"/></svg></span>
+    <span class="krug-snd" aria-hidden="true"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M1.5 5.5h3L8.5 2v12l-4-3.5h-3z"/><path d="M10.5 5.5l4 5m0-5l-4 5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></span>
   </button>
   <span class="krug-label"><b>A word from the head</b><span>Video note · 0:30</span></span>
 </div>
@@ -1031,7 +1056,7 @@ a.wb-day.today:hover{background:#6dff58}
     <div class="frame"><img src="img/head-docs.jpg" alt="Maria Titova, head of the Documentation" loading="lazy" width="960" height="960"></div>
   </figure>
   <div class="ch-body">
-    <p class="ch-index" data-reveal style="--i:0"><b>05</b> / 10 · department</p>
+    <p class="ch-index" data-reveal style="--i:0"><b>05</b> / 11 · department</p>
     <h3 class="ch-name" data-reveal style="--i:1">Documentation</h3>
     <p class="ch-head" data-reveal style="--i:2">Head of department<b>Maria Titova</b></p>
     <p class="ch-motto" data-reveal style="--i:3">Behind every idea, a signature</p>
@@ -1043,6 +1068,7 @@ a.wb-day.today:hover{background:#6dff58}
     <video data-solo playsinline preload="none" poster="img/krug-docs.jpg"></video>
     <svg class="krug-ring" viewBox="0 0 100 100" aria-hidden="true"><circle class="t" cx="50" cy="50" r="48"/><circle class="p" cx="50" cy="50" r="48"/></svg>
     <span class="krug-ico"><svg class="play" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 1.5v13l11-6.5z"/></svg><svg class="pause" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 1.5h3.5v13H3zM9.5 1.5H13v13H9.5z"/></svg></span>
+    <span class="krug-snd" aria-hidden="true"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M1.5 5.5h3L8.5 2v12l-4-3.5h-3z"/><path d="M10.5 5.5l4 5m0-5l-4 5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></span>
   </button>
   <span class="krug-label"><b>A word from the head</b><span>Video note · 0:48</span></span>
 </div>
@@ -1053,7 +1079,7 @@ a.wb-day.today:hover{background:#6dff58}
     <div class="frame"><img src="img/head-patriot.jpg" alt="Yuri Tosunyan, head of the Patriotic Affairs" loading="lazy" width="960" height="960"></div>
   </figure>
   <div class="ch-body">
-    <p class="ch-index" data-reveal style="--i:0"><b>06</b> / 10 · department</p>
+    <p class="ch-index" data-reveal style="--i:0"><b>06</b> / 11 · department</p>
     <h3 class="ch-name" data-reveal style="--i:1">Patriotic Affairs</h3>
     <p class="ch-head" data-reveal style="--i:2">Head of department<b>Yuri Tosunyan</b></p>
     <p class="ch-motto" data-reveal style="--i:3">Dialogue. History. Action.</p>
@@ -1065,6 +1091,7 @@ a.wb-day.today:hover{background:#6dff58}
     <video data-solo playsinline preload="none" poster="img/krug-patriot.jpg"></video>
     <svg class="krug-ring" viewBox="0 0 100 100" aria-hidden="true"><circle class="t" cx="50" cy="50" r="48"/><circle class="p" cx="50" cy="50" r="48"/></svg>
     <span class="krug-ico"><svg class="play" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 1.5v13l11-6.5z"/></svg><svg class="pause" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 1.5h3.5v13H3zM9.5 1.5H13v13H9.5z"/></svg></span>
+    <span class="krug-snd" aria-hidden="true"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M1.5 5.5h3L8.5 2v12l-4-3.5h-3z"/><path d="M10.5 5.5l4 5m0-5l-4 5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></span>
   </button>
   <span class="krug-label"><b>A word from the head</b><span>Video note · 0:41</span></span>
 </div>
@@ -1075,7 +1102,7 @@ a.wb-day.today:hover{background:#6dff58}
     <div class="frame"><img src="img/head-integration.jpg" alt="Ekaterina Barsukova, head of the Integration" loading="lazy" width="960" height="960"></div>
   </figure>
   <div class="ch-body">
-    <p class="ch-index" data-reveal style="--i:0"><b>07</b> / 10 · department</p>
+    <p class="ch-index" data-reveal style="--i:0"><b>07</b> / 11 · department</p>
     <h3 class="ch-name" data-reveal style="--i:1">Integration</h3>
     <p class="ch-head" data-reveal style="--i:2">Head of department<b>Ekaterina Barsukova</b></p>
     <p class="ch-motto" data-reveal style="--i:3">Everyone belongs here</p>
@@ -1087,6 +1114,7 @@ a.wb-day.today:hover{background:#6dff58}
     <video data-solo playsinline preload="none" poster="img/krug-integration.jpg"></video>
     <svg class="krug-ring" viewBox="0 0 100 100" aria-hidden="true"><circle class="t" cx="50" cy="50" r="48"/><circle class="p" cx="50" cy="50" r="48"/></svg>
     <span class="krug-ico"><svg class="play" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 1.5v13l11-6.5z"/></svg><svg class="pause" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 1.5h3.5v13H3zM9.5 1.5H13v13H9.5z"/></svg></span>
+    <span class="krug-snd" aria-hidden="true"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M1.5 5.5h3L8.5 2v12l-4-3.5h-3z"/><path d="M10.5 5.5l4 5m0-5l-4 5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></span>
   </button>
   <span class="krug-label"><b>A word from the head</b><span>Video note · 0:35</span></span>
 </div>
@@ -1097,7 +1125,7 @@ a.wb-day.today:hover{background:#6dff58}
     <div class="frame"><img src="img/head-internal.jpg" alt="Olesya Rudakova, head of the Internal Relations" loading="lazy" width="960" height="960"></div>
   </figure>
   <div class="ch-body">
-    <p class="ch-index" data-reveal style="--i:0"><b>08</b> / 10 · department</p>
+    <p class="ch-index" data-reveal style="--i:0"><b>08</b> / 11 · department</p>
     <h3 class="ch-name" data-reveal style="--i:1">Internal Relations</h3>
     <p class="ch-head" data-reveal style="--i:2">Head of department<b>Olesya Rudakova</b></p>
     <p class="ch-motto" data-reveal style="--i:3">Building trust within the MGIMO family</p>
@@ -1109,6 +1137,7 @@ a.wb-day.today:hover{background:#6dff58}
     <video data-solo playsinline preload="none" poster="img/krug-internal.jpg"></video>
     <svg class="krug-ring" viewBox="0 0 100 100" aria-hidden="true"><circle class="t" cx="50" cy="50" r="48"/><circle class="p" cx="50" cy="50" r="48"/></svg>
     <span class="krug-ico"><svg class="play" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 1.5v13l11-6.5z"/></svg><svg class="pause" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 1.5h3.5v13H3zM9.5 1.5H13v13H9.5z"/></svg></span>
+    <span class="krug-snd" aria-hidden="true"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M1.5 5.5h3L8.5 2v12l-4-3.5h-3z"/><path d="M10.5 5.5l4 5m0-5l-4 5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></span>
   </button>
   <span class="krug-label"><b>A word from the head</b><span>Video note · 0:52</span></span>
 </div>
@@ -1119,7 +1148,7 @@ a.wb-day.today:hover{background:#6dff58}
     <div class="frame"><img src="img/head-resources.jpg" alt="Alexey Abramov, head of the Resource Development" loading="lazy" width="960" height="960"></div>
   </figure>
   <div class="ch-body">
-    <p class="ch-index" data-reveal style="--i:0"><b>09</b> / 10 · department</p>
+    <p class="ch-index" data-reveal style="--i:0"><b>09</b> / 11 · department</p>
     <h3 class="ch-name" data-reveal style="--i:1">Resource Development</h3>
     <p class="ch-head" data-reveal style="--i:2">Head of department<b>Alexey Abramov</b></p>
     <p class="ch-motto" data-reveal style="--i:3">Making the possible real</p>
@@ -1131,6 +1160,7 @@ a.wb-day.today:hover{background:#6dff58}
     <video data-solo playsinline preload="none" poster="img/krug-resources.jpg"></video>
     <svg class="krug-ring" viewBox="0 0 100 100" aria-hidden="true"><circle class="t" cx="50" cy="50" r="48"/><circle class="p" cx="50" cy="50" r="48"/></svg>
     <span class="krug-ico"><svg class="play" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 1.5v13l11-6.5z"/></svg><svg class="pause" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 1.5h3.5v13H3zM9.5 1.5H13v13H9.5z"/></svg></span>
+    <span class="krug-snd" aria-hidden="true"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M1.5 5.5h3L8.5 2v12l-4-3.5h-3z"/><path d="M10.5 5.5l4 5m0-5l-4 5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></span>
   </button>
   <span class="krug-label"><b>A word from the head</b><span>Video note · 0:56</span></span>
 </div>
@@ -1141,7 +1171,7 @@ a.wb-day.today:hover{background:#6dff58}
     <div class="frame"><img src="img/head-external.jpg" alt="Anay Nasrutdinova, head of the External Relations" loading="lazy" width="960" height="960"></div>
   </figure>
   <div class="ch-body">
-    <p class="ch-index" data-reveal style="--i:0"><b>10</b> / 10 · department</p>
+    <p class="ch-index" data-reveal style="--i:0"><b>10</b> / 11 · department</p>
     <h3 class="ch-name" data-reveal style="--i:1">External Relations</h3>
     <p class="ch-head" data-reveal style="--i:2">Head of department<b>Anay Nasrutdinova</b></p>
     <p class="ch-motto" data-reveal style="--i:3">The Student Union&#x27;s voice in the outside world</p>
@@ -1153,8 +1183,32 @@ a.wb-day.today:hover{background:#6dff58}
     <video data-solo playsinline preload="none" poster="img/krug-external.jpg"></video>
     <svg class="krug-ring" viewBox="0 0 100 100" aria-hidden="true"><circle class="t" cx="50" cy="50" r="48"/><circle class="p" cx="50" cy="50" r="48"/></svg>
     <span class="krug-ico"><svg class="play" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 1.5v13l11-6.5z"/></svg><svg class="pause" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 1.5h3.5v13H3zM9.5 1.5H13v13H9.5z"/></svg></span>
+    <span class="krug-snd" aria-hidden="true"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M1.5 5.5h3L8.5 2v12l-4-3.5h-3z"/><path d="M10.5 5.5l4 5m0-5l-4 5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></span>
   </button>
   <span class="krug-label"><b>A word from the head</b><span>Video note · 0:35</span></span>
+</div>
+  </div>
+</article>
+<article class="ch wrap flip" id="da" data-hue="neon" data-n="11" data-label="Dip. Academy">
+  <figure class="ch-cover" data-reveal>
+    <div class="frame"><img src="img/head-da.jpg" alt="Anastasia Zherebkova, head of the Diplomatic Academy Youth Movement" loading="lazy" width="960" height="960"></div>
+  </figure>
+  <div class="ch-body">
+    <p class="ch-index" data-reveal style="--i:0"><b>11</b> / 11 · department</p>
+    <h3 class="ch-name" data-reveal style="--i:1">Diplomatic Academy Youth Movement</h3>
+    <p class="ch-head" data-reveal style="--i:2">Head of department<b>Anastasia Zherebkova</b></p>
+    <p class="ch-motto" data-reveal style="--i:3">One family, one cause</p>
+    <p class="ch-lead" data-reveal style="--i:4">The Diplomatic Academy has become part of MGIMO, so these are no longer two universities that cooperate but one big team. The Diplomatic Academy Youth Movement works inside the Student Union on a par with the other departments.</p>
+    <h4 class="ch-sub" data-reveal style="--i:5">What the department does</h4><ul class="ch-do" data-reveal style="--i:5"><li>Integration — joining the work of the MGIMO Student Union, taking part in its events and initiatives</li><li>Continuity — keeping what was valuable at the Diplomatic Academy and bringing it into the common pool</li><li>A common cause — working together on projects that matter to the whole university</li></ul><p class="ch-note" data-reveal style="--i:6">In 2025 Diplomatic Academy students went to the Autumn Starostat and took the Battle of the Faculties stage for the first time.</p>
+    <ul class="traits" data-reveal style="--i:6" aria-label="Qualities of the head"><li>Integration</li><li>Continuity</li><li>A common cause</li></ul>
+    <div class="krug" data-src="media/krug-da.mp4" data-reveal style="--i:7">
+  <button class="krug-btn" type="button" aria-pressed="false" aria-label="Video message: Anastasia Zherebkova, 0:54">
+    <video data-solo playsinline preload="none" poster="img/krug-da.jpg"></video>
+    <svg class="krug-ring" viewBox="0 0 100 100" aria-hidden="true"><circle class="t" cx="50" cy="50" r="48"/><circle class="p" cx="50" cy="50" r="48"/></svg>
+    <span class="krug-ico"><svg class="play" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 1.5v13l11-6.5z"/></svg><svg class="pause" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 1.5h3.5v13H3zM9.5 1.5H13v13H9.5z"/></svg></span>
+    <span class="krug-snd" aria-hidden="true"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M1.5 5.5h3L8.5 2v12l-4-3.5h-3z"/><path d="M10.5 5.5l4 5m0-5l-4 5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></span>
+  </button>
+  <span class="krug-label"><b>A word from the head</b><span>Video note · 0:54</span></span>
 </div>
   </div>
 </article>
@@ -1183,6 +1237,7 @@ a.wb-day.today:hover{background:#6dff58}
   
   <button class="vid-cover" type="button" aria-label="Watch video: Welcome Day from the inside, 0:45">
     <span class="play"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 1.5v13l11-6.5z"/></svg></span>
+    <span class="snd"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M1.5 5.5h3L8.5 2v12l-4-3.5h-3z"/><path d="M10.5 5.5l4 5m0-5l-4 5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>Turn on sound</span>
     <b>Welcome Day from the inside</b><span>Video · 0:45</span>
   </button>
 </div><button class="ph side" type="button" aria-label="Open photo: The Student Union team at Welcome Day"><img src="img/p6672.jpg" alt="The Student Union team at Welcome Day" loading="lazy"></button><button class="ph side" type="button" aria-label="Open photo: The Student Union tent at the MGIMO stadium"><img src="img/p10367.jpg" alt="The Student Union tent at the MGIMO stadium" loading="lazy"></button><button class="ph below" type="button" aria-label="Open photo: First-years with faculty flags"><img src="img/p8758.jpg" alt="First-years with faculty flags" loading="lazy"></button><button class="ph below" type="button" aria-label="Open photo: Student Union activists&#x27; flash mob"><img src="img/p6673.jpg" alt="Student Union activists&#x27; flash mob" loading="lazy"></button></div>
@@ -1204,6 +1259,7 @@ a.wb-day.today:hover{background:#6dff58}
   
   <button class="vid-cover" type="button" aria-label="Watch video: STUDWAY teaser, 0:11">
     <span class="play"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 1.5v13l11-6.5z"/></svg></span>
+    <span class="snd"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M1.5 5.5h3L8.5 2v12l-4-3.5h-3z"/><path d="M10.5 5.5l4 5m0-5l-4 5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>Turn on sound</span>
     <b>STUDWAY teaser</b><span>Video · 0:11</span>
   </button>
 </div><button class="ph" type="button" aria-label="Open photo: First-years on the main stage after the quest"><img src="img/p10078.jpg" alt="First-years on the main stage after the quest" loading="lazy"></button><button class="ph" type="button" aria-label="Open photo: Quest stations in the hall"><img src="img/p10071.jpg" alt="Quest stations in the hall" loading="lazy"></button><button class="ph" type="button" aria-label="Open photo: A team at one of the stations"><img src="img/p10073.jpg" alt="A team at one of the stations" loading="lazy"></button><button class="ph" type="button" aria-label="Open photo: STUDWAY photo zone"><img src="img/p10076.jpg" alt="STUDWAY photo zone" loading="lazy"></button></div>
@@ -1225,6 +1281,7 @@ a.wb-day.today:hover{background:#6dff58}
   <div class="parts" role="group" aria-label="Film parts"><button type="button" data-i="0" aria-current="true">Part 1</button><button type="button" data-i="1">Part 2</button><button type="button" data-i="2">Part 3</button></div>
   <button class="vid-cover" type="button" aria-label="Watch video: Battle of the Faculties: how it went, 3:27">
     <span class="play"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 1.5v13l11-6.5z"/></svg></span>
+    <span class="snd"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M1.5 5.5h3L8.5 2v12l-4-3.5h-3z"/><path d="M10.5 5.5l4 5m0-5l-4 5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>Turn on sound</span>
     <b>Battle of the Faculties: how it went</b><span>Video · 3:27</span>
   </button>
 </div><button class="ph" type="button" aria-label="Open photo: Faculty teams on the Battle stage"><img src="img/p9167.jpg" alt="Faculty teams on the Battle stage" loading="lazy"></button><button class="ph" type="button" aria-label="Open photo: A faculty&#x27;s dance number"><img src="img/p9172.jpg" alt="A faculty&#x27;s dance number" loading="lazy"></button><button class="ph" type="button" aria-label="Open photo: Presenting the Rector&#x27;s Cup"><img src="img/p9169.jpg" alt="Presenting the Rector&#x27;s Cup" loading="lazy"></button><button class="ph" type="button" aria-label="Open photo: A performance with the Russian flag"><img src="img/p9185.jpg" alt="A performance with the Russian flag" loading="lazy"></button></div>
@@ -1246,6 +1303,7 @@ a.wb-day.today:hover{background:#6dff58}
   
   <button class="vid-cover" type="button" aria-label="Watch video: A day at Starostat, 0:30">
     <span class="play"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 1.5v13l11-6.5z"/></svg></span>
+    <span class="snd"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M1.5 5.5h3L8.5 2v12l-4-3.5h-3z"/><path d="M10.5 5.5l4 5m0-5l-4 5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>Turn on sound</span>
     <b>A day at Starostat</b><span>Video · 0:30</span>
   </button>
 </div><button class="ph side" type="button" aria-label="Open photo: Spring Starostat participants"><img src="img/p9628.jpg" alt="Spring Starostat participants" loading="lazy"></button><button class="ph side" type="button" aria-label="Open photo: Starostat concert lit by phones"><img src="img/p9630.jpg" alt="Starostat concert lit by phones" loading="lazy"></button><button class="ph below" type="button" aria-label="Open photo: Autumn Starostat at Ethnomir"><img src="img/p8868.jpg" alt="Autumn Starostat at Ethnomir" loading="lazy"></button><button class="ph below" type="button" aria-label="Open photo: The team in MGIMO Team uniforms"><img src="img/p9635.jpg" alt="The team in MGIMO Team uniforms" loading="lazy"></button></div>
@@ -1267,6 +1325,7 @@ a.wb-day.today:hover{background:#6dff58}
   
   <button class="vid-cover" type="button" aria-label="Watch video: MGIMO Exchange: Different but Together, 1:27">
     <span class="play"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 1.5v13l11-6.5z"/></svg></span>
+    <span class="snd"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M1.5 5.5h3L8.5 2v12l-4-3.5h-3z"/><path d="M10.5 5.5l4 5m0-5l-4 5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>Turn on sound</span>
     <b>MGIMO Exchange: Different but Together</b><span>Video · 1:27</span>
   </button>
 </div><button class="ph side" type="button" aria-label="Open photo: MGIMO Exchange participants"><img src="img/p7874.jpg" alt="MGIMO Exchange participants" loading="lazy"></button><button class="ph side" type="button" aria-label="Open photo: Discovering Russian traditions"><img src="img/p7879.jpg" alt="Discovering Russian traditions" loading="lazy"></button><button class="ph below" type="button" aria-label="Open photo: A team number at the concert"><img src="img/p4250.jpg" alt="A team number at the concert" loading="lazy"></button><button class="ph below" type="button" aria-label="Open photo: A workshop at Ethnomir"><img src="img/p7882.jpg" alt="A workshop at Ethnomir" loading="lazy"></button></div>
@@ -1319,6 +1378,7 @@ a.wb-day.today:hover{background:#6dff58}
   
   <button class="vid-cover" type="button" aria-label="Watch video: It wasn&#x27;t just a year. It was our year., 0:22">
     <span class="play"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 1.5v13l11-6.5z"/></svg></span>
+    <span class="snd"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M1.5 5.5h3L8.5 2v12l-4-3.5h-3z"/><path d="M10.5 5.5l4 5m0-5l-4 5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>Turn on sound</span>
     <b>It wasn&#x27;t just a year. It was our year.</b><span>Video · 0:22</span>
   </button>
 </div>
@@ -1347,7 +1407,7 @@ a.wb-day.today:hover{background:#6dff58}
 </section>
 </main>
 
-<aside class="tcount" aria-hidden="true"><span class="n"><b>00</b></span><span class="of">/ 10</span><span class="ticks"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span><span class="nm"></span></aside>
+<aside class="tcount" aria-hidden="true"><span class="n"><b>00</b></span><span class="of">/ 11</span><span class="ticks"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span><span class="nm"></span></aside>
 
 <div class="lb" id="lb" hidden role="dialog" aria-modal="true" aria-label="Photo">
   <button class="lb-close" type="button" aria-label="Close">×</button>
@@ -1356,7 +1416,7 @@ a.wb-day.today:hover{background:#6dff58}
 
 <script>
 (function(){
-  var I18N={"watch": "Watch", "open": "Open", "listen": "Listen", "copied": "Copied", "sel": "Selected — press Ctrl+C", "scr": "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789#%+/<>"};
+  var I18N={"watch": "Watch", "open": "Open", "listen": "Listen", "copied": "Copied", "tapSound": "Tap to turn on sound", "soundOn": "Turn on sound", "sound": "Sound", "sel": "Selected — press Ctrl+C", "scr": "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789#%+/<>"};
   var root=document.documentElement;
   var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
   var mo=!reduce;
@@ -1564,6 +1624,7 @@ a.wb-day.today:hover{background:#6dff58}
     document.addEventListener('mouseover',function(e){
       var t=e.target;if(!t.closest){return}
       if(t.closest('.lb')||t.closest('.mv.on video'))return setMode('off');
+      if(t.closest('.mv.auto .vid-cover')||t.closest('.krug.muted .krug-btn'))return setMode('media',I18N.sound);
       if(t.closest('.vid-cover'))return setMode('media',I18N.watch);
       if(t.closest('.krug-btn'))return setMode('media',I18N.listen);
       if(t.closest('.ph'))return setMode('media',I18N.open);
@@ -1583,44 +1644,78 @@ a.wb-day.today:hover{background:#6dff58}
     }
   }
 
-  // одновременно звучит только одно видео
+  // видео: само включается без звука, когда его видно; звук — по нажатию
   var players=[].slice.call(document.querySelectorAll('video[data-solo]'));
-  function pauseOthers(v){players.forEach(function(o){if(o!==v&&!o.paused)o.pause()})}
-  players.forEach(function(v){v.addEventListener('play',function(){pauseOthers(v)})});
+  var conn=navigator.connection,saveData=!!(conn&&(conn.saveData||/(^|-)2g|3g/.test(conn.effectiveType||'')));
+  var autoOK=!reduce&&!saveData&&('IntersectionObserver' in window);
+  function playV(v){var pr=v.play();if(pr&&pr.catch)pr.catch(function(){if(v._sync)v._sync()});return pr}
+  function quiet(v){v.muted=true;v.setAttribute('muted','')}
+  // звук одновременно только у одного видео: остальные продолжают без звука
+  function withSound(v){players.forEach(function(o){if(o!==v&&!o.muted){quiet(o);if(o._sync)o._sync()}});v.removeAttribute('muted');v.muted=false;v._user=false}
+  if('IntersectionObserver' in window){
+    var vio=new IntersectionObserver(function(es){es.forEach(function(en){
+      var v=en.target,r=en.intersectionRatio;
+      if(r<0.2){
+        // ушло с экрана — пауза; вернётся снова без звука
+        if(document.fullscreenElement===v||v.webkitDisplayingFullscreen)return;
+        if(!v.paused)v.pause();
+        v._user=false;if(v._leave)v._leave();
+      }else if(r>=0.5&&autoOK&&v.paused&&!v._user&&v._auto){v._auto()}
+    })},{threshold:[0,0.2,0.5]});
+    players.forEach(function(v){vio.observe(v)});
+  }
 
   // кружки глав
   [].forEach.call(document.querySelectorAll('.krug'),function(k){
     var btn=k.querySelector('.krug-btn'),v=k.querySelector('video'),p=k.querySelector('.krug-ring .p');
+    var hint=k.querySelector('.krug-label span'),base=hint.textContent,aria=btn.getAttribute('aria-label');
     var C=2*Math.PI*48;p.style.strokeDasharray=C;p.style.strokeDashoffset=C;
+    function load(){if(!v.getAttribute('src'))v.setAttribute('src',k.getAttribute('data-src'))}
+    function sync(){
+      var on=!v.paused,m=on&&v.muted;
+      k.classList.toggle('playing',on&&!v.muted);k.classList.toggle('muted',m);
+      btn.setAttribute('aria-pressed',on&&!v.muted?'true':'false');
+      hint.textContent=m?I18N.tapSound:base;
+      btn.setAttribute('aria-label',m?I18N.tapSound+': '+aria:aria);
+    }
+    v._sync=sync;
+    v._auto=function(){load();quiet(v);v.loop=true;playV(v)};
+    v._leave=function(){quiet(v);sync()};
     btn.addEventListener('click',function(){
-      if(!v.getAttribute('src')){v.setAttribute('src',k.getAttribute('data-src'))}
-      if(v.paused){var pr=v.play();if(pr&&pr.catch)pr.catch(function(){})}else{v.pause()}
+      load();
+      if(!v.paused&&!v.muted){v.pause();v._user=true;return}
+      if(v.muted||v.currentTime===0){if(!v.paused||v.muted)v.currentTime=0;withSound(v);v.loop=false}
+      playV(v);
     });
-    v.addEventListener('play',function(){k.classList.add('playing');btn.setAttribute('aria-pressed','true')});
-    v.addEventListener('pause',function(){k.classList.remove('playing');btn.setAttribute('aria-pressed','false')});
+    ['play','pause','volumechange'].forEach(function(t){v.addEventListener(t,sync)});
     v.addEventListener('timeupdate',function(){if(v.duration)p.style.strokeDashoffset=C*(1-v.currentTime/v.duration)});
-    v.addEventListener('ended',function(){v.currentTime=0;p.style.strokeDashoffset=C});
+    v.addEventListener('ended',function(){v.currentTime=0;p.style.strokeDashoffset=C;v._user=true;sync()});
   });
 
-  // видео проектов: обложка → плеер со звуком
+  // видео проектов и финала: превью без звука → по нажатию звук и обычный плеер
   [].forEach.call(document.querySelectorAll('.mv'),function(box){
     var cover=box.querySelector('.vid-cover'),v=box.querySelector('video');
     if(!cover)return;
-    cover.addEventListener('click',function(){
-      if(!v.getAttribute('src'))v.setAttribute('src',box.getAttribute('data-src'));
-      box.classList.add('on');v.controls=true;
-      var pr=v.play();if(pr&&pr.catch)pr.catch(function(){});
-      v.focus();
-    });
-  });
-
-  // длинный фильм разбит на части: играют подряд, как одно видео
-  [].forEach.call(document.querySelectorAll('.mv[data-parts]'),function(box){
-    var parts=box.getAttribute('data-parts').split('|'),v=box.querySelector('video'),btns=[].slice.call(box.querySelectorAll('.parts button')),cur=0;
+    var parts=box.getAttribute('data-parts'),cur=0,aria=cover.getAttribute('aria-label');
+    parts=parts?parts.split('|'):null;
+    var btns=[].slice.call(box.querySelectorAll('.parts button'));
     function mark(){btns.forEach(function(b,i){if(i===cur)b.setAttribute('aria-current','true');else b.removeAttribute('aria-current')})}
-    function load(i){cur=i;v.setAttribute('src',parts[i]);mark();var pr=v.play();if(pr&&pr.catch)pr.catch(function(){})}
-    v.addEventListener('ended',function(){if(cur<parts.length-1)load(cur+1)});
-    btns.forEach(function(b,i){b.addEventListener('click',function(){box.classList.add('on');v.controls=true;load(i)})});
+    function load(){if(!v.getAttribute('src'))v.setAttribute('src',parts?parts[cur]:box.getAttribute('data-src'))}
+    function part(i){cur=i;v.setAttribute('src',parts[i]);mark()}
+    function sync(){
+      var m=!v.paused&&v.muted&&!box.classList.contains('on');
+      box.classList.toggle('auto',m);
+      cover.setAttribute('aria-label',m?I18N.soundOn+': '+aria:aria);
+    }
+    v._sync=sync;
+    v._auto=function(){load();quiet(v);v.loop=!parts;playV(v)};
+    v._leave=function(){box.classList.remove('on');v.controls=false;quiet(v);sync()};
+    function open(){box.classList.add('on');v.controls=true;withSound(v);v.loop=false;sync()}
+    cover.addEventListener('click',function(){load();open();playV(v);v.focus()});
+    btns.forEach(function(b,i){b.addEventListener('click',function(){open();part(i);playV(v)})});
+    if(parts)v.addEventListener('ended',function(){if(cur<parts.length-1){part(cur+1);playV(v)}else if(v.muted){part(0);playV(v)}});
+    ['play','pause','volumechange'].forEach(function(t){v.addEventListener(t,sync)});
+    v.addEventListener('pause',function(){if(box.classList.contains('on')&&!v.ended&&document.visibilityState==='visible')v._user=true});
   });
 
   // фото на весь экран
@@ -2410,7 +2505,7 @@ var DGV = (function () {
 (function(){var box=document.getElementById('dgt-list');if(!box||!window.fetch)return;
 fetch('digest.json',{cache:'no-cache'}).then(function(r){return r.ok?r.json():null}).then(function(d){if(d)DGV.teaser(box,DG.normDigest(d),{lang:'en',by:'by'},'digest-en.html')}).catch(function(){});})();
 
-var PET_PAL={"K": "#262b52", "H": "#b4bbe4", "L": "#d3d8f5", "G": "#959ecf", "D": "#5b6399", "N": "#00ac1d", "n": "#45ff2e", "P": "#7b5cd6", "E": "#ff7a1a", "B": "#3a3f66", "W": "#f1f3ff", "F": "#ff6f91", "Z": "#f1f3ff", "R": "#ff4724", "Q": "#d6e2ff", "q": "#ffffff", "C": "#6f3f24", "M": "#c8925c", "S": "#00ac1d", "Y": "#ffd23f", "y": "#e0a800"};var PET_FR={"stand": "........................|...............KKKK.....|..............KHHHHK....|.............KHHHHHHK...|.............KHHHHEHKWB.|.............KHHHHHHKB..|.............KNNHHHHK...|............KNnNNNNHK...|...........KNNnNNPNNK...|.......KKKKGNNNNPPNNNK..|.....KKLLLLLGNNPPNNLLK..|...KKLLGGGGLLLGPPLLLLLK.|.KKDDGGDDDDGGLLGLLLLLLK.|KDDDDGGGGGDDDDGLLLLLLLK.|KDDDKKGGGGGGGGLLLLLLLLK.|.KKK..KGGGGGGGGLLLLLLK..|.......KKGGGGGGLLLLLK...|.........KKKKKKKKKKK....|............F..F........|...........FF.FF........", "walkA": "........................|...............KKKK.....|..............KHHHHK....|.............KHHHHHHK...|.............KHHHHEHKWB.|.............KHHHHHHKB..|............KNNHHHHK....|...........KNnNNNNK.....|..........KNNnNNPNNK....|...KKKKKKKGNNNNPPNNK....|..KLLLLLLLGGNNPPNLLLK...|.KLLGGGGGLLGGGGGLLLLLK..|KDDGGDDDDGGGLGGGLLLLLK..|KDDDGGGGDDDDGGLLLLLLLK..|.KKDDGGGGGGGGLLLLLLLK...|...KKKKKGGGGGGLLLLLK....|........KKKKKKKKKKK.....|..........F....F........|.........FF....FF.......|........................", "walkB": "........................|.............KKKK.......|............KHHHHK......|...........KHHHHHHK.....|...........KHHHHEHKWB...|...........KHHHHHHKB....|...........KNNHHHHK.....|...........KNnNNNNK.....|..........KNNnNNPNNK....|...KKKKKKKGNNNNPPNNK....|..KLLLLLLLGGNNPPNLLLK...|.KLLGGGGGLLGGGGGLLLLLK..|KDDGGDDDDGGGLGGGLLLLLK..|KDDDGGGGDDDDGGLLLLLLLK..|.KKDDGGGGGGGGLLLLLLLK...|...KKKKKGGGGGGLLLLLK....|........KKKKKKKKKKK.....|............FF..........|...........FFFF.........|........................", "peck": "........................|........................|........................|........................|........................|........................|........................|........................|........................|.......KKKKK............|.....KKLLLLLGKK.........|...KKLLGGGGLLGNNK.......|.KKDDGGDDDDGGLNnNK......|KDDDDGGGGGDDDDGNnNK.....|KDDDKKGGGGGGGGLNNPNKK...|.KKK..KGGGGGGGGLLNKHHK..|.......KKGGGGGGLLKHHHHK.|.........KKKKKKKKKHHEHK.|............F..F..KHHKWB|...........FF.FF...KKKB.", "flyA": ".......KK...............|......KLLK..............|.....KLGGLK.....KKKK....|....KLGDGGLK...KHHHHK...|....KLGDGGGLK.KHHHHHHK..|.....KLGDGGLKKHHHHHEHKWB|......KLGGGGLKHHHHHHHKB.|.......KLGGGLKNNHHHHHK..|..KKKKKKKLGGLNnNNNNNK...|KKLLLLLLLKLLGNNnNPNNK...|KDDGGGGGLLKGGNNPPNNLK...|KDDDGGGGGGLLGGPPNLLLLK..|.KKDDGGGGGGGGGLLLLLLK...|...KKKKGGGGGGGLLLLLK....|.......KKKKKKKKKKKK.....|.........FF.FF..........|........................|........................|........................|........................", "flyB": "........................|........................|................KKKK....|...............KHHHHK...|..............KHHHHHHK..|..............KHHHHEHKWB|..............KHHHHHHKB.|..............KNNHHHHK..|..KKKKKKKKKKKKNnNNNNK...|KKLLLLLLLLGGGNNnNPNNK...|KDDGGGGGLLGGGNNPPNNLK...|KDDDGGGGGLKKKGPPNLLLLK..|.KKDDGGGKLLGGKLLLLLLK...|...KKKKKLGGDGKLLLLLK....|.......KLGGDGLKKKKKK....|......KLGGDGLK.FF.FF....|......KLLGDLK...........|.......KLLK.............|........KK..............|........................", "sleep": "........................|........................|........................|........................|........................|........................|........................|..............KKKK......|.............KHHHHK.....|............KHHHHHHK....|...........KHHHKKKHK....|.......KKKKKNNHHHHHHKWB.|.....KKLLLLGNNnNNHHHKB..|...KKLLGGGGLNNnNPNNNK...|.KKDDGGDDDDGNNPPNLLLLK..|KDDDDGGGGGDDDGPPLLLLLK..|KDDDKKGGGGGGGGLLLLLLLK..|.KKK..KGGGGGGGGLLLLLK...|.......KKKKKKKKKKKKK....|........................", "blink": "........................|...............KKKK.....|..............KHHHHK....|.............KHHHHHHK...|.............KHHHHKHKWB.|.............KHHHHHHKB..|.............KNNHHHHK...|............KNnNNNNHK...|...........KNNnNNPNNK...|.......KKKKGNNNNPPNNNK..|.....KKLLLLLGNNPPNNLLK..|...KKLLGGGGLLLGPPLLLLLK.|.KKDDGGDDDDGGLLGLLLLLLK.|KDDDDGGGGGDDDDGLLLLLLLK.|KDDDKKGGGGGGGGLLLLLLLLK.|.KKK..KGGGGGGGGLLLLLLK..|.......KKGGGGGGLLLLLK...|.........KKKKKKKKKKK....|............F..F........|...........FF.FF........", "talk": "........................|...............KKKK.....|..............KHHHHK....|.............KHHHHHHK...|.............KHHHHEHKWB.|.............KHHHHHH.B..|.............KNNHHHHB...|............KNnNNNNHK...|...........KNNnNNPNNK...|.......KKKKGNNNNPPNNNK..|.....KKLLLLLGNNPPNNLLK..|...KKLLGGGGLLLGPPLLLLLK.|.KKDDGGDDDDGGLLGLLLLLLK.|KDDDDGGGGGDDDDGLLLLLLLK.|KDDDKKGGGGGGGGLLLLLLLLK.|.KKK..KGGGGGGGGLLLLLLK..|.......KKGGGGGGLLLLLK...|.........KKKKKKKKKKK....|............F..F........|...........FF.FF........", "env": "KKKKKKKK|KZZZZZZK|KKZZZZKK|KZKRRKZK|KZZRRZZK|KKKKKKKK", "seed": ".KK.|KGGK|.KK.", "heart": ".KK.KK.|KRRKRRK|KRRRRRK|.KRRRK.|..KRK..|...K...", "cheese": "....KK.|..KKYYK|KKYYyYK|KYyYYYK|KYYYYyK|KKKKKKK", "cup0": "SS......|.SS.....|..SS....|...S....|...S....|Q..S...Q|Qq.S...Q|Qq.S...Q|Qq.S...Q|Q..S...Q|Q..S...Q|Q..S...Q|Q..S...Q|Q..S...Q|Q......Q|QQQQQQQQ", "cup1": "SS......|.SS.....|..SS....|...S....|...S....|Q..S...Q|Qq.S...Q|Qq.S...Q|Qq.S...Q|Q..S...Q|Q..S...Q|Q..S...Q|QMMSMMMQ|QCCSCCCQ|QCCCCCCQ|QQQQQQQQ", "cup1s": "CC......|.CC.....|..CC....|...C....|...C....|Q..C...Q|Qq.C...Q|Qq.C...Q|Qq.C...Q|Q..C...Q|Q..C...Q|Q..C...Q|QMMSMMMQ|QCCSCCCQ|QCCCCCCQ|QQQQQQQQ", "cup2": "SS......|.SS.....|..SS....|...S....|...S....|Q..S...Q|Qq.S...Q|Qq.S...Q|Qq.S...Q|QMMSMMMQ|QCCSCCCQ|QCCSCCCQ|QCCSCCCQ|QCCSCCCQ|QCCCCCCQ|QQQQQQQQ", "cup2s": "CC......|.CC.....|..CC....|...C....|...C....|Q..C...Q|Qq.C...Q|Qq.C...Q|Qq.C...Q|QMMSMMMQ|QCCSCCCQ|QCCSCCCQ|QCCSCCCQ|QCCSCCCQ|QCCCCCCQ|QQQQQQQQ", "cup3": "SS......|.SS.....|..SS....|...S....|...S....|Q..S...Q|QMMSMMMQ|QCCSCCCQ|QCCSCCCQ|QCCSCCCQ|QCCSCCCQ|QCCSCCCQ|QCCSCCCQ|QCCSCCCQ|QCCCCCCQ|QQQQQQQQ", "cup3s": "CC......|.CC.....|..CC....|...C....|...C....|Q..C...Q|QMMSMMMQ|QCCSCCCQ|QCCSCCCQ|QCCSCCCQ|QCCSCCCQ|QCCSCCCQ|QCCSCCCQ|QCCSCCCQ|QCCCCCCQ|QQQQQQQQ"};var PET_L={"lang": "en", "name": "Dimusya", "aria": "Dimusya the pigeon — talk", "close": "Close", "envAria": "Mail from Dimusya — open", "call": "Bring Dimusya the pigeon back", "uncall": "Hide Dimusya the pigeon", "digestHref": "digest-en.html", "hello": "Hi, Dimusya!", "more": "Another fact", "feed": "Feed", "hide": "Hide", "open": "Open", "openDigest": "Open the digest", "details": "Details", "register": "Register", "greetFirst": "Hi! I'm Dimusya, the Student Union's pigeon extraordinary and plenipotentiary. I deliver the mail: event reminders and stories of how it all began.", "greetBack": "Welcome back! I missed you. A little. Pigeons are reserved.", "morning": ["Good morning! I've had breakfast already: yoghurt and a mug of hot water. All according to protocol.", "Mornings at MGIMO start with the digest. And seeds."], "day": ["A break between classes is just enough to check the digest.", "Lunchtime is for negotiations. And crumbs."], "evening": ["Evenings are when MGIMO gets interesting: clubs, talks, games.", "Good evening! Time to pick where to go this week."], "night": ["It's the middle of the night. Even ambassadors are asleep. Fine — if you're up, so am I."], "wake": ["Huh? I'm not asleep. I'm analysing the international situation.", "Oops, dozed off for a minute. How may I help?"], "wakeNight": "It's night… Fine, if you're not sleeping, neither am I.", "poke": "Hey! I'm a pigeon, not a lift button.", "bye": "Flying off. You can call me back at the very bottom of the page.", "back": "I'm back! Did you miss me?", "mail": "You've got mail!", "soonIn": "In {in}: {title}{place}. It's on your “I'm going” list.", "todayAt": "Today at {time}: {title}{place}. It's on your “I'm going” list.", "todayAll": "Today: {title}. It's on your “I'm going” list.", "tomorrowAt": "Tomorrow{time}: {title}. Don't forget!", "regClosing": "Registration for {title} closes {when}. Will you make it?", "today": "today", "tomorrow": "tomorrow", "todayCount": "{n} at MGIMO today. The next one is at {time}: {title}.", "todayCountNoTime": "{n} at MGIMO today. It's all in the digest.", "newDigest": "A fresh digest for {range} is out! I've read it already.", "newDigestHere": "A fresh issue for {range}! Press “I'm going” on what you like — I'll remind you if you drop by that day.", "goingAdded": ["Added to “Mine”. If you visit the site that day, I'll remind you.", "Great choice. I'd go too, but they don't let me into classrooms.", "Entered into the protocol. I'll remind you when it's time."], "goingRemoved": ["Crossed out. No offence taken.", "Removed from “Mine”. It happens."], "share": "Link copied. Pigeon post is taking the day off.", "calendar": "Into the calendar — very wise. I write everything down too.", "subscribed": "A subscription is reliable: events will fly to you on their own. Almost like me.", "filtered": "Filtering. Pigeons like order too.", "searchNone": "Nothing found. And I can find even crumbs!", "feedThanks": ["Thank you! Seeds are the best currency.", "Yum. Very diplomatic of you.", "Crumbs accepted. Talks were held in a warm and friendly atmosphere.", "Thank you! Though for breakfast I do prefer yoghurt and a mug of hot water."], "feedCount": "That's treat number {n} from you. Practically diplomatic recognition.", "flock": "It's a delegation! They've flown in for talks.", "press": ["Official statement: we have the best press office there is. Pigeons carried the news for centuries — we know what we're talking about.", "I officially declare: the Student Union has the best press office. As a hereditary carrier pigeon, I confirm it. The news is verified, the source is reliable.", "The press office writes so well that even pigeons read it. Personally verified."], "coffeeStart": "Insider info from the press office: the head of the department is crazy about cheese and coffee. The cheese is sacred, I won't touch it. But the coffee…", "coffeeEnd": "That hits the spot! Now I see where the press office gets all its energy. I left the cheese for the head of the department.", "min": ["minute", "minutes", "minutes"], "hours": "h", "mins": "min", "events": ["event", "events", "events"], "sections": {"chair": "The Student Union's chair. Let's say hello politely!", "team": "Ten departments, each irreplaceable. I'm in charge of pigeons, for instance.", "welcome": "Welcome Day is a first-year's first big day. Pigeons don't get one, sadly.", "studway": "STUDWAY is a quest to get to know the university. I'd do it, but they don't let me into classrooms.", "bitva": "The Battle of the Faculties happens every autumn. Which faculty are you rooting for?", "starostat": "Starostat is where it all began, back in autumn 2003.", "exchange": "MGIMO Exchange: students from 31 countries on one trip. I'd go too, but I don't have a passport.", "history": "This is our history. I'm new here, but settling in nicely.", "digest": "The next events are right here. I keep an eye on them.", "join": "Only together. Only forward! That's the motto — I'm quoting."}, "facts": ["The Student Union was founded on 24 February 2004. I wasn't even on the drawing board then.", "The idea of the Student Union was born in autumn 2003 at the first Autumn Starostat.", "The Student Union's first motto was “Together first, together best”. Now it's “Only together. Only forward”.", "The first Battle of the Faculties took place on 27 October 2017 and was called “The Time of the Firsts”.", "Students from 12 countries came to the first MGIMO Exchange in 2022. In 2025, over 65 students from 31 countries.", "The first STUDWAY took place on 28 August 2023. International applicants were the first to complete the quest.", "Over 100 student organisations gathered at the first STUD EXPO on 26 February 2026.", "The Student Union's first chair was Dmitry Starostin. In 2024 he came to the Spring Starostat.", "In 2024 the Student Union turned 20 and MGIMO turned 80.", "The Student Union has ten departments, from the press office to external relations. No pigeon department yet, but I'm working on it.", "I officially declare: the Student Union has the best press office. As a hereditary carrier pigeon, I confirm it. The news is verified, the source is reliable.", "My breakfast, according to protocol: yoghurt and a mug of hot water. Yes, just hot water. A classic.", "Picasso drew the dove of peace: his lithograph became the emblem of the 1949 World Peace Congress. So diplomacy runs in my blood.", "In 1995, Japanese scientists taught pigeons to tell paintings by Monet from paintings by Picasso.", "Pigeons remember human faces and recognise people even after they change clothes.", "In 1918 the pigeon Cher Ami delivered a note that saved almost 200 surrounded soldiers.", "Reuters started with pigeon post: in 1850 pigeons carried news between Aachen and Brussels.", "Pigeons drink by sucking water up, like through a straw. Most birds have to tip their heads back.", "Pigeons can learn to tell real English words from made-up ones. A language university suits me.", "Homing pigeons find their way home using the sun and the Earth's magnetic field."]};
+var PET_PAL={"K": "#262b52", "H": "#b4bbe4", "L": "#d3d8f5", "G": "#959ecf", "D": "#5b6399", "N": "#00ac1d", "n": "#45ff2e", "P": "#7b5cd6", "E": "#ff7a1a", "B": "#3a3f66", "W": "#f1f3ff", "F": "#ff6f91", "Z": "#f1f3ff", "R": "#ff4724", "Q": "#d6e2ff", "q": "#ffffff", "C": "#6f3f24", "M": "#c8925c", "S": "#00ac1d", "Y": "#ffd23f", "y": "#e0a800"};var PET_FR={"stand": "........................|...............KKKK.....|..............KHHHHK....|.............KHHHHHHK...|.............KHHHHEHKWB.|.............KHHHHHHKB..|.............KNNHHHHK...|............KNnNNNNHK...|...........KNNnNNPNNK...|.......KKKKGNNNNPPNNNK..|.....KKLLLLLGNNPPNNLLK..|...KKLLGGGGLLLGPPLLLLLK.|.KKDDGGDDDDGGLLGLLLLLLK.|KDDDDGGGGGDDDDGLLLLLLLK.|KDDDKKGGGGGGGGLLLLLLLLK.|.KKK..KGGGGGGGGLLLLLLK..|.......KKGGGGGGLLLLLK...|.........KKKKKKKKKKK....|............F..F........|...........FF.FF........", "walkA": "........................|...............KKKK.....|..............KHHHHK....|.............KHHHHHHK...|.............KHHHHEHKWB.|.............KHHHHHHKB..|............KNNHHHHK....|...........KNnNNNNK.....|..........KNNnNNPNNK....|...KKKKKKKGNNNNPPNNK....|..KLLLLLLLGGNNPPNLLLK...|.KLLGGGGGLLGGGGGLLLLLK..|KDDGGDDDDGGGLGGGLLLLLK..|KDDDGGGGDDDDGGLLLLLLLK..|.KKDDGGGGGGGGLLLLLLLK...|...KKKKKGGGGGGLLLLLK....|........KKKKKKKKKKK.....|..........F....F........|.........FF....FF.......|........................", "walkB": "........................|.............KKKK.......|............KHHHHK......|...........KHHHHHHK.....|...........KHHHHEHKWB...|...........KHHHHHHKB....|...........KNNHHHHK.....|...........KNnNNNNK.....|..........KNNnNNPNNK....|...KKKKKKKGNNNNPPNNK....|..KLLLLLLLGGNNPPNLLLK...|.KLLGGGGGLLGGGGGLLLLLK..|KDDGGDDDDGGGLGGGLLLLLK..|KDDDGGGGDDDDGGLLLLLLLK..|.KKDDGGGGGGGGLLLLLLLK...|...KKKKKGGGGGGLLLLLK....|........KKKKKKKKKKK.....|............FF..........|...........FFFF.........|........................", "peck": "........................|........................|........................|........................|........................|........................|........................|........................|........................|.......KKKKK............|.....KKLLLLLGKK.........|...KKLLGGGGLLGNNK.......|.KKDDGGDDDDGGLNnNK......|KDDDDGGGGGDDDDGNnNK.....|KDDDKKGGGGGGGGLNNPNKK...|.KKK..KGGGGGGGGLLNKHHK..|.......KKGGGGGGLLKHHHHK.|.........KKKKKKKKKHHEHK.|............F..F..KHHKWB|...........FF.FF...KKKB.", "flyA": ".......KK...............|......KLLK..............|.....KLGGLK.....KKKK....|....KLGDGGLK...KHHHHK...|....KLGDGGGLK.KHHHHHHK..|.....KLGDGGLKKHHHHHEHKWB|......KLGGGGLKHHHHHHHKB.|.......KLGGGLKNNHHHHHK..|..KKKKKKKLGGLNnNNNNNK...|KKLLLLLLLKLLGNNnNPNNK...|KDDGGGGGLLKGGNNPPNNLK...|KDDDGGGGGGLLGGPPNLLLLK..|.KKDDGGGGGGGGGLLLLLLK...|...KKKKGGGGGGGLLLLLK....|.......KKKKKKKKKKKK.....|.........FF.FF..........|........................|........................|........................|........................", "flyB": "........................|........................|................KKKK....|...............KHHHHK...|..............KHHHHHHK..|..............KHHHHEHKWB|..............KHHHHHHKB.|..............KNNHHHHK..|..KKKKKKKKKKKKNnNNNNK...|KKLLLLLLLLGGGNNnNPNNK...|KDDGGGGGLLGGGNNPPNNLK...|KDDDGGGGGLKKKGPPNLLLLK..|.KKDDGGGKLLGGKLLLLLLK...|...KKKKKLGGDGKLLLLLK....|.......KLGGDGLKKKKKK....|......KLGGDGLK.FF.FF....|......KLLGDLK...........|.......KLLK.............|........KK..............|........................", "sleep": "........................|........................|........................|........................|........................|........................|........................|..............KKKK......|.............KHHHHK.....|............KHHHHHHK....|...........KHHHKKKHK....|.......KKKKKNNHHHHHHKWB.|.....KKLLLLGNNnNNHHHKB..|...KKLLGGGGLNNnNPNNNK...|.KKDDGGDDDDGNNPPNLLLLK..|KDDDDGGGGGDDDGPPLLLLLK..|KDDDKKGGGGGGGGLLLLLLLK..|.KKK..KGGGGGGGGLLLLLK...|.......KKKKKKKKKKKKK....|........................", "blink": "........................|...............KKKK.....|..............KHHHHK....|.............KHHHHHHK...|.............KHHHHKHKWB.|.............KHHHHHHKB..|.............KNNHHHHK...|............KNnNNNNHK...|...........KNNnNNPNNK...|.......KKKKGNNNNPPNNNK..|.....KKLLLLLGNNPPNNLLK..|...KKLLGGGGLLLGPPLLLLLK.|.KKDDGGDDDDGGLLGLLLLLLK.|KDDDDGGGGGDDDDGLLLLLLLK.|KDDDKKGGGGGGGGLLLLLLLLK.|.KKK..KGGGGGGGGLLLLLLK..|.......KKGGGGGGLLLLLK...|.........KKKKKKKKKKK....|............F..F........|...........FF.FF........", "talk": "........................|...............KKKK.....|..............KHHHHK....|.............KHHHHHHK...|.............KHHHHEHKWB.|.............KHHHHHH.B..|.............KNNHHHHB...|............KNnNNNNHK...|...........KNNnNNPNNK...|.......KKKKGNNNNPPNNNK..|.....KKLLLLLGNNPPNNLLK..|...KKLLGGGGLLLGPPLLLLLK.|.KKDDGGDDDDGGLLGLLLLLLK.|KDDDDGGGGGDDDDGLLLLLLLK.|KDDDKKGGGGGGGGLLLLLLLLK.|.KKK..KGGGGGGGGLLLLLLK..|.......KKGGGGGGLLLLLK...|.........KKKKKKKKKKK....|............F..F........|...........FF.FF........", "env": "KKKKKKKK|KZZZZZZK|KKZZZZKK|KZKRRKZK|KZZRRZZK|KKKKKKKK", "seed": ".KK.|KGGK|.KK.", "heart": ".KK.KK.|KRRKRRK|KRRRRRK|.KRRRK.|..KRK..|...K...", "cheese": "....KK.|..KKYYK|KKYYyYK|KYyYYYK|KYYYYyK|KKKKKKK", "cup0": "SS......|.SS.....|..SS....|...S....|...S....|Q..S...Q|Qq.S...Q|Qq.S...Q|Qq.S...Q|Q..S...Q|Q..S...Q|Q..S...Q|Q..S...Q|Q..S...Q|Q......Q|QQQQQQQQ", "cup1": "SS......|.SS.....|..SS....|...S....|...S....|Q..S...Q|Qq.S...Q|Qq.S...Q|Qq.S...Q|Q..S...Q|Q..S...Q|Q..S...Q|QMMSMMMQ|QCCSCCCQ|QCCCCCCQ|QQQQQQQQ", "cup1s": "CC......|.CC.....|..CC....|...C....|...C....|Q..C...Q|Qq.C...Q|Qq.C...Q|Qq.C...Q|Q..C...Q|Q..C...Q|Q..C...Q|QMMSMMMQ|QCCSCCCQ|QCCCCCCQ|QQQQQQQQ", "cup2": "SS......|.SS.....|..SS....|...S....|...S....|Q..S...Q|Qq.S...Q|Qq.S...Q|Qq.S...Q|QMMSMMMQ|QCCSCCCQ|QCCSCCCQ|QCCSCCCQ|QCCSCCCQ|QCCCCCCQ|QQQQQQQQ", "cup2s": "CC......|.CC.....|..CC....|...C....|...C....|Q..C...Q|Qq.C...Q|Qq.C...Q|Qq.C...Q|QMMSMMMQ|QCCSCCCQ|QCCSCCCQ|QCCSCCCQ|QCCSCCCQ|QCCCCCCQ|QQQQQQQQ", "cup3": "SS......|.SS.....|..SS....|...S....|...S....|Q..S...Q|QMMSMMMQ|QCCSCCCQ|QCCSCCCQ|QCCSCCCQ|QCCSCCCQ|QCCSCCCQ|QCCSCCCQ|QCCSCCCQ|QCCCCCCQ|QQQQQQQQ", "cup3s": "CC......|.CC.....|..CC....|...C....|...C....|Q..C...Q|QMMSMMMQ|QCCSCCCQ|QCCSCCCQ|QCCSCCCQ|QCCSCCCQ|QCCSCCCQ|QCCSCCCQ|QCCSCCCQ|QCCCCCCQ|QQQQQQQQ"};var PET_L={"lang": "en", "name": "Dimusya", "aria": "Dimusya the pigeon — talk", "close": "Close", "envAria": "Mail from Dimusya — open", "call": "Bring Dimusya the pigeon back", "uncall": "Hide Dimusya the pigeon", "digestHref": "digest-en.html", "hello": "Hi, Dimusya!", "more": "Another fact", "feed": "Feed", "hide": "Hide", "open": "Open", "openDigest": "Open the digest", "details": "Details", "register": "Register", "greetFirst": "Hi! I'm Dimusya, the Student Union's pigeon extraordinary and plenipotentiary. I deliver the mail: event reminders and stories of how it all began.", "greetBack": "Welcome back! I missed you. A little. Pigeons are reserved.", "morning": ["Good morning! I've had breakfast already: yoghurt and a mug of hot water. All according to protocol.", "Mornings at MGIMO start with the digest. And seeds."], "day": ["A break between classes is just enough to check the digest.", "Lunchtime is for negotiations. And crumbs."], "evening": ["Evenings are when MGIMO gets interesting: clubs, talks, games.", "Good evening! Time to pick where to go this week."], "night": ["It's the middle of the night. Even ambassadors are asleep. Fine — if you're up, so am I."], "wake": ["Huh? I'm not asleep. I'm analysing the international situation.", "Oops, dozed off for a minute. How may I help?"], "wakeNight": "It's night… Fine, if you're not sleeping, neither am I.", "poke": "Hey! I'm a pigeon, not a lift button.", "bye": "Flying off. You can call me back at the very bottom of the page.", "back": "I'm back! Did you miss me?", "mail": "You've got mail!", "soonIn": "In {in}: {title}{place}. It's on your “I'm going” list.", "todayAt": "Today at {time}: {title}{place}. It's on your “I'm going” list.", "todayAll": "Today: {title}. It's on your “I'm going” list.", "tomorrowAt": "Tomorrow{time}: {title}. Don't forget!", "regClosing": "Registration for {title} closes {when}. Will you make it?", "today": "today", "tomorrow": "tomorrow", "todayCount": "{n} at MGIMO today. The next one is at {time}: {title}.", "todayCountNoTime": "{n} at MGIMO today. It's all in the digest.", "newDigest": "A fresh digest for {range} is out! I've read it already.", "newDigestHere": "A fresh issue for {range}! Press “I'm going” on what you like — I'll remind you if you drop by that day.", "goingAdded": ["Added to “Mine”. If you visit the site that day, I'll remind you.", "Great choice. I'd go too, but they don't let me into classrooms.", "Entered into the protocol. I'll remind you when it's time."], "goingRemoved": ["Crossed out. No offence taken.", "Removed from “Mine”. It happens."], "share": "Link copied. Pigeon post is taking the day off.", "calendar": "Into the calendar — very wise. I write everything down too.", "subscribed": "A subscription is reliable: events will fly to you on their own. Almost like me.", "filtered": "Filtering. Pigeons like order too.", "searchNone": "Nothing found. And I can find even crumbs!", "feedThanks": ["Thank you! Seeds are the best currency.", "Yum. Very diplomatic of you.", "Crumbs accepted. Talks were held in a warm and friendly atmosphere.", "Thank you! Though for breakfast I do prefer yoghurt and a mug of hot water."], "feedCount": "That's treat number {n} from you. Practically diplomatic recognition.", "flock": "It's a delegation! They've flown in for talks.", "press": ["Official statement: we have the best press office there is. Pigeons carried the news for centuries — we know what we're talking about.", "I officially declare: the Student Union has the best press office. As a hereditary carrier pigeon, I confirm it. The news is verified, the source is reliable.", "The press office writes so well that even pigeons read it. Personally verified."], "coffeeStart": "Insider info from the press office: the head of the department is crazy about cheese and coffee. The cheese is sacred, I won't touch it. But the coffee…", "coffeeEnd": "That hits the spot! Now I see where the press office gets all its energy. I left the cheese for the head of the department.", "min": ["minute", "minutes", "minutes"], "hours": "h", "mins": "min", "events": ["event", "events", "events"], "sections": {"chair": "The Student Union's chair. Let's say hello politely!", "team": "Eleven departments, each irreplaceable. I'm in charge of pigeons, for instance.", "welcome": "Welcome Day is a first-year's first big day. Pigeons don't get one, sadly.", "studway": "STUDWAY is a quest to get to know the university. I'd do it, but they don't let me into classrooms.", "bitva": "The Battle of the Faculties happens every autumn. Which faculty are you rooting for?", "starostat": "Starostat is where it all began, back in autumn 2003.", "exchange": "MGIMO Exchange: students from 31 countries on one trip. I'd go too, but I don't have a passport.", "history": "This is our history. I'm new here, but settling in nicely.", "digest": "The next events are right here. I keep an eye on them.", "join": "Only together. Only forward! That's the motto — I'm quoting."}, "facts": ["The Student Union was founded on 24 February 2004. I wasn't even on the drawing board then.", "The idea of the Student Union was born in autumn 2003 at the first Autumn Starostat.", "The Student Union's first motto was “Together first, together best”. Now it's “Only together. Only forward”.", "The first Battle of the Faculties took place on 27 October 2017 and was called “The Time of the Firsts”.", "Students from 12 countries came to the first MGIMO Exchange in 2022. In 2025, over 65 students from 31 countries.", "The first STUDWAY took place on 28 August 2023. International applicants were the first to complete the quest.", "Over 100 student organisations gathered at the first STUD EXPO on 26 February 2026.", "Dmitry Starostin led the Student Union in the 2000s, and in 2024 he came to the Spring Starostat to meet today's activists.", "In 2024 the Student Union turned 20 and MGIMO turned 80.", "The Student Union has eleven departments, from the press office to the Diplomatic Academy Youth Movement. No pigeon department yet, but I'm working on it.", "I officially declare: the Student Union has the best press office. As a hereditary carrier pigeon, I confirm it. The news is verified, the source is reliable.", "My breakfast, according to protocol: yoghurt and a mug of hot water. Yes, just hot water. A classic.", "Picasso drew the dove of peace: his lithograph became the emblem of the 1949 World Peace Congress. So diplomacy runs in my blood.", "In 1995, Japanese scientists taught pigeons to tell paintings by Monet from paintings by Picasso.", "Pigeons remember human faces and recognise people even after they change clothes.", "In 1918 the pigeon Cher Ami delivered a note that saved almost 200 surrounded soldiers.", "Reuters started with pigeon post: in 1850 pigeons carried news between Aachen and Brussels.", "Pigeons drink by sucking water up, like through a straw. Most birds have to tip their heads back.", "Pigeons can learn to tell real English words from made-up ones. A language university suits me.", "Homing pigeons find their way home using the sun and the Earth's magnetic field."]};
 /* Голубь Димуся — пиксельный питомец сайта Студсоюза.
    Гуляет по низу экрана, садится на заголовки, клюёт крошки, спит ночью и носит «диппочту»:
    напоминания о мероприятиях из дайджеста и факты из истории Студсоюза.
