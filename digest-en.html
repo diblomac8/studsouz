@@ -371,6 +371,8 @@ a.soc:hover{border-color:var(--neon);background:rgba(69,255,46,.06)}
 .foot{margin-top:clamp(80px,12vh,140px);padding-block:28px calc(28px + env(safe-area-inset-bottom,0px));border-top:1px solid var(--line)}
 .foot .wrap{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:24px}
 .foot p{font:400 12px/1.6 var(--f-mono);letter-spacing:.04em;color:var(--mute);max-width:70ch}
+.foot .legal{display:grid;gap:4px;margin-top:16px}
+.foot .legal p{font-size:11px;line-height:1.5}
 .foot .sig{font:600 13px/1.4 var(--f-mono);letter-spacing:.12em;text-transform:uppercase;color:var(--paper);margin-top:10px}
 
 
@@ -826,6 +828,7 @@ a.wb-day.today:hover{background:#6dff58}
       <a class="mark mark-lg" href="en.html" aria-label="MGIMO Student Union — home"><svg class="logo" viewBox="0 0 392 198.2" aria-hidden="true" focusable="false"><path d="M69,46.7l20.8,1c-1.4,8.8-5.8,15.4-13,20-7.2,4.5-17.1,6.8-29.7,6.8s-26.5-3.3-34.8-9.8C4.1,58.1,0,49,0,37.2S4,16.4,12,9.8C20.1,3.3,31.3,0,45.8,0s21.5,2.3,28.9,6.8c7.4,4.6,11.9,10.8,13.6,18.6l-20.6,1.3c-1.2-2.8-3.7-5.1-7.7-6.8-4-1.7-8.7-2.6-14.2-2.6-7.8,0-13.8,1.8-18,5.4s-6.3,8.4-6.3,14.4,2.2,10.9,6.6,14.5c4.4,3.6,10.8,5.3,19.1,5.3s10.8-1,14.5-2.9c3.7-1.9,6.2-4.4,7.4-7.5Z"/><path d="M94.3,18.7V1.2h82.1v17.5h-30.3v54.5h-21.4V18.7h-30.3Z"/><path d="M249.4,1.2h23.1l-25.1,48.1c-3.2,6-6.1,10.7-8.9,14s-6.2,5.9-10.1,7.7c-4,1.8-8.8,2.7-14.4,2.7s-8.7-.3-14-.9v-16.7c4.9.4,8.7.6,11.6.6,6.2,0,10.3-1.8,12.1-5.2h-9.4L180.3,1.2h23.9l26.2,42L249.4,1.2Z"/><path d="M351.7,55.7h9.6v33.8h-20v-16.3h-56.5v16.3h-20v-33.8h8.5c2.5-2.6,4.6-8,6.2-16.2,1.6-8.2,2.7-21,3.1-38.3h69.1v54.5h0ZM330.3,55.7V18.7h-28.5c-1,10.3-2.2,18.4-3.8,24.4-1.4,5.7-2.9,9.9-4.4,12.7h36.7Z"/><path d="M369.7,73.2v-19.8h22.2v19.8h-22.2Z"/><path d="M288.2,149.6c-2.3-1.8-5.6-2.7-9.7-2.7s-7.4.9-9.7,2.7-3.5,4.2-3.5,7.2,1.2,5.4,3.5,7.2,5.6,2.7,9.7,2.7,7.4-.9,9.7-2.7c2.3-1.8,3.5-4.2,3.5-7.2s-1.2-5.4-3.5-7.2Z"/><path d="M0,114.2v84h335.4v-84H0ZM91.2,174.8h-10.2v-30.2l-10.6,30.2h-14.4l-10.6-30.2v30.2h-10.2v-36h18.7l9.5,29.7,9.3-29.7h18.7v36h0ZM133.9,147.6h-23.3v27.2h-10.7v-36h34v8.7ZM183.2,174.8h-10.4v-28.4l-16.5,28.4h-16.4v-36h10.4v28.4l16.5-28.4h16.4v36ZM248,174.8h-10.2v-30.2l-10.6,30.2h-14.4l-10.6-30.2v30.2h-10.2v-36h18.7l9.5,29.7,9.3-29.7h18.7v36h0ZM296,170.5c-4.2,3.3-10.1,4.9-17.6,4.9s-13.4-1.6-17.6-4.9-6.3-7.8-6.3-13.7,2.1-10.4,6.3-13.7c4.2-3.3,10.1-4.9,17.6-4.9s13.4,1.6,17.6,4.9c4.2,3.3,6.3,7.8,6.3,13.7s-2.1,10.4-6.3,13.7Z"/></svg></a>
       <p class="sig">MGIMO Student Union, on air</p>
       <p>The digest is compiled by the MGIMO Student Union&#x27;s Internal Relations department.</p>
+      <div class="legal"><p>© 2004–<span class="yr">2026</span> MGIMO Student Union. All rights reserved. 12+</p><p>Photos, videos and texts belong to the Student Union and their authors. Reuse only with the Student Union&#x27;s permission and a link to this site.</p><p>This site does not collect visitors&#x27; personal data: “I&#x27;m going” marks and pigeon settings are stored only in your browser.</p></div>
     </div>
     <span class="barcode" aria-hidden="true">t.me/studsouzmgimo</span>
   </div>
@@ -1275,6 +1278,7 @@ var DG = (function () {
 if (typeof module !== 'undefined') module.exports = DG;
 
 /* Отрисовка выпуска дайджеста в виде расписания недели. Нужен DG из digest_core.js. */
+try { [].forEach.call(document.querySelectorAll('.yr'), function (y) { var n = new Date().getFullYear(); if (n > +y.textContent) y.textContent = n; }); } catch (e) {}
 var DGV = (function () {
   var el = DG.el;
 
