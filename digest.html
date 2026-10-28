@@ -581,7 +581,7 @@ a.wb-day.today:hover{background:#6dff58}
 .slot-main h3{margin:0;font:700 19px/1.32 var(--f-display);overflow-wrap:break-word}
 .stud{display:inline-block;padding:3px 5px 2px;background:var(--brand);color:var(--ink);font:900 10px/1 var(--f-display);letter-spacing:.02em;vertical-align:3px}
 .slot-org{margin-top:6px;font:500 15px/1.4 var(--f-body);color:rgba(241,243,255,.84)}
-.slot-note{margin-top:6px;max-width:62ch;font-size:14px;line-height:1.5;color:var(--mute)}
+.slot-note{margin-top:6px;max-width:62ch;overflow-wrap:anywhere;font-size:14px;line-height:1.5;color:var(--mute)}
 .slot-where b{display:block;font:600 15px/1.35 var(--f-body)}
 .slot-where span{display:block;margin-top:4px;font-size:14px;color:var(--mute)}
 .slot-do{display:flex;flex-direction:column;align-items:flex-start;gap:8px}
@@ -893,32 +893,90 @@ var DG = (function () {
   }
   function str(v, max) { v = v == null ? '' : String(v); v = v.replace(/[\u0000-\u0008\u000b\u000c\u000e-\u001f]/g, '').trim(); return max ? v.slice(0, max) : v; }
 
+  /* ---------- ссылки, вставленные прямо в текст ----------
+     Активист может вставить «Ссылка на клуб: https://t.me/…» в примечание или в организатора.
+     Вынимаем такие адреса из текста и превращаем в короткие кнопки-слова. */
+  var RX_URL = /(?:https?:\/\/|www\.|(?:t\.me|vk\.com|vk\.ru|forms\.gle|forms\.yandex\.ru|docs\.google\.com|clck\.ru|timepad\.ru|leader-id\.ru)\/)[^\s<>"«»]+/gi;
+  var RX_REG_URL = /forms\.gle|docs\.google\.com\/forms|forms\.yandex\.|forms\.office\.com|timepad\.|leader-id\.|tilda\.ws\/reg|\/reg(istration)?\b|\/form/i;
+  function urlKind(u) {
+    if (RX_REG_URL.test(u)) return 'reg';
+    if (/^https?:\/\/(www\.)?(t\.me|telegram\.me)\//i.test(u)) return 'tg';
+    if (/^https?:\/\/(www\.|m\.)?vk\.(com|ru)\//i.test(u)) return 'vk';
+    return 'web';
+  }
+  var KIND_LABEL = { reg: ['Регистрация', 'Registration'], tg: ['Telegram', 'Telegram'], vk: ['ВКонтакте', 'VK'], web: ['Ссылка', 'Link'] };
+  // «Ссылка на клуб:» → «Клуб», «Регистрация —» → «Регистрация»
+  function labelFrom(before, kind, en) {
+    var m = /([^.!?\n]{1,40}?)\s*[:—–-]\s*$/.exec(before);
+    var p = m ? m[1].replace(/^\s*(ссылк[аиу]|link)\s*(на|to)?\s*/i, '').trim() : '';
+    if (/регистрац|registr|sign.?up/i.test(p)) return { label: en ? 'Registration' : 'Регистрация', cut: m ? m[0] : '', reg: true };
+    if (p && p.length <= 30) return { label: p.charAt(0).toUpperCase() + p.slice(1), cut: m[0], reg: false };
+    return { label: KIND_LABEL[kind][en ? 1 : 0], cut: m && !p ? m[0] : '', reg: false };
+  }
+  function pullLinks(text, found, en) {
+    text = text == null ? '' : String(text);
+    if (!RX_URL.test(text)) return text;
+    RX_URL.lastIndex = 0;
+    var out = '', last = 0, m;
+    while ((m = RX_URL.exec(text))) {
+      var raw = m[0].replace(/[.,;:!?)\]»]+$/, ''), u = safeUrl(/^www\./i.test(raw) ? 'https://' + raw : raw);
+      var before = text.slice(last, m.index), kind = u ? urlKind(u) : 'web', lb = labelFrom(before, kind, en);
+      if (lb.cut) before = before.slice(0, before.length - lb.cut.length);
+      out += before;
+      last = m.index + raw.length;
+      var isReg = lb.reg || kind === 'reg', until = '';
+      // «Регистрация — ссылка до 30 октября» → срок регистрации
+      var um = isReg ? /^\s*(до\s+[^.,;!?\n]{1,30})/i.exec(text.slice(last)) : null;
+      if (um) { until = um[1].trim(); last += um[0].length; }
+      if (u) found.push({ url: u, label: lb.label, en: en, reg: isReg, until: until });
+    }
+    out += text.slice(last);
+    return out.replace(/\(\s*\)/g, '').replace(/([.!?…])\s*[.,;:]+/g, '$1').replace(/\s+([.,;:!?])/g, '$1').replace(/[ \t]{2,}/g, ' ').replace(/^[\s,;:—–-]+|[\s,;:—–-]+$/g, '').trim();
+  }
+
   // приводим любое пришедшее событие к безопасному формату
   function normEvent(e) {
     e = e || {};
     var reg = e.reg || {};
     var st = ['open', 'closed', 'none'].indexOf(reg.state) >= 0 ? reg.state : 'none';
+    var found = [];
+    var T = {};
+    ['title', 'org', 'place', 'note'].forEach(function (f) { T[f] = pullLinks(e[f], found, false); T[f + '_en'] = pullLinks(e[f + '_en'], found, true); });
     var out = {
       date: /^\d{4}-\d{2}-\d{2}$/.test(e.date || '') ? e.date : '',
       end: /^\d{4}-\d{2}-\d{2}$/.test(e.end || '') ? e.end : '',
       time: str(e.time, 80),
-      title: str(e.title, 300),
-      title_en: str(e.title_en, 300),
-      org_en: str(e.org_en, 160),
-      place_en: str(e.place_en, 200),
-      note_en: str(e.note_en, 300),
+      title: str(T.title, 300),
+      title_en: str(T.title_en, 300),
+      org_en: str(T.org_en, 160),
+      place_en: str(T.place_en, 200),
+      note_en: str(T.note_en, 300),
       url: safeUrl(e.url),
-      org: str(e.org, 160),
-      place: str(e.place, 200),
+      org: str(T.org, 160),
+      place: str(T.place, 200),
       online: !!e.online,
-      note: str(e.note, 300),
-      cat: CAT_KEYS.indexOf(e.cat) >= 0 ? e.cat : guessCat(str(e.title)),
+      note: str(T.note, 300),
+      cat: CAT_KEYS.indexOf(e.cat) >= 0 ? e.cat : guessCat(str(T.title)),
       reg: { state: st, url: safeUrl(reg.url), until: str(reg.until, 60) },
       links: []
     };
     (Array.isArray(e.links) ? e.links : []).slice(0, 6).forEach(function (l) {
-      var u = safeUrl(l && l.url); if (u) out.links.push({ label: str(l.label, 80) || 'Ссылка', label_en: str(l.label_en, 80), url: u });
+      var u = safeUrl(l && l.url); if (u) out.links.push({ label: str(pullLinks(l.label, [], false), 80) || 'Ссылка', label_en: str(pullLinks(l.label_en, [], true), 80), url: u });
     });
+    // адреса из текста: регистрация — в кнопку «Зарегистрироваться», остальное — в короткие ссылки
+    var seen = {};
+    [out.url, out.reg.url].concat(out.links.map(function (l) { return l.url; })).forEach(function (u) { if (u) seen[u] = 1; });
+    found.forEach(function (f) {
+      if (seen[f.url]) { if (f.en) out.links.forEach(function (l) { if (l.url === f.url && !l.label_en) l.label_en = f.label; }); return; }
+      seen[f.url] = 1;
+      if (f.reg && !out.reg.url && out.reg.state !== 'closed') { out.reg.url = f.url; if (f.until && !out.reg.until && !f.en) out.reg.until = f.until.replace(/^до\s+/i, ''); return; }
+      if (out.links.length >= 8) return;
+      var ru = f.en ? (f.label === 'Registration' ? 'Регистрация' : KIND_LABEL[urlKind(f.url)][0]) : f.label;
+      var en = f.en ? f.label : ({ 'Регистрация': 'Registration', 'Клуб': 'Club', 'ВКонтакте': 'VK', 'Ссылка': 'Link', 'Telegram': 'Telegram' })[f.label] || '';
+      out.links.push({ label: ru, label_en: en, url: f.url });
+    });
+    // ссылка на регистрацию есть, а статус не выбран — значит, регистрация открыта
+    if (out.reg.url && out.reg.state === 'none') out.reg.state = 'open';
     if (out.end && out.end < out.date) out.end = '';
     if (out.end === out.date) out.end = '';
     return out;
