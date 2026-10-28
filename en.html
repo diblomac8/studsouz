@@ -1660,7 +1660,16 @@ a.wb-day.today:hover{background:#6dff58}
         if(document.fullscreenElement===v||v.webkitDisplayingFullscreen)return;
         if(!v.paused)v.pause();
         v._user=false;if(v._leave)v._leave();
-      }else if(r>=0.5&&autoOK&&v.paused&&!v._user&&v._auto){v._auto()}
+        // через несколько секунд выгружаем ролик из памяти: браузер держит буферы и декодер каждого загруженного видео
+        clearTimeout(v._unload);
+        v._unload=setTimeout(function(){
+          if(!v.paused||!v.getAttribute('src'))return;
+          v._t=v.currentTime;v.removeAttribute('src');v.load();if(v._sync)v._sync();
+        },4000);
+      }else{
+        clearTimeout(v._unload);
+        if(r>=0.5&&autoOK&&v.paused&&!v._user&&v._auto)v._auto();
+      }
     })},{threshold:[0,0.2,0.5]});
     players.forEach(function(v){vio.observe(v)});
   }
@@ -1700,7 +1709,12 @@ a.wb-day.today:hover{background:#6dff58}
     parts=parts?parts.split('|'):null;
     var btns=[].slice.call(box.querySelectorAll('.parts button'));
     function mark(){btns.forEach(function(b,i){if(i===cur)b.setAttribute('aria-current','true');else b.removeAttribute('aria-current')})}
-    function load(){if(!v.getAttribute('src'))v.setAttribute('src',parts?parts[cur]:box.getAttribute('data-src'))}
+    function load(){
+      if(v.getAttribute('src'))return;
+      v.setAttribute('src',parts?parts[cur]:box.getAttribute('data-src'));
+      // вернулись к выгруженному ролику — продолжаем с того же места
+      if(v._t){var t=v._t;v._t=0;v.addEventListener('loadedmetadata',function f(){v.removeEventListener('loadedmetadata',f);try{v.currentTime=t}catch(e){}})}
+    }
     function part(i){cur=i;v.setAttribute('src',parts[i]);mark()}
     function sync(){
       var m=!v.paused&&v.muted&&!box.classList.contains('on');
