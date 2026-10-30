@@ -521,6 +521,39 @@ html.has-cur .mv.on video,html.has-cur .lb,html.has-cur .lb *{cursor:auto!import
   *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;animation-delay:0s!important;transition-duration:.01ms!important;transition-delay:0s!important}
   .barcode::after{display:none}
 }
+
+/* куратор Студсоюза — проректор: портрет и цитата перед председателем */
+.kur{display:grid;grid-template-columns:minmax(0,1fr);gap:32px;padding-block:64px;border-top:1px solid var(--line);align-items:center}
+.kur-ph{margin:0;position:relative;width:min(240px,62vw)}
+.kur-ph::before,.kur-ph::after{content:"";position:absolute;width:24px;height:24px;border:2px solid var(--hue);z-index:2;pointer-events:none}
+.kur-ph::before{top:-8px;left:-8px;border-right:0;border-bottom:0}
+.kur-ph::after{bottom:-8px;right:-8px;border-left:0;border-top:0}
+.kur-ph .frame{overflow:hidden;box-shadow:0 40px 90px -45px var(--hue)}
+.kur-ph img{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover}
+.kur-body{display:grid;gap:14px;max-width:64ch}
+.kur-name{margin:0;font:800 clamp(24px,3vw,40px)/1.05 var(--f-display);text-transform:uppercase;letter-spacing:-.01em;text-wrap:balance}
+.kur-q{position:relative;margin:14px 0 0;padding:6px 0 0 clamp(28px,3vw,44px);border-left:2px solid var(--hue)}
+.kur-q p{margin:0;font:600 clamp(18px,1.9vw,24px)/1.4 var(--f-display);text-wrap:pretty}
+.kur-q p::before{content:"«"}
+.kur-q p::after{content:"»"}
+.kur-q footer{margin-top:14px;font-size:14px;color:var(--mute)}
+@media (min-width:900px){
+  .kur{grid-template-columns:300px minmax(0,1fr);gap:clamp(48px,6vw,96px);padding-block:12vh}
+  .kur-ph{width:100%}
+}
+:lang(en) .kur-q p::before{content:"“"}
+:lang(en) .kur-q p::after{content:"”"}
+/* фото проректора раскрывается так же, как у председателя и глав */
+.js .kur-ph{--open:1.2s;--curve:cubic-bezier(.65,0,.25,1)}
+.js .kur-ph .frame{clip-path:inset(50% 50% 50% 50%);transition:clip-path var(--open) var(--curve) .25s}
+.js .kur-ph img{transform:scale(1.14);transition:transform 1.8s var(--ease) .25s}
+.js .kur-ph::before{top:calc(50% - 24px);left:calc(50% - 24px)}
+.js .kur-ph::after{bottom:calc(50% - 24px);right:calc(50% - 24px)}
+.js .kur-ph::before,.js .kur-ph::after{opacity:0;transition:opacity .3s ease,top var(--open) var(--curve) .25s,left var(--open) var(--curve) .25s,bottom var(--open) var(--curve) .25s,right var(--open) var(--curve) .25s}
+.js .kur-ph.in .frame{clip-path:inset(0 0 0 0)}
+.js .kur-ph.in img{transform:none}
+.js .kur-ph.in::before{top:-8px;left:-8px;opacity:1}
+.js .kur-ph.in::after{bottom:-8px;right:-8px;opacity:1}
 /* ===== Дайджест: расписание недели ===== */
 .dg-page{background:var(--ink)}
 .dg-page main{padding-top:calc(64px + env(safe-area-inset-top,0px));min-height:80vh}
@@ -938,6 +971,17 @@ a.wb-day.today:hover{background:#6dff58}
     <p data-reveal style="--i:2">У каждого отдела свой ритм, свои задачи и своя атмосфера. Листай: сначала обложка главы, потом — чем живёт отдел. Нажми на кружок, чтобы услышать главу.</p>
     <nav class="crew" data-reveal style="--i:3" aria-label="Команда: перейти к главе"><ol><li style="--k:0"><a href="#chair" data-hue="neon" aria-label="Председатель — Михаил Мосунов"><span class="av"><img src="img/av-chair.jpg" alt="" loading="lazy" width="240" height="240"></span><b>Председатель</b><span class="who"><span>Михаил</span><span>Мосунов</span></span></a></li><li style="--k:1"><a href="#press" data-hue="flare" aria-label="Пресс-служба — Анастасия Шахорская"><span class="av"><img src="img/av-press.jpg" alt="" loading="lazy" width="240" height="240"></span><b>Пресс-служба</b><span class="who"><span>Анастасия</span><span>Шахорская</span></span></a></li><li style="--k:2"><a href="#hr" data-hue="flare" aria-label="HR-отдел — Аня Дао (Дао Ван Ань)"><span class="av"><img src="img/av-hr.jpg" alt="" loading="lazy" width="240" height="240"></span><b>HR-отдел</b><span class="who"><span>Аня</span><span>Дао</span></span></a></li><li style="--k:3"><a href="#event" data-hue="neon" aria-label="Ивент-отдел — Алия Саетова"><span class="av"><img src="img/av-event.jpg" alt="" loading="lazy" width="240" height="240"></span><b>Ивент-отдел</b><span class="who"><span>Алия</span><span>Саетова</span></span></a></li><li style="--k:4"><a href="#design" data-hue="neon" aria-label="Дизайн-отдел — Анастасия Худякова"><span class="av"><img src="img/av-design.jpg" alt="" loading="lazy" width="240" height="240"></span><b>Дизайн-отдел</b><span class="who"><span>Анастасия</span><span>Худякова</span></span></a></li><li style="--k:5"><a href="#docs" data-hue="flare" aria-label="Документация — Мария Титова"><span class="av"><img src="img/av-docs.jpg" alt="" loading="lazy" width="240" height="240"></span><b>Документация</b><span class="who"><span>Мария</span><span>Титова</span></span></a></li><li style="--k:6"><a href="#patriot" data-hue="flare" aria-label="Патриотика — Юрий Тосунян"><span class="av"><img src="img/av-patriot.jpg" alt="" loading="lazy" width="240" height="240"></span><b>Патриотика</b><span class="who"><span>Юрий</span><span>Тосунян</span></span></a></li><li style="--k:7"><a href="#integration" data-hue="neon" aria-label="Интеграция — Екатерина Барсукова"><span class="av"><img src="img/av-integration.jpg" alt="" loading="lazy" width="240" height="240"></span><b>Интеграция</b><span class="who"><span>Екатерина</span><span>Барсукова</span></span></a></li><li style="--k:8"><a href="#internal" data-hue="neon" aria-label="Внутренние связи — Олеся Рудакова"><span class="av"><img src="img/av-internal.jpg" alt="" loading="lazy" width="240" height="240"></span><b>Внутренние связи</b><span class="who"><span>Олеся</span><span>Рудакова</span></span></a></li><li style="--k:9"><a href="#resources" data-hue="neon" aria-label="Привлечение ресурсов — Алексей Абрамов"><span class="av"><img src="img/av-resources.jpg" alt="" loading="lazy" width="240" height="240"></span><b>Привлечение ресурсов</b><span class="who"><span>Алексей</span><span>Абрамов</span></span></a></li><li style="--k:10"><a href="#external" data-hue="flare" aria-label="Внешние связи — Анай Насрутдинова"><span class="av"><img src="img/av-external.jpg" alt="" loading="lazy" width="240" height="240"></span><b>Внешние связи</b><span class="who"><span>Анай</span><span>Насрутдинова</span></span></a></li><li style="--k:11"><a href="#da" data-hue="neon" aria-label="Дипакадемия — Анастасия Жеребкова"><span class="av"><img src="img/av-da.jpg" alt="" loading="lazy" width="240" height="240"></span><b>Дипакадемия</b><span class="who"><span>Анастасия</span><span>Жеребкова</span></span></a></li></ol></nav>
   </div>
+  <section class="kur wrap" id="curator" data-hue="neon" aria-labelledby="kur-name">
+  <figure class="kur-ph" data-reveal>
+    <div class="frame"><img src="img/curator.jpg" alt="Станислав Игоревич Суровцев, проректор МГИМО по молодёжной политике" loading="lazy" width="500" height="625"></div>
+  </figure>
+  <div class="kur-body">
+    <p class="ch-index" data-reveal style="--i:0"><b>Слово проректора</b></p>
+    <h3 class="kur-name" id="kur-name" data-reveal style="--i:1">Станислав Игоревич Суровцев</h3>
+    <p class="ch-head" data-reveal style="--i:2">Проректор МГИМО по молодёжной политике, социальной работе и международным связям</p>
+    <blockquote class="kur-q" data-reveal style="--i:3"><p>Студсоюз — это платформа для реализации идей студентов, организации крупнейших мероприятий и участия в принятии решений по важнейшим вопросам студенчества МГИМО</p><footer>Из приветственного слова на презентации Студенческого союза, 16 сентября 2024 года</footer></blockquote>
+  </div>
+</section>
   <article class="ch chair wrap" id="chair" data-hue="neon" data-n="00" data-label="Председатель">
   <figure class="ch-cover" data-reveal>
     <div class="frame"><img src="img/head-chair.jpg" alt="Михаил Мосунов, председатель Студенческого союза МГИМО" loading="lazy" width="960" height="960"></div>
