@@ -62,6 +62,13 @@ p{margin:0}
 .aura i{position:absolute;width:70vmax;height:70vmax;border-radius:50%;opacity:.2;will-change:transform}
 .aura i:nth-child(1){top:-30vmax;right:-28vmax;background:radial-gradient(circle,var(--neon) 0,transparent 62%);transform:translate3d(0,calc(var(--sp,0) * 40vh),0)}
 .aura i:nth-child(2){bottom:-34vmax;left:-30vmax;background:radial-gradient(circle,var(--flare) 0,transparent 62%);transform:translate3d(0,calc(var(--sp,0) * -40vh),0)}
+/* на компьютере то же свечение рисуется фоном страницы: отдельный слой под текстом заставлял браузер держать вторую копию всей страницы в видеопамяти */
+@property --ap{syntax:"<number>";inherits:false;initial-value:0}
+@media (hover:hover) and (pointer:fine){
+  .glow .aura{display:none}
+  .glow body{background:transparent}
+  html.glow{background:radial-gradient(circle 30.69vmax at calc(100% - 7vmax) calc(5vmax + var(--ap,0) * 40vh),rgb(69 255 46/.2),transparent) fixed,radial-gradient(circle 30.69vmax at 5vmax calc(100% - 1vmax - var(--ap,0) * 40vh),rgb(255 71 36/.2),transparent) fixed,var(--ink)}
+}
 
 /* barcode – как на обложках сезона */
 .barcode{display:inline-flex;flex-direction:column;gap:4px;font:400 9px/1 var(--f-mono);letter-spacing:.16em;color:var(--mute)}
@@ -119,7 +126,7 @@ p{margin:0}
 .onair .dot{width:9px;height:9px;border-radius:50%;background:var(--flare);box-shadow:0 0 14px var(--flare);animation:blink 1.6s ease-in-out infinite}
 .onair span+span{color:var(--mute)}
 @keyframes blink{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.3;transform:scale(.82)}}
-.hero h1{margin:22px 0 0;font:900 clamp(28px,8.6vw,124px)/.94 var(--f-display);text-transform:uppercase;letter-spacing:-.01em}
+.hero h1{margin:22px 0 0;font:900 clamp(28px,min(8.6vw,15vh),124px)/.94 var(--f-display);text-transform:uppercase;letter-spacing:-.01em}
 .hero h1 .vis{display:block}
 .hero h1 .ln{display:block;overflow:hidden;padding:.18em 0 .04em;margin-top:-.18em}
 .hero h1 .ln>span{display:inline-block;animation:rise 1.1s var(--ease) both;animation-delay:calc(var(--d) * 110ms + 150ms)}
@@ -233,7 +240,8 @@ html[lang="en"] .ch-motto::before{content:"“"}html[lang="en"] .ch-motto::after
 @media (min-width:960px){
   .ch{grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(48px,6vw,104px);padding-block:14vh}
   .ch.flip .ch-cover{order:2;justify-self:end}
-  .ch-cover{position:sticky;top:calc(104px + env(safe-area-inset-top,0px))}
+  /* в низком окне обложка уменьшается, чтобы целиком помещаться на экране под шапкой */
+  .ch-cover{position:sticky;top:calc(104px + env(safe-area-inset-top,0px));width:100%;max-width:min(560px,max(280px,calc(100vh - 200px)))}
   .ch-body{padding-top:30vh;padding-bottom:4vh}
   .ch.chair .ch-body{padding-top:16vh}
 }
