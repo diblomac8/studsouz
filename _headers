@@ -1,0 +1,13 @@
+# Защитные заголовки сайта Студенческого союза МГИМО.
+# Работают на Netlify и Cloudflare Pages: файл должен лежать в корне сайта рядом с index.html.
+# Content-Security-Policy разрешает только скрипты самого сайта (по хэшам), загрузку данных с этого же сайта и обращения редактора к api.github.com (публикация выпуска);
+# запрещает чужие скрипты, отправку данных на другие сайты и встраивание сайта в чужие страницы.
+# После правки HTML-страниц файл нужно пересобрать (build/headers.py). Обновление digest.json его не затрагивает.
+/*
+  Content-Security-Policy: default-src 'none'; script-src 'sha256-LXGoXfSte4QaL8ablPEFbdfoJlnK6xYbqtKvn32A0No=' 'sha256-WxxpGtabepLyNPAfmfMkaV/cBBphLGawueafLEsINho=' 'sha256-ujZv291nHanPmWcUlYeKLK3bMTQD7yoxwcKt3JwhJFQ=' 'sha256-qMJaHQwONrfg4X0Rbb0ul/RkQGl6P1s3hs92nP4kD2E=' 'sha256-q8PuXDDc+DkS7Hr0Y8bLc6a7i/f6eANeFRToyn5Ct+w=' 'sha256-U1AwtSCjq2PmNqAIZxFXPIZP8FK3nGi9zSKTR55GEFQ='; style-src 'unsafe-inline'; img-src 'self' data:; media-src 'self'; font-src data:; connect-src 'self' https://api.github.com; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; upgrade-insecure-requests
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=()
+  Cross-Origin-Opener-Policy: same-origin
+  Strict-Transport-Security: max-age=31536000
