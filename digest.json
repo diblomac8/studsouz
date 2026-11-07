@@ -9,7 +9,7 @@
     "name_en": "Olesya Rudakova",
     "tg": "Billy_Foxx"
   },
-  "updated": "2026-11-03",
+  "updated": "2026-11-07",
   "events": [
     {
       "date": "2026-11-03",
@@ -73,6 +73,28 @@
       "reg": {
         "state": "open",
         "url": "https://t.me/bc_mgimo_bot?start=reg_11",
+        "until": ""
+      },
+      "links": []
+    },
+    {
+      "date": "2026-11-03",
+      "end": "2026-11-19",
+      "time": "",
+      "title": "Выставка «Языки народов России»: мелодия единства и культурный код России",
+      "title_en": "",
+      "org_en": "",
+      "place_en": "",
+      "note_en": "",
+      "url": "https://t.me/russianunityPO/501",
+      "org": "Студенческий проектный офис «Единство народов России»",
+      "place": "Атриум нового корпуса",
+      "online": false,
+      "note": "",
+      "cat": "other",
+      "reg": {
+        "state": "none",
+        "url": "",
         "until": ""
       },
       "links": []
@@ -219,7 +241,7 @@
       "place_en": "",
       "note_en": "",
       "url": "https://t.me/literatureclub_mgimo/1164",
-      "org": "Литературный клуб им. А.С. Грибоедова \"Вдохновение\"",
+      "org": "Литературный клуб им. А.С. Грибоедова \"Вдохновение\" совместно со Студенческим проектным офисом «Единство народов России»",
       "place": "",
       "online": false,
       "note": "",
