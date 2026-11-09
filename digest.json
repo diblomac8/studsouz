@@ -144,6 +144,28 @@
       "links": []
     },
     {
+      "date": "2026-11-11",
+      "end": "",
+      "time": "16:00",
+      "title": "Интеллектуальная игра \"Демографический квиз\"",
+      "title_en": "",
+      "org_en": "",
+      "place_en": "",
+      "note_en": "",
+      "url": "https://t.me/sssmgimo/120",
+      "org": "Союз Студенческих Семей",
+      "place": "уточняется",
+      "online": false,
+      "note": "",
+      "cat": "other",
+      "reg": {
+        "state": "open",
+        "url": "https://docs.google.com/forms/d/e/1FAIpQLSeUlayEHJUVIajsWEi2D82QTwdObHyIR1HNP9zfTGQQbYYhKw/viewform?usp=publish-editor",
+        "until": ""
+      },
+      "links": []
+    },
+    {
       "date": "2026-11-12",
       "end": "",
       "time": "12:00",
