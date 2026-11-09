@@ -207,13 +207,7 @@
         "url": "https://forms.yandex.ru/cloud/6ad7138d6d2d73808aa5a8a3/",
         "until": ""
       },
-      "links": [
-        {
-          "label": "Регистрация",
-          "label_en": "Registration",
-          "url": "http://forms.yandex.ru/cloud/6ad7"
-        }
-      ]
+      "links": []
     },
     {
       "date": "2026-11-13",
