@@ -4,7 +4,7 @@
 # запрещает чужие скрипты, отправку данных на другие сайты и встраивание сайта в чужие страницы.
 # После правки HTML-страниц файл нужно пересобрать (build/headers.py). Обновление digest.json его не затрагивает.
 /*
-  Content-Security-Policy: default-src 'none'; script-src 'sha256-q43+E5gmFxyiLX0ydXPd7ELmS/wOwYAZy2cJ1EtsMPM=' 'sha256-4/aSIzFjwPRScQgJhrCSqFY/ZPV5gRxTKZm7hHHX+6k=' 'sha256-oAKIVuPGW83AcqdgpkDxctCPjFqJ6kSNyATZSzMQAk4=' 'sha256-4ZZmGRxict2DH6NIOqEBe+rBkb9lVAfIJ1dU9xBNYpc=' 'sha256-SVr9+h5E/ySNIfDnJ3WLM39YNsZpAwDxgKtghgBYlk4=' 'sha256-x5V8EZh7RZ4rjXY9Bng01PBBsZQuyflC08l6WsGBsLg=' 'sha256-U1AwtSCjq2PmNqAIZxFXPIZP8FK3nGi9zSKTR55GEFQ='; style-src 'unsafe-inline'; img-src 'self' data:; media-src 'self'; font-src data:; connect-src 'self' https://api.github.com; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; upgrade-insecure-requests
+  Content-Security-Policy: default-src 'none'; script-src 'sha256-q43+E5gmFxyiLX0ydXPd7ELmS/wOwYAZy2cJ1EtsMPM=' 'sha256-5p1U1bzQeQJ/FAFnOFeRcofw1WY4MuB+1kuTIC9azhw=' 'sha256-oAKIVuPGW83AcqdgpkDxctCPjFqJ6kSNyATZSzMQAk4=' 'sha256-mRjV0cytt2IewRV8OrVUSRDzCr5DJ+SnMnH57qREEzI=' 'sha256-SVr9+h5E/ySNIfDnJ3WLM39YNsZpAwDxgKtghgBYlk4=' 'sha256-x5V8EZh7RZ4rjXY9Bng01PBBsZQuyflC08l6WsGBsLg=' 'sha256-U1AwtSCjq2PmNqAIZxFXPIZP8FK3nGi9zSKTR55GEFQ='; style-src 'unsafe-inline'; img-src 'self' data:; media-src 'self'; font-src data:; connect-src 'self' https://api.github.com; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; upgrade-insecure-requests
   X-Content-Type-Options: nosniff
   X-Frame-Options: DENY
   Referrer-Policy: strict-origin-when-cross-origin
