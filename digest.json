@@ -9,7 +9,7 @@
     "name_en": "Olesya Rudakova",
     "tg": "Billy_Foxx"
   },
-  "updated": "2026-11-09",
+  "updated": "2026-11-12",
   "events": [
     {
       "date": "2026-11-09",
@@ -183,6 +183,28 @@
       "reg": {
         "state": "open",
         "url": "https://forms.yandex.ru/u/6ae74b9f852af3daf2cf946d",
+        "until": ""
+      },
+      "links": []
+    },
+    {
+      "date": "2026-11-12",
+      "end": "",
+      "time": "14:00",
+      "title": "Выставка \"Право на присутствие\", приуроченная к конференции \"Женщина и мир\"",
+      "title_en": "",
+      "org_en": "",
+      "place_en": "",
+      "note_en": "",
+      "url": "https://t.me/artlab_mgimo/7384",
+      "org": "ART LAB МГИМО совместно с клубом \"Women in science\"",
+      "place": "4 этаж корпуса МП",
+      "online": false,
+      "note": "",
+      "cat": "other",
+      "reg": {
+        "state": "none",
+        "url": "",
         "until": ""
       },
       "links": []
