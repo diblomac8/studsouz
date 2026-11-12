@@ -669,6 +669,16 @@ a.wb-day.today:hover{background:#6dff58}
   .wb-day{min-height:150px;scroll-snap-align:start;border-left:1px solid var(--line)}
   .wb-day:first-child{border-left:0}
   .wb-day:nth-child(n+8){border-top-color:transparent}
+  /* телефон: дни строками, всё время видно без прокрутки */
+  .wb{display:block;overflow:visible}
+  .wb-day{display:grid;grid-template-columns:72px minmax(0,1fr);align-items:baseline;gap:4px 12px;min-height:0;padding:12px 10px;border-left:0;border-top:1px solid var(--line)}
+  .wb-day:first-child,.wb-day:nth-child(n+8){border-top-color:transparent}
+  .wb-day:first-child{border-top:0}
+  .wb-hd{grid-template-columns:auto auto;justify-content:start;align-items:baseline;gap:6px}
+  .wb-num{font-size:24px}
+  .wb-now{grid-column:1/-1;font-size:12px}
+  .wb-times{display:flex;flex-wrap:wrap;gap:4px 14px;white-space:normal}
+  .wb-times li{white-space:nowrap}
   .slot{grid-template-columns:70px minmax(0,1fr);gap:6px 14px;padding:18px 0}
   .slot-time b{font-size:21px}
   .slot-where,.slot-do{grid-column:2}
