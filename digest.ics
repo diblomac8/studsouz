@@ -21,7 +21,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:e-2026-10-12-uvphlp@studsouz-mgimo
-DTSTAMP:20261112T191237Z
+DTSTAMP:20261115T201559Z
 DTSTART;TZID=Europe/Moscow:20261012T160000
 DTEND;TZID=Europe/Moscow:20261012T173000
 SUMMARY:Open Talk со Стефанией Маликовой
@@ -33,7 +33,7 @@ URL:https://t.me/bcmgimo/2781
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-10-12-34y6nd@studsouz-mgimo
-DTSTAMP:20261112T191237Z
+DTSTAMP:20261115T201559Z
 DTSTART;TZID=Europe/Moscow:20261012T180000
 DTEND;TZID=Europe/Moscow:20261012T193000
 SUMMARY:Старт программы ПК «Спортивные сооб
@@ -45,7 +45,7 @@ URL:https://t.me/mgimo_sbip/6210
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-10-12-hzhvc1@studsouz-mgimo
-DTSTAMP:20261112T191237Z
+DTSTAMP:20261115T201559Z
 DTSTART;TZID=Europe/Moscow:20261012T223000
 DTEND;TZID=Europe/Moscow:20261013T000000
 SUMMARY:Просмотр игроков в ХК "Дипломаты" МГИ
@@ -58,7 +58,7 @@ URL:https://t.me/mgimodiplomats/2213
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-10-13-dbdq4w@studsouz-mgimo
-DTSTAMP:20261112T191237Z
+DTSTAMP:20261115T201559Z
 DTSTART;TZID=Europe/Moscow:20261013T160000
 DTEND;TZID=Europe/Moscow:20261013T173000
 SUMMARY:Научная дискуссия о многовекторной 
@@ -70,7 +70,7 @@ URL:https://vk.ru/wall-89928414_3806
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-10-13-xahdld@studsouz-mgimo
-DTSTAMP:20261112T191237Z
+DTSTAMP:20261115T201559Z
 DTSTART;TZID=Europe/Moscow:20261013T170000
 DTEND;TZID=Europe/Moscow:20261013T183000
 SUMMARY:Лекция историка-корееведа\, к.и.н.\, ди
@@ -84,7 +84,7 @@ URL:https://t.me/koreanclubMGIMO/1051
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-10-14-nretp7@studsouz-mgimo
-DTSTAMP:20261112T191237Z
+DTSTAMP:20261115T201559Z
 DTSTART;TZID=Europe/Moscow:20261014T160000
 DTEND;TZID=Europe/Moscow:20261014T173000
 SUMMARY:Интеллектуальная игра "Грань Разума"
@@ -97,7 +97,7 @@ URL:https://t.me/cpcmgimo/949
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-10-15-angeqh@studsouz-mgimo
-DTSTAMP:20261112T191237Z
+DTSTAMP:20261115T201559Z
 DTSTART;TZID=Europe/Moscow:20261015T110000
 DTEND;TZID=Europe/Moscow:20261015T123000
 SUMMARY:День финтеха от Альфа-Банка
@@ -109,7 +109,7 @@ URL:https://t.me/meomgimo/1441
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-10-15-smivee@studsouz-mgimo
-DTSTAMP:20261112T191237Z
+DTSTAMP:20261115T201559Z
 DTSTART;TZID=Europe/Moscow:20261015T160000
 DTEND;TZID=Europe/Moscow:20261015T173000
 SUMMARY:Завтрак с Дипломатом - Дмитрием Юрье
@@ -121,7 +121,7 @@ URL:https://t.me/studsouzmgimo/10407
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-10-15-p0swbu@studsouz-mgimo
-DTSTAMP:20261112T191237Z
+DTSTAMP:20261115T201559Z
 DTSTART;TZID=Europe/Moscow:20261015T160000
 DTEND;TZID=Europe/Moscow:20261015T173000
 SUMMARY:Корпоративно-инвестиционный бизнес 
@@ -134,7 +134,7 @@ URL:https://t.me/oeconomicus/3959
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-10-15-xy9lqf@studsouz-mgimo
-DTSTAMP:20261112T191237Z
+DTSTAMP:20261115T201559Z
 DTSTART;TZID=Europe/Moscow:20261015T160000
 DTEND;TZID=Europe/Moscow:20261015T173000
 SUMMARY:Open Talk с Пелагеей
@@ -145,7 +145,7 @@ URL:https://t.me/letstalkmgimo/3311
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-10-15-679xp9@studsouz-mgimo
-DTSTAMP:20261112T191237Z
+DTSTAMP:20261115T201559Z
 DTSTART;VALUE=DATE:20261015
 DTEND;VALUE=DATE:20261016
 SUMMARY:Окончание приёма заявок для вступле
@@ -158,7 +158,7 @@ URL:https://vk.ru/wall-31188434_4975
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-10-16-yl6w4h@studsouz-mgimo
-DTSTAMP:20261112T191237Z
+DTSTAMP:20261115T201559Z
 DTSTART;TZID=Europe/Moscow:20261016T160000
 DTEND;TZID=Europe/Moscow:20261016T173000
 SUMMARY:Открытие регистрации на модель выбо
@@ -174,7 +174,7 @@ URL:https://t.me/anglosaxon_club/338
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-10-16-5txae6@studsouz-mgimo
-DTSTAMP:20261112T191237Z
+DTSTAMP:20261115T201559Z
 DTSTART;TZID=Europe/Moscow:20261016T173000
 DTEND;TZID=Europe/Moscow:20261016T190000
 SUMMARY:Экскурсия по открытому хранению Муз
@@ -187,7 +187,7 @@ URL:https://t.me/artlab_mgimo/7294
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-10-16-gehjfz@studsouz-mgimo
-DTSTAMP:20261112T191237Z
+DTSTAMP:20261115T201559Z
 DTSTART;VALUE=DATE:20261016
 DTEND;VALUE=DATE:20261019
 SUMMARY:Осенний старостат 2026
@@ -199,7 +199,7 @@ URL:https://t.me/studsouzmgimo/10403
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-10-16-qgej3f@studsouz-mgimo
-DTSTAMP:20261112T191237Z
+DTSTAMP:20261115T201559Z
 DTSTART;VALUE=DATE:20261016
 DTEND;VALUE=DATE:20261018
 SUMMARY:Конференция «Россия и АСЕАН в АТР: ди
@@ -212,7 +212,7 @@ URL:https://t.me/aseancentremgimo/1570
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-10-16-evtvrf@studsouz-mgimo
-DTSTAMP:20261112T191237Z
+DTSTAMP:20261115T201559Z
 DTSTART;VALUE=DATE:20261016
 DTEND;VALUE=DATE:20261017
 SUMMARY:Спецкурс «Актуальные проблемы рынка
@@ -225,7 +225,7 @@ URL:https://t.me/law_club_mgimo/1341
 END:VEVENT
 BEGIN:VEVENT
 UID:e-2026-10-16-jg43rp@studsouz-mgimo
-DTSTAMP:20261112T191237Z
+DTSTAMP:20261115T201559Z
 DTSTART;VALUE=DATE:20261016
 DTEND;VALUE=DATE:20261017
 SUMMARY:Открытие регистрации на Молодежный 
@@ -237,264 +237,23 @@ DESCRIPTION:28-29 октября\nРегистрация: https://forms.yan
 URL:https://t.me/forumrussiaafricawhatisnextMGIMO/1196
 END:VEVENT
 BEGIN:VEVENT
-UID:e-2026-11-03-n0foab@studsouz-mgimo
-DTSTAMP:20261112T191237Z
-DTSTART;TZID=Europe/Moscow:20261103T140000
-DTEND;TZID=Europe/Moscow:20261103T153000
-SUMMARY:Выставка «Строгановский культурный 
- код в сохранении наследия России. Дизайн
-  и народные художественные промыслы»
-LOCATION:Малая сцена Культурного центра МГИМ
- О
-DESCRIPTION:Культурный центр МГИМО\nПодробнее:
-  https://t.me/mgimoculturecentre/5387
-URL:https://t.me/mgimoculturecentre/5387
-END:VEVENT
-BEGIN:VEVENT
-UID:e-2026-11-03-94g4pu@studsouz-mgimo
-DTSTAMP:20261112T191237Z
-DTSTART;TZID=Europe/Moscow:20261103T160000
-DTEND;TZID=Europe/Moscow:20261103T173000
-SUMMARY:Интеллектуальная игра «Единство: би
- тва умов»\, приуроченная к Дню народного 
- единства
-LOCATION:1077
-DESCRIPTION:Экономический клуб МГИМО OECONOMICUS им
- .А.В.Макаренко\nРегистрация: https://docs.google.com
- /forms/u/0/d/e/1FAIpQLScaHS23mHZO9oxhLGTZoTTn3TpHYJfofCwpDs5MSZptxa9cDw/fo
- rmResponse\nПодробнее: https://t.me/oeconomicus/4020
-URL:https://t.me/oeconomicus/4020
-END:VEVENT
-BEGIN:VEVENT
-UID:e-2026-11-03-bai6fr@studsouz-mgimo
-DTSTAMP:20261112T191237Z
-DTSTART;TZID=Europe/Moscow:20261103T160000
-DTEND;TZID=Europe/Moscow:20261103T173000
-SUMMARY:Open Talk с Дарьей Джафаровой
-LOCATION:214
-DESCRIPTION:Бизнес-клуб\nРегистрация: https://t.me/bc_
- mgimo_bot?start=reg_11\nПодробнее: https://t.me/bcmgimo/2838
-URL:https://t.me/bcmgimo/2838
-END:VEVENT
-BEGIN:VEVENT
 UID:e-2026-11-03-41bf0y@studsouz-mgimo
-DTSTAMP:20261112T191237Z
+DTSTAMP:20261115T201559Z
 DTSTART;VALUE=DATE:20261103
 DTEND;VALUE=DATE:20261104
 SUMMARY:Выставка «Языки народов России»: мел
  одия единства и культурный код России
-LOCATION:Атриум нового корпуса
+LOCATION:Атриум корпуса МП
 DESCRIPTION:Студенческий проектный офис «Един
  ство народов России»\nИдёт до 19 ноября\nП
  одробнее: https://t.me/russianunityPO/501
 URL:https://t.me/russianunityPO/501
 END:VEVENT
 BEGIN:VEVENT
-UID:e-2026-11-05-6iuj0n@studsouz-mgimo
-DTSTAMP:20261112T191237Z
-DTSTART;TZID=Europe/Moscow:20261105T160000
-DTEND;TZID=Europe/Moscow:20261105T173000
-SUMMARY:Визит с лекцией директора Латиноаме
- риканского департамента Министерства и
- ностранных дел Российской Федерации\, Чр
- езвычайного и Полномочного Посла Алекса
- ндра Валентиновича Щетинина
-LOCATION:314 ауд.
-DESCRIPTION:Ибероамериканский клуб\nПодробнее
- : https://t.me/elclubiberoamericanomgimo/380
-URL:https://t.me/elclubiberoamericanomgimo/380
-END:VEVENT
-BEGIN:VEVENT
-UID:e-2026-11-05-pksk6@studsouz-mgimo
-DTSTAMP:20261112T191237Z
-DTSTART;TZID=Europe/Moscow:20261105T160000
-DTEND;TZID=Europe/Moscow:20261105T173000
-SUMMARY:Лекция сотрудника Отдела европейски
- х политических исследований ИМЭМО РАН А
- ртёма Леонидовича Ильинского «Восстани
- е 1956: что Москва и Будапешт помнят по-раз
- ному?»
-LOCATION:аудиторию сообщат позднее
-DESCRIPTION:ВИК МГИМО\nПодробнее: https://vk.ru/wall-44173
- 671_778
-URL:https://vk.ru/wall-44173671_778
-END:VEVENT
-BEGIN:VEVENT
-UID:e-2026-11-05-pbnr37@studsouz-mgimo
-DTSTAMP:20261112T191237Z
-DTSTART;TZID=Europe/Moscow:20261105T180000
-DTEND;TZID=Europe/Moscow:20261105T193000
-SUMMARY:Установочное собрание
-LOCATION:215
-DESCRIPTION:СПК (Студенческий парламентский к
- луб)\nРегистрация: https://цр.москва/event/15324\nП
- одробнее: https://t.me/spc_damidrus/1210
-URL:https://t.me/spc_damidrus/1210
-END:VEVENT
-BEGIN:VEVENT
-UID:e-2026-11-06-q1f9wj@studsouz-mgimo
-DTSTAMP:20261112T191237Z
-DTSTART;TZID=Europe/Moscow:20261106T160000
-DTEND;TZID=Europe/Moscow:20261106T173000
-SUMMARY:Научно-практическая конференция «Ин
- дия: диалог между цивилизацией и возможн
- остями. Экономические успехи XXI века»
-LOCATION:443 ауд.
-DESCRIPTION:Экономический клуб OECONOMICUS им. А.В. М
- акаренко\nРегистрация закрыта\nПодробне
- е: https://t.me/oeconomicus/3976
-URL:https://t.me/oeconomicus/3976
-END:VEVENT
-BEGIN:VEVENT
-UID:e-2026-11-06-vvis3g@studsouz-mgimo
-DTSTAMP:20261112T191237Z
-DTSTART;VALUE=DATE:20261106
-DTEND;VALUE=DATE:20261107
-SUMMARY:Закрытие регистрации на V научно-пра
- ктическую конференцию OECONOMICUS Forum
-DESCRIPTION:Экономический клуб OECONOMICUS им. А.В. М
- акаренко\nРегистрация: https://forms.yandex.ru/u/6ac919
- 136d2d73ba13d71d10\nПодробнее: https://t.me/oeconomicus/4011
-URL:https://t.me/oeconomicus/4011
-END:VEVENT
-BEGIN:VEVENT
-UID:e-2026-11-07-c9wl5e@studsouz-mgimo
-DTSTAMP:20261112T191237Z
-DTSTART;TZID=Europe/Moscow:20261107T110000
-DTEND;TZID=Europe/Moscow:20261107T183000
-SUMMARY:VI Всероссийская конференция с между
- народным участием «Право между Востоком
-  и Западом»
-DESCRIPTION:Клуб сравнительного правоведения\
- nПодробнее: https://vk.ru/wall-155714747_2223
-URL:https://vk.ru/wall-155714747_2223
-END:VEVENT
-BEGIN:VEVENT
-UID:e-2026-11-08-7zxan@studsouz-mgimo
-DTSTAMP:20261112T191237Z
-DTSTART;VALUE=DATE:20261108
-DTEND;VALUE=DATE:20261109
-SUMMARY:Прогулка к Дню народного единства
-DESCRIPTION:Литературный клуб им. А.С. Грибоедо
- ва "Вдохновение" совместно со Студенческ
- им проектным офисом «Единство народов Р
- оссии»\nРегистрация: https://forms.gle/eTLFCHBYhXqNDxV99\
- nПодробнее: https://t.me/literatureclub_mgimo/1164
-URL:https://t.me/literatureclub_mgimo/1164
-END:VEVENT
-BEGIN:VEVENT
-UID:e-2026-11-09-pq6ck7@studsouz-mgimo
-DTSTAMP:20261112T191237Z
-DTSTART;TZID=Europe/Moscow:20261109T160000
-DTEND;TZID=Europe/Moscow:20261109T173000
-SUMMARY:Встреча «Военная журналистика и Бол
- ьшой спорт» в формате круглого стола с М
- арьяной Наумовой
-LOCATION:216
-DESCRIPTION:Студенческий союз\nРегистрация: http
- s://forms.yandex.ru/u/6ae847015057b20029eb8e7e/\nПодробнее: https
- ://t.me/studsouzmgimo/10623
-URL:https://t.me/studsouzmgimo/10623
-END:VEVENT
-BEGIN:VEVENT
-UID:e-2026-11-09-4k11tn@studsouz-mgimo
-DTSTAMP:20261112T191237Z
-DTSTART;VALUE=DATE:20261109
-DTEND;VALUE=DATE:20261110
-SUMMARY:Экспозиция «Языки народов России. Ме
- лодия единства и культурный код России»
-LOCATION:Атриум Нового корпуса
-DESCRIPTION:Студенческий проектный офис «Един
- ство народов России»\nИдёт до 19 ноября\nП
- одробнее: https://t.me/russianunityPO/501
-URL:https://t.me/russianunityPO/501
-END:VEVENT
-BEGIN:VEVENT
-UID:e-2026-11-09-2sb0li@studsouz-mgimo
-DTSTAMP:20261112T191237Z
-DTSTART;VALUE=DATE:20261109
-DTEND;VALUE=DATE:20261112
-SUMMARY:IX Международная научно-практическая
-  конференция «Федерализм в современном 
- публичном праве»
-DESCRIPTION:Международно-правовой факультет М
- ГИМО\nИдёт до 11 ноября\nРегистрация закры
- та\nПодробнее: https://t.me/law_club_mgimo/1289
-URL:https://t.me/law_club_mgimo/1289
-END:VEVENT
-BEGIN:VEVENT
-UID:e-2026-11-10-861qbs@studsouz-mgimo
-DTSTAMP:20261112T191237Z
-DTSTART;TZID=Europe/Moscow:20261110T160000
-DTEND;TZID=Europe/Moscow:20261110T173000
-SUMMARY:Open Talk с Денисом Сметнёвым – сооснова
- телем Skyeng
-LOCATION:505
-DESCRIPTION:Экономический клуб OECONOMICUS им А.В. М
- акаренко совместно с Бизнес-клубом\nПодр
- обнее: https://t.me/oeconomicus/4055
-URL:https://t.me/oeconomicus/4055
-END:VEVENT
-BEGIN:VEVENT
-UID:e-2026-11-11-tknpiq@studsouz-mgimo
-DTSTAMP:20261112T191237Z
-DTSTART;TZID=Europe/Moscow:20261111T143000
-DTEND;TZID=Europe/Moscow:20261111T160000
-SUMMARY:Мост между культурами: от Пхеньяна д
- о Анкары
-LOCATION:Актовый зал им. Горчакова (корпус Ди
- пломатической Академии на ул. Остоженка)
-DESCRIPTION:Дипломатический клуб им А.Г. Карло
- ва\nРегистрация: https://forms.gle/os6zh79vt6pwLhaX7\nПод
- робнее: https://t.me/MGIMO_Diplomatic_club/831
-URL:https://t.me/MGIMO_Diplomatic_club/831
-END:VEVENT
-BEGIN:VEVENT
-UID:e-2026-11-11-vlgj26@studsouz-mgimo
-DTSTAMP:20261112T191237Z
-DTSTART;TZID=Europe/Moscow:20261111T160000
-DTEND;TZID=Europe/Moscow:20261111T173000
-SUMMARY:Лекция "Японский мегаполис: возрожде
- ние деревянной архитектуры"
-LOCATION:2120
-DESCRIPTION:Японский клуб\nПодробнее: https://vk.ru/wa
- ll-62575051_4371
-URL:https://vk.ru/wall-62575051_4371
-END:VEVENT
-BEGIN:VEVENT
-UID:e-2026-11-11-5xdo66@studsouz-mgimo
-DTSTAMP:20261112T191237Z
-DTSTART;TZID=Europe/Moscow:20261111T160000
-DTEND;TZID=Europe/Moscow:20261111T173000
-SUMMARY:Интеллектуальная игра "Демографичес
- кий квиз"
-LOCATION:уточняется
-DESCRIPTION:Союз Студенческих Семей\nРегистра
- ция: https://docs.google.com/forms/d/e/1FAIpQLSeUlayEHJUVIajsWEi2D82QTw
- dObHyIR1HNP9zfTGQQbYYhKw/viewform?usp=publish-editor\nПодробнее: 
- https://t.me/sssmgimo/120
-URL:https://t.me/sssmgimo/120
-END:VEVENT
-BEGIN:VEVENT
-UID:e-2026-11-12-2ximmf@studsouz-mgimo
-DTSTAMP:20261112T191237Z
-DTSTART;TZID=Europe/Moscow:20261112T120000
-DTEND;TZID=Europe/Moscow:20261112T133000
-SUMMARY:Конференция по Балтийско-Скандинавс
- кому макрорегиону
-LOCATION:Актовый зал им. Горчакова (корпус Ди
- пломатической Академии на ул. Остоженка)
-DESCRIPTION:Студенческий совет\nРегистрация: (
- для слушателей из других универов)\nРеги
- страция: https://forms.yandex.ru/u/6ae74b9f852af3daf2cf946d\nПод
- робнее: https://t.me/STUD_DAMID/392
-URL:https://t.me/STUD_DAMID/392
-END:VEVENT
-BEGIN:VEVENT
-UID:e-2026-11-12-j6bcz5@studsouz-mgimo
-DTSTAMP:20261112T191237Z
-DTSTART;TZID=Europe/Moscow:20261112T140000
-DTEND;TZID=Europe/Moscow:20261112T153000
+UID:e-2026-11-12-ism03q@studsouz-mgimo
+DTSTAMP:20261115T201559Z
+DTSTART;VALUE=DATE:20261112
+DTEND;VALUE=DATE:20261113
 SUMMARY:Выставка "Право на присутствие"\, при
  уроченная к конференции "Женщина и мир"
 LOCATION:4 этаж корпуса МП
@@ -504,47 +263,267 @@ DESCRIPTION:ART LAB МГИМО совместно с клубом "Women in
 URL:https://t.me/artlab_mgimo/7384
 END:VEVENT
 BEGIN:VEVENT
-UID:e-2026-11-12-gxdwu9@studsouz-mgimo
-DTSTAMP:20261112T191237Z
-DTSTART;TZID=Europe/Moscow:20261112T160000
-DTEND;TZID=Europe/Moscow:20261112T173000
-SUMMARY:Как понимать современное общество: п
- резентация клуба «СОЦИУМ» и лекция Кири
- лла Сорвина
-LOCATION:ауд. 214
-DESCRIPTION:Социологический клуб МГИМО "Социу
- м"\nРегистрация закрыта\nПодробнее: https://t.
- me/mediaclubmgimo/967
-URL:https://t.me/mediaclubmgimo/967
+UID:e-2026-11-16-pqlie7@studsouz-mgimo
+DTSTAMP:20261115T201559Z
+DTSTART;TZID=Europe/Moscow:20261116T160000
+DTEND;TZID=Europe/Moscow:20261116T173000
+SUMMARY:Мастер-класс «Роль стран БРИКС+ в дел
+ олларизации и её влияние на мировую торг
+ овлю» Равиндера Рены – профессора Школы
+  бизнеса Университета Воксен (Хайдараба
+ д\, Индия)
+LOCATION:Ауд. 215
+DESCRIPTION:Бизнес-клуб НСО МГИМО\nПодробнее: ht
+ tps://t.me/bcmgimo/2855
+URL:https://t.me/bcmgimo/2855
 END:VEVENT
 BEGIN:VEVENT
-UID:e-2026-11-12-vbadu8@studsouz-mgimo
-DTSTAMP:20261112T191237Z
-DTSTART;TZID=Europe/Moscow:20261112T180000
-DTEND;TZID=Europe/Moscow:20261112T193000
-SUMMARY:Открытая лекция исполнительного дир
- ектора\, руководителя направления по мер
- ам государственной поддержки ВЭБ.РФ Мак
- сима Ткаченко "Партнерство государства 
- и бизнеса в развитии городов"
+UID:e-2026-11-16-8261w0@studsouz-mgimo
+DTSTAMP:20261115T201559Z
+DTSTART;TZID=Europe/Moscow:20261116T160000
+DTEND;TZID=Europe/Moscow:20261116T173000
+SUMMARY:Экскурсия в Институт научной информ
+ ации по общественным наукам (ИНИОН) РАН
+LOCATION:Нахимовский проспект\, 51/21
+DESCRIPTION:Клуб этикета МГИМО\nРегистрация: д
+ о 14 ноября включительно\nРегистрация: https
+ ://forms.gle/wJp55LiE7Uc1GDzJ9 (до 14 ноября)\nПодробнее:
+  https://t.me/etiquettemgimo/604
+URL:https://t.me/etiquettemgimo/604
+END:VEVENT
+BEGIN:VEVENT
+UID:e-2026-11-16-9oueej@studsouz-mgimo
+DTSTAMP:20261115T201559Z
+DTSTART;TZID=Europe/Moscow:20261116T160000
+DTEND;TZID=Europe/Moscow:20261116T173000
+SUMMARY:Командная игра по кризисному управл
+ ению «Ливанский кризис»
+LOCATION:уточняется
+DESCRIPTION:World Politics Club MGIMO (НСО)\nРегистрация за
+ крыта\nПодробнее: https://vk.ru/wall-203555517_1334
+URL:https://vk.ru/wall-203555517_1334
+END:VEVENT
+BEGIN:VEVENT
+UID:e-2026-11-16-6l2e4x@studsouz-mgimo
+DTSTAMP:20261115T201559Z
+DTSTART;TZID=Europe/Moscow:20261116T230000
+DTEND;TZID=Europe/Moscow:20261117T003000
+SUMMARY:Закрытие регистрации для внешних го
+ стей на Свою игру: через тернии к устойчи
+ вому развитию
+DESCRIPTION:Клуб Триверсум\nРегистрация: https://do
+ cs.google.com/forms/d/e/1FAIpQLSdMgpo541acBwUptyes9CYqNzUIiYl2F5vOjcIfiOhg
+ tqa--A/viewform\nПодробнее: https://t.me/Triversum_clubMGIMO/637
+URL:https://t.me/Triversum_clubMGIMO/637
+END:VEVENT
+BEGIN:VEVENT
+UID:e-2026-11-17-3lu1jj@studsouz-mgimo
+DTSTAMP:20261115T201559Z
+DTSTART;TZID=Europe/Moscow:20261117T103500
+DTEND;TZID=Europe/Moscow:20261117T120500
+SUMMARY:Лекция: «Консульская служба\, диплом
+ атия\, которая начинается с человека» с С
+ ергеем Валентиновичем Семёновым (диплом
+ ат\, выпускник МГИМО 1985 года\, а с 2021 года 
+ – Генеральный консул России в Гданьске)
+LOCATION:ауд 443
+DESCRIPTION:World Politics Club MGIMO (НСО)\nРегистрация: htt
+ ps://forms.yandex.ru/u/6ae75158852af3de7ccf9590/\nПодробнее: http
+ s://vk.ru/wall-203555517_1332
+URL:https://vk.ru/wall-203555517_1332
+END:VEVENT
+BEGIN:VEVENT
+UID:e-2026-11-17-qimso0@studsouz-mgimo
+DTSTAMP:20261115T201559Z
+DTSTART;TZID=Europe/Moscow:20261117T120000
+DTEND;TZID=Europe/Moscow:20261117T133000
+SUMMARY:Встреча с исполнительным директором
+  компании «Антиплагиат» Евгением Лукьян
+ чиковым на тему: "Как устроена проверка В
+ КР в системе «Антиплагиат»"
+LOCATION:Ауд. 314
+DESCRIPTION:Факультет управления и политики\nР
+ егистрация закрыта\nПодробнее: https://t.me/FUPm
+ gimo/3954
+URL:https://t.me/FUPmgimo/3954
+END:VEVENT
+BEGIN:VEVENT
+UID:e-2026-11-17-nkmxyr@studsouz-mgimo
+DTSTAMP:20261115T201559Z
+DTSTART;TZID=Europe/Moscow:20261117T160000
+DTEND;TZID=Europe/Moscow:20261117T173000
+SUMMARY:Лекция в формате Direktes Gespräch «С берего
+ в Рейна: встреча с О.Ю. Красницким (Чрезвы
+ чайный и Полномочный Посланник 1 класса\,
+  заместитель директора Третьего Европей
+ ского департамента МИД России\, Генераль
+ ный консул России в Бонне (2024-2026))»
+LOCATION:Зал 2
+DESCRIPTION:Клуб германских исследований НСО 
+ МГИМО\nМероприятие для студентов МГИМО.\n
+ Регистрация: https://forms.yandex.ru/u/6aec473249af471109104e1d
+ \nПодробнее: https://vk.ru/wall-105243335_5935
+URL:https://vk.ru/wall-105243335_5935
+END:VEVENT
+BEGIN:VEVENT
+UID:e-2026-11-17-37b43g@studsouz-mgimo
+DTSTAMP:20261115T201559Z
+DTSTART;TZID=Europe/Moscow:20261117T160000
+DTEND;TZID=Europe/Moscow:20261117T173000
+SUMMARY:Киновечер "Come un gatto in tangenziale"
+LOCATION:ауд. 511
+DESCRIPTION:Итальянский клуб НСО им Т.В. Зоново
+ й\nПодробнее: https://t.me/italclub_mgimo/2400
+URL:https://t.me/italclub_mgimo/2400
+END:VEVENT
+BEGIN:VEVENT
+UID:e-2026-11-17-7md0bo@studsouz-mgimo
+DTSTAMP:20261115T201559Z
+DTSTART;TZID=Europe/Moscow:20261117T163000
+DTEND;TZID=Europe/Moscow:20261117T180000
+SUMMARY:Встреча с Чрезвычайным и Полномочны
+ м Послом Федеративной Республики Бразил
+ ия Сержио Родригесом Дос Сантосом на тем
+ у: «Бразилия после выборов. Место Бразил
+ ии в современном мире»
+LOCATION:Аудитория: Актовый зал им. А.М.Горчак
+ ова\;\nАдрес: ул. Остоженка\, 53/2с
+DESCRIPTION:Клуб Латинской Америки La Tertulia ДА М
+ ГИМО МИД РОССИИ\nРегистрация: Форма для с
+ тудентов/преподавателей корпусов МГИМО 
+ МИД РФ Форма для внешних гостей\, не явля
+ ющихся студентами/преподавателями МГИМ
+ О МИД РФ закрыта\nРегистрация: https://docs.google
+ .com/forms/d/e/1FAIpQLSepmAIsRtHx1nXhcRneKooMrSesArGy3LdQo0c5bdjVOwKscQ/vi
+ ewform?usp=publish-editor\nПодробнее: https://t.me/elclubiberoame
+ ricanomgimo/411
+URL:https://t.me/elclubiberoamericanomgimo/411
+END:VEVENT
+BEGIN:VEVENT
+UID:e-2026-11-18-hffhv2@studsouz-mgimo
+DTSTAMP:20261115T201559Z
+DTSTART;TZID=Europe/Moscow:20261118T160000
+DTEND;TZID=Europe/Moscow:20261118T173000
+SUMMARY:Open talk с Эммануэлем Киде (Президент Фр
+ анко-российской торгово-промышленной па
+ латы и независимый член Совета директор
+ ов ПАО «НОВАТЭК»)
+LOCATION:1 зал
+DESCRIPTION:Бизнес-клуб МГИМО\nВход по предвар
+ ительной регистрации\nПодробнее: https://t.me/
+ bcmgimo/2869\nTelegram: https://t.me/bc_mgimo_bot?start=reg_15
+URL:https://t.me/bcmgimo/2869
+END:VEVENT
+BEGIN:VEVENT
+UID:e-2026-11-18-bljmk9@studsouz-mgimo
+DTSTAMP:20261115T201559Z
+DTSTART;TZID=Europe/Moscow:20261118T160000
+DTEND;TZID=Europe/Moscow:20261118T173000
+SUMMARY:Четвертая лекция в рамках образоват
+ ельного блока Парламентской модели 2026
+LOCATION:2 зал
+DESCRIPTION:Московская международная Модель О
+ ОН C-MIMUN\nПодробнее: https://t.me/mgimopm/1726
+URL:https://t.me/mgimopm/1726
+END:VEVENT
+BEGIN:VEVENT
+UID:e-2026-11-18-gvqd1o@studsouz-mgimo
+DTSTAMP:20261115T201559Z
+DTSTART;TZID=Europe/Moscow:20261118T160000
+DTEND;TZID=Europe/Moscow:20261118T173000
+SUMMARY:Дебаты «Fakes\, provocations\, mind control: how to wage an 
+ information war (and should we)?»
+LOCATION:уточняется
+DESCRIPTION:World Politics Club MGIMO (НСО)\nрегистрация\nР
+ егистрация: https://forms.yandex.ru/u/6ae74d561f1eb5edbdd05492/\
+ nПодробнее: https://vk.ru/wall-203555517_1336
+URL:https://vk.ru/wall-203555517_1336
+END:VEVENT
+BEGIN:VEVENT
+UID:e-2026-11-18-tqefso@studsouz-mgimo
+DTSTAMP:20261115T201559Z
+DTSTART;TZID=Europe/Moscow:20261118T160000
+DTEND;TZID=Europe/Moscow:20261118T173000
+SUMMARY:Мероприятие «Стажировка в Китае: от 
+ заявки до возвращения».
+LOCATION:ауд. 215
+DESCRIPTION:Китайский клуб НСО МГИМО\nПодробне
+ е: https://t.me/ccmgimo/1348
+URL:https://t.me/ccmgimo/1348
+END:VEVENT
+BEGIN:VEVENT
+UID:e-2026-11-19-xiwf12@studsouz-mgimo
+DTSTAMP:20261115T201559Z
+DTSTART;TZID=Europe/Moscow:20261119T160000
+DTEND;TZID=Europe/Moscow:20261119T173000
+SUMMARY:Открытый семинар с третьим секретар
+ ем Генерального секретариата Шилиным Я. 
+ С. «Будущее отношений России со странами
+  Евросоюза».
+LOCATION:ауд 215
+DESCRIPTION:Клуб ведения переговоров Negotiation club
+ \nМероприятие носит внутренний характер\
+ , наличие внешних гостей не предусмотрен
+ о\nПодробнее: https://t.me/NC_mgimo_tg/895\nВКонтакте: 
+ https://vk.ru/wall-89928414_3819
+URL:https://t.me/NC_mgimo_tg/895
+END:VEVENT
+BEGIN:VEVENT
+UID:e-2026-11-20-wufxkz@studsouz-mgimo
+DTSTAMP:20261115T201559Z
+DTSTART;TZID=Europe/Moscow:20261120T160000
+DTEND;TZID=Europe/Moscow:20261120T173000
+SUMMARY:Разговорный клуб на португальском я
+ зыке «O dinheiro compra tudo?»
+LOCATION:ауд. 2152
+DESCRIPTION:Ибероамериканский клуб НСО МГИМО\n
+ Подробнее: https://t.me/elclubiberoamericanomgimo/421
+URL:https://t.me/elclubiberoamericanomgimo/421
+END:VEVENT
+BEGIN:VEVENT
+UID:e-2026-11-20-bu0o07@studsouz-mgimo
+DTSTAMP:20261115T201559Z
+DTSTART;TZID=Europe/Moscow:20261120T200000
+DTEND;TZID=Europe/Moscow:20261120T213000
+SUMMARY:Оканчание регистрации на заочное уч
+ астие в конференции "Границы памяти"
+DESCRIPTION:Исторический клуб НСО МГИМО «Касс
+ иодор»\nСтудентам МГИМО регистрация не т
+ ребуется! Форма: bordersofmemoryconf.ru/apsilankimas\nПод
+ робнее: https://vk.ru/wall-5582445_4040\nСсылка: http://border
+ sofmemoryconf.ru/apsilankimas
+URL:https://vk.ru/wall-5582445_4040
+END:VEVENT
+BEGIN:VEVENT
+UID:e-2026-11-21-hr5tnf@studsouz-mgimo
+DTSTAMP:20261115T201559Z
+DTSTART;TZID=Europe/Moscow:20261121T113000
+DTEND;TZID=Europe/Moscow:20261121T130000
+SUMMARY:Открытая онлайн-лекция «Почему круп
+ ные проекты срываются и как нивелироват
+ ь риски» с А. Н. Головановой\, директором 
+ по развитию инфраструктурных проектов\, 
+ руководителем департамента ГЧП ППК «РЭО
+ »
+LOCATION:Онлайн
 DESCRIPTION:от Школа бизнеса и международных к
- омпетенций\n.\nРегистрация: https://forms.yandex.ru/c
- loud/6ad7138d6d2d73808aa5a8a3/\nПодробнее: https://vk.ru/wall-683
- 49124_2339
-URL:https://vk.ru/wall-68349124_2339
+ омпетенций\nРегистрация: https://forms.yandex.ru/clou
+ d/6ae4a4786d2d7367b98d62ca/\nПодробнее: https://vk.ru/wall-683491
+ 24_2348
+URL:https://vk.ru/wall-68349124_2348
 END:VEVENT
 BEGIN:VEVENT
-UID:e-2026-11-13-sv32ar@studsouz-mgimo
-DTSTAMP:20261112T191237Z
-DTSTART;TZID=Europe/Moscow:20261113T160000
-DTEND;TZID=Europe/Moscow:20261113T173000
-SUMMARY:Круглый стол\, приуроченный к 10-летию
-  Дипломатического клуба МГИМО им. А.Г. Ка
- рлова НСО МГИМО: "Дипломатия нового поко
- ления: преемственность и инновации"
-LOCATION:423
-DESCRIPTION:Дипломатический клуб им А.Г. Карло
- ва\nПодробнее: https://t.me/MGIMO_Diplomatic_club/830
-URL:https://t.me/MGIMO_Diplomatic_club/830
+UID:e-2026-11-21-wgt0jr@studsouz-mgimo
+DTSTAMP:20261115T201559Z
+DTSTART;TZID=Europe/Moscow:20261121T170000
+DTEND;TZID=Europe/Moscow:20261121T183000
+SUMMARY:Тайский разговорный клуб « การรู
+ ้จักกัน (Знакомство)»
+LOCATION:ауд. 130
+DESCRIPTION:Клуб юго-восточной Азии\nДля регис
+ трации на мероприятие просьба писать Да
+ рье Борисовой\nПодробнее: https://t.me/southeast_asia
+ _mgimo/42\nВКонтакте: https://vk.ru/id38379769
+URL:https://t.me/southeast_asia_mgimo/42
 END:VEVENT
 END:VCALENDAR

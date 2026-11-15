@@ -9,180 +9,26 @@
     "name_en": "Olesya Rudakova",
     "tg": "Billy_Foxx"
   },
-  "updated": "2026-11-12",
+  "updated": "2026-11-15",
   "events": [
     {
-      "date": "2026-11-09",
-      "end": "",
-      "time": "16:00",
-      "title": "Встреча «Военная журналистика и Большой спорт» в формате круглого стола с Марьяной Наумовой",
-      "title_en": "",
-      "org_en": "",
-      "place_en": "",
-      "note_en": "",
-      "url": "https://t.me/studsouzmgimo/10623",
-      "org": "Студенческий союз",
-      "place": "216",
-      "online": false,
-      "note": "",
-      "cat": "sport",
-      "reg": {
-        "state": "open",
-        "url": "https://forms.yandex.ru/u/6ae847015057b20029eb8e7e/",
-        "until": ""
-      },
-      "links": []
-    },
-    {
-      "date": "2026-11-09",
+      "date": "2026-11-03",
       "end": "2026-11-19",
       "time": "",
-      "title": "Экспозиция «Языки народов России. Мелодия единства и культурный код России»",
+      "title": "Выставка «Языки народов России»: мелодия единства и культурный код России",
       "title_en": "",
       "org_en": "",
       "place_en": "",
       "note_en": "",
       "url": "https://t.me/russianunityPO/501",
       "org": "Студенческий проектный офис «Единство народов России»",
-      "place": "Атриум Нового корпуса",
+      "place": "Атриум корпуса МП",
       "online": false,
       "note": "",
-      "cat": "other",
+      "cat": "culture",
       "reg": {
         "state": "none",
         "url": "",
-        "until": ""
-      },
-      "links": []
-    },
-    {
-      "date": "2026-11-09",
-      "end": "2026-11-11",
-      "time": "",
-      "title": "IX Международная научно-практическая конференция «Федерализм в современном публичном праве»",
-      "title_en": "",
-      "org_en": "",
-      "place_en": "",
-      "note_en": "",
-      "url": "https://t.me/law_club_mgimo/1289",
-      "org": "Международно-правовой факультет МГИМО",
-      "place": "",
-      "online": false,
-      "note": "",
-      "cat": "talk",
-      "reg": {
-        "state": "closed",
-        "url": "",
-        "until": ""
-      },
-      "links": []
-    },
-    {
-      "date": "2026-11-10",
-      "end": "",
-      "time": "16:00",
-      "title": "Open Talk с Денисом Сметнёвым – сооснователем Skyeng",
-      "title_en": "",
-      "org_en": "",
-      "place_en": "",
-      "note_en": "",
-      "url": "https://t.me/oeconomicus/4055",
-      "org": "Экономический клуб OECONOMICUS им А.В. Макаренко совместно с Бизнес-клубом",
-      "place": "505",
-      "online": false,
-      "note": "",
-      "cat": "talk",
-      "reg": {
-        "state": "none",
-        "url": "",
-        "until": ""
-      },
-      "links": []
-    },
-    {
-      "date": "2026-11-11",
-      "end": "",
-      "time": "14:30",
-      "title": "Мост между культурами: от Пхеньяна до Анкары",
-      "title_en": "",
-      "org_en": "",
-      "place_en": "",
-      "note_en": "",
-      "url": "https://t.me/MGIMO_Diplomatic_club/831",
-      "org": "Дипломатический клуб им А.Г. Карлова",
-      "place": "Актовый зал им. Горчакова (корпус Дипломатической Академии на ул. Остоженка)",
-      "online": false,
-      "note": "",
-      "cat": "other",
-      "reg": {
-        "state": "open",
-        "url": "https://forms.gle/os6zh79vt6pwLhaX7",
-        "until": ""
-      },
-      "links": []
-    },
-    {
-      "date": "2026-11-11",
-      "end": "",
-      "time": "16:00",
-      "title": "Лекция \"Японский мегаполис: возрождение деревянной архитектуры\"",
-      "title_en": "",
-      "org_en": "",
-      "place_en": "",
-      "note_en": "",
-      "url": "https://vk.ru/wall-62575051_4371",
-      "org": "Японский клуб",
-      "place": "2120",
-      "online": false,
-      "note": "",
-      "cat": "talk",
-      "reg": {
-        "state": "none",
-        "url": "",
-        "until": ""
-      },
-      "links": []
-    },
-    {
-      "date": "2026-11-11",
-      "end": "",
-      "time": "16:00",
-      "title": "Интеллектуальная игра \"Демографический квиз\"",
-      "title_en": "",
-      "org_en": "",
-      "place_en": "",
-      "note_en": "",
-      "url": "https://t.me/sssmgimo/120",
-      "org": "Союз Студенческих Семей",
-      "place": "уточняется",
-      "online": false,
-      "note": "",
-      "cat": "other",
-      "reg": {
-        "state": "open",
-        "url": "https://docs.google.com/forms/d/e/1FAIpQLSeUlayEHJUVIajsWEi2D82QTwdObHyIR1HNP9zfTGQQbYYhKw/viewform?usp=publish-editor",
-        "until": ""
-      },
-      "links": []
-    },
-    {
-      "date": "2026-11-12",
-      "end": "",
-      "time": "12:00",
-      "title": "Конференция по Балтийско-Скандинавскому макрорегиону",
-      "title_en": "",
-      "org_en": "",
-      "place_en": "",
-      "note_en": "",
-      "url": "https://t.me/STUD_DAMID/392",
-      "org": "Студенческий совет",
-      "place": "Актовый зал им. Горчакова (корпус Дипломатической Академии на ул. Остоженка)",
-      "online": false,
-      "note": "Регистрация: (для слушателей из других универов)",
-      "cat": "talk",
-      "reg": {
-        "state": "open",
-        "url": "https://forms.yandex.ru/u/6ae74b9f852af3daf2cf946d",
         "until": ""
       },
       "links": []
@@ -190,7 +36,7 @@
     {
       "date": "2026-11-12",
       "end": "2026-12-03",
-      "time": "14:00",
+      "time": "",
       "title": "Выставка \"Право на присутствие\", приуроченная к конференции \"Женщина и мир\"",
       "title_en": "",
       "org_en": "",
@@ -201,7 +47,7 @@
       "place": "4 этаж корпуса МП",
       "online": false,
       "note": "",
-      "cat": "other",
+      "cat": "culture",
       "reg": {
         "state": "none",
         "url": "",
@@ -210,17 +56,127 @@
       "links": []
     },
     {
-      "date": "2026-11-12",
+      "date": "2026-11-16",
       "end": "",
       "time": "16:00",
-      "title": "Как понимать современное общество: презентация клуба «СОЦИУМ» и лекция Кирилла Сорвина",
+      "title": "Мастер-класс «Роль стран БРИКС+ в делолларизации и её влияние на мировую торговлю» Равиндера Рены – профессора Школы бизнеса Университета Воксен (Хайдарабад, Индия)",
       "title_en": "",
       "org_en": "",
       "place_en": "",
       "note_en": "",
-      "url": "https://t.me/mediaclubmgimo/967",
-      "org": "Социологический клуб МГИМО \"Социум\"",
-      "place": "ауд. 214",
+      "url": "https://t.me/bcmgimo/2855",
+      "org": "Бизнес-клуб НСО МГИМО",
+      "place": "Ауд. 215",
+      "online": false,
+      "note": "",
+      "cat": "career",
+      "reg": {
+        "state": "none",
+        "url": "",
+        "until": ""
+      },
+      "links": []
+    },
+    {
+      "date": "2026-11-16",
+      "end": "",
+      "time": "16:00",
+      "title": "Экскурсия в Институт научной информации по общественным наукам (ИНИОН) РАН",
+      "title_en": "",
+      "org_en": "",
+      "place_en": "",
+      "note_en": "",
+      "url": "https://t.me/etiquettemgimo/604",
+      "org": "Клуб этикета МГИМО",
+      "place": "Нахимовский проспект, 51/21",
+      "online": false,
+      "note": "Регистрация: до 14 ноября включительно",
+      "cat": "culture",
+      "reg": {
+        "state": "open",
+        "url": "https://forms.gle/wJp55LiE7Uc1GDzJ9",
+        "until": "14 ноября"
+      },
+      "links": []
+    },
+    {
+      "date": "2026-11-16",
+      "end": "",
+      "time": "16:00",
+      "title": "Командная игра по кризисному управлению «Ливанский кризис»",
+      "title_en": "",
+      "org_en": "",
+      "place_en": "",
+      "note_en": "",
+      "url": "https://vk.ru/wall-203555517_1334",
+      "org": "World Politics Club MGIMO (НСО)",
+      "place": "уточняется",
+      "online": false,
+      "note": "",
+      "cat": "contest",
+      "reg": {
+        "state": "closed",
+        "url": "",
+        "until": ""
+      },
+      "links": []
+    },
+    {
+      "date": "2026-11-16",
+      "end": "",
+      "time": "23:00",
+      "title": "Закрытие регистрации для внешних гостей на Свою игру: через тернии к устойчивому развитию",
+      "title_en": "",
+      "org_en": "",
+      "place_en": "",
+      "note_en": "",
+      "url": "https://t.me/Triversum_clubMGIMO/637",
+      "org": "Клуб Триверсум",
+      "place": "",
+      "online": false,
+      "note": "",
+      "cat": "other",
+      "reg": {
+        "state": "open",
+        "url": "https://docs.google.com/forms/d/e/1FAIpQLSdMgpo541acBwUptyes9CYqNzUIiYl2F5vOjcIfiOhgtqa--A/viewform",
+        "until": ""
+      },
+      "links": []
+    },
+    {
+      "date": "2026-11-17",
+      "end": "",
+      "time": "10:35",
+      "title": "Лекция: «Консульская служба, дипломатия, которая начинается с человека» с Сергеем Валентиновичем Семёновым (дипломат, выпускник МГИМО 1985 года, а с 2021 года – Генеральный консул России в Гданьске)",
+      "title_en": "",
+      "org_en": "",
+      "place_en": "",
+      "note_en": "",
+      "url": "https://vk.ru/wall-203555517_1332",
+      "org": "World Politics Club MGIMO (НСО)",
+      "place": "ауд 443",
+      "online": false,
+      "note": "",
+      "cat": "talk",
+      "reg": {
+        "state": "open",
+        "url": "https://forms.yandex.ru/u/6ae75158852af3de7ccf9590/",
+        "until": ""
+      },
+      "links": []
+    },
+    {
+      "date": "2026-11-17",
+      "end": "",
+      "time": "12:00",
+      "title": "Встреча с исполнительным директором компании «Антиплагиат» Евгением Лукьянчиковым на тему: \"Как устроена проверка ВКР в системе «Антиплагиат»\"",
+      "title_en": "",
+      "org_en": "",
+      "place_en": "",
+      "note_en": "",
+      "url": "https://t.me/FUPmgimo/3954",
+      "org": "Факультет управления и политики",
+      "place": "Ауд. 314",
       "online": false,
       "note": "",
       "cat": "talk",
@@ -232,48 +188,292 @@
       "links": []
     },
     {
-      "date": "2026-11-12",
+      "date": "2026-11-17",
       "end": "",
-      "time": "18:00",
-      "title": "Открытая лекция исполнительного директора, руководителя направления по мерам государственной поддержки ВЭБ.РФ Максима Ткаченко \"Партнерство государства и бизнеса в развитии городов\"",
+      "time": "16:00",
+      "title": "Лекция в формате Direktes Gespräch «С берегов Рейна: встреча с О.Ю. Красницким (Чрезвычайный и Полномочный Посланник 1 класса, заместитель директора Третьего Европейского департамента МИД России, Генеральный консул России в Бонне (2024-2026))»",
       "title_en": "",
       "org_en": "",
       "place_en": "",
       "note_en": "",
-      "url": "https://vk.ru/wall-68349124_2339",
-      "org": "Школа бизнеса и международных компетенций",
-      "place": "",
+      "url": "https://vk.ru/wall-105243335_5935",
+      "org": "Клуб германских исследований НСО МГИМО",
+      "place": "Зал 2",
       "online": false,
-      "note": ".",
+      "note": "Мероприятие для студентов МГИМО.",
       "cat": "talk",
       "reg": {
         "state": "open",
-        "url": "https://forms.yandex.ru/cloud/6ad7138d6d2d73808aa5a8a3/",
+        "url": "https://forms.yandex.ru/u/6aec473249af471109104e1d",
         "until": ""
       },
       "links": []
     },
     {
-      "date": "2026-11-13",
+      "date": "2026-11-17",
       "end": "",
       "time": "16:00",
-      "title": "Круглый стол, приуроченный к 10-летию Дипломатического клуба МГИМО им. А.Г. Карлова НСО МГИМО: \"Дипломатия нового поколения: преемственность и инновации\"",
+      "title": "Киновечер \"Come un gatto in tangenziale\"",
       "title_en": "",
       "org_en": "",
       "place_en": "",
       "note_en": "",
-      "url": "https://t.me/MGIMO_Diplomatic_club/830",
-      "org": "Дипломатический клуб им А.Г. Карлова",
-      "place": "423",
+      "url": "https://t.me/italclub_mgimo/2400",
+      "org": "Итальянский клуб НСО им Т.В. Зоновой",
+      "place": "ауд. 511",
       "online": false,
       "note": "",
-      "cat": "talk",
+      "cat": "culture",
       "reg": {
         "state": "none",
         "url": "",
         "until": ""
       },
       "links": []
+    },
+    {
+      "date": "2026-11-17",
+      "end": "",
+      "time": "16:30",
+      "title": "Встреча с Чрезвычайным и Полномочным Послом Федеративной Республики Бразилия Сержио Родригесом Дос Сантосом на тему: «Бразилия после выборов. Место Бразилии в современном мире»",
+      "title_en": "",
+      "org_en": "",
+      "place_en": "",
+      "note_en": "",
+      "url": "https://t.me/elclubiberoamericanomgimo/411",
+      "org": "Клуб Латинской Америки La Tertulia ДА МГИМО МИД РОССИИ",
+      "place": "Аудитория: Актовый зал им. А.М.Горчакова;\nАдрес: ул. Остоженка, 53/2с",
+      "online": false,
+      "note": "Регистрация: Форма для студентов/преподавателей корпусов МГИМО МИД РФ Форма для внешних гостей, не являющихся студентами/преподавателями МГИМО МИД РФ закрыта",
+      "cat": "talk",
+      "reg": {
+        "state": "open",
+        "url": "https://docs.google.com/forms/d/e/1FAIpQLSepmAIsRtHx1nXhcRneKooMrSesArGy3LdQo0c5bdjVOwKscQ/viewform?usp=publish-editor",
+        "until": ""
+      },
+      "links": []
+    },
+    {
+      "date": "2026-11-18",
+      "end": "",
+      "time": "16:00",
+      "title": "Open talk с Эммануэлем Киде (Президент Франко-российской торгово-промышленной палаты и независимый член Совета директоров ПАО «НОВАТЭК»)",
+      "title_en": "",
+      "org_en": "",
+      "place_en": "",
+      "note_en": "",
+      "url": "https://t.me/bcmgimo/2869",
+      "org": "Бизнес-клуб МГИМО",
+      "place": "1 зал",
+      "online": false,
+      "note": "Вход по предварительной регистрации",
+      "cat": "talk",
+      "reg": {
+        "state": "open",
+        "url": "",
+        "until": ""
+      },
+      "links": [
+        {
+          "label": "Telegram",
+          "label_en": "Telegram",
+          "url": "https://t.me/bc_mgimo_bot?start=reg_15"
+        }
+      ]
+    },
+    {
+      "date": "2026-11-18",
+      "end": "",
+      "time": "16:00",
+      "title": "Четвертая лекция в рамках образовательного блока Парламентской модели 2026",
+      "title_en": "",
+      "org_en": "",
+      "place_en": "",
+      "note_en": "",
+      "url": "https://t.me/mgimopm/1726",
+      "org": "Московская международная Модель ООН C-MIMUN",
+      "place": "2 зал",
+      "online": false,
+      "note": "",
+      "cat": "contest",
+      "reg": {
+        "state": "none",
+        "url": "",
+        "until": ""
+      },
+      "links": []
+    },
+    {
+      "date": "2026-11-18",
+      "end": "",
+      "time": "16:00",
+      "title": "Дебаты «Fakes, provocations, mind control: how to wage an information war (and should we)?»",
+      "title_en": "",
+      "org_en": "",
+      "place_en": "",
+      "note_en": "",
+      "url": "https://vk.ru/wall-203555517_1336",
+      "org": "World Politics Club MGIMO (НСО)",
+      "place": "уточняется",
+      "online": false,
+      "note": "регистрация",
+      "cat": "contest",
+      "reg": {
+        "state": "open",
+        "url": "https://forms.yandex.ru/u/6ae74d561f1eb5edbdd05492/",
+        "until": ""
+      },
+      "links": []
+    },
+    {
+      "date": "2026-11-18",
+      "end": "",
+      "time": "16:00",
+      "title": "Мероприятие «Стажировка в Китае: от заявки до возвращения».",
+      "title_en": "",
+      "org_en": "",
+      "place_en": "",
+      "note_en": "",
+      "url": "https://t.me/ccmgimo/1348",
+      "org": "Китайский клуб НСО МГИМО",
+      "place": "ауд. 215",
+      "online": false,
+      "note": "",
+      "cat": "other",
+      "reg": {
+        "state": "none",
+        "url": "",
+        "until": ""
+      },
+      "links": []
+    },
+    {
+      "date": "2026-11-19",
+      "end": "",
+      "time": "16:00",
+      "title": "Открытый семинар с третьим секретарем Генерального секретариата Шилиным Я. С. «Будущее отношений России со странами Евросоюза».",
+      "title_en": "",
+      "org_en": "",
+      "place_en": "",
+      "note_en": "",
+      "url": "https://t.me/NC_mgimo_tg/895",
+      "org": "Клуб ведения переговоров Negotiation club",
+      "place": "ауд 215",
+      "online": false,
+      "note": "Мероприятие носит внутренний характер, наличие внешних гостей не предусмотрено",
+      "cat": "talk",
+      "reg": {
+        "state": "none",
+        "url": "",
+        "until": ""
+      },
+      "links": [
+        {
+          "label": "ВКонтакте",
+          "label_en": "",
+          "url": "https://vk.ru/wall-89928414_3819"
+        }
+      ]
+    },
+    {
+      "date": "2026-11-20",
+      "end": "",
+      "time": "16:00",
+      "title": "Разговорный клуб на португальском языке «O dinheiro compra tudo?»",
+      "title_en": "",
+      "org_en": "",
+      "place_en": "",
+      "note_en": "",
+      "url": "https://t.me/elclubiberoamericanomgimo/421",
+      "org": "Ибероамериканский клуб НСО МГИМО",
+      "place": "ауд. 2152",
+      "online": false,
+      "note": "",
+      "cat": "other",
+      "reg": {
+        "state": "none",
+        "url": "",
+        "until": ""
+      },
+      "links": []
+    },
+    {
+      "date": "2026-11-20",
+      "end": "",
+      "time": "20:00",
+      "title": "Оканчание регистрации на заочное участие в конференции \"Границы памяти\"",
+      "title_en": "",
+      "org_en": "",
+      "place_en": "",
+      "note_en": "",
+      "url": "https://vk.ru/wall-5582445_4040",
+      "org": "Исторический клуб НСО МГИМО «Кассиодор»",
+      "place": "",
+      "online": false,
+      "note": "Студентам МГИМО регистрация не требуется! Форма: bordersofmemoryconf.ru/apsilankimas",
+      "cat": "talk",
+      "reg": {
+        "state": "open",
+        "url": "",
+        "until": ""
+      },
+      "links": [
+        {
+          "label": "Ссылка",
+          "label_en": "Link",
+          "url": "http://bordersofmemoryconf.ru/apsilankimas"
+        }
+      ]
+    },
+    {
+      "date": "2026-11-21",
+      "end": "",
+      "time": "11:30",
+      "title": "Открытая онлайн-лекция «Почему крупные проекты срываются и как нивелировать риски» с А. Н. Головановой, директором по развитию инфраструктурных проектов, руководителем департамента ГЧП ППК «РЭО»",
+      "title_en": "",
+      "org_en": "",
+      "place_en": "",
+      "note_en": "",
+      "url": "https://vk.ru/wall-68349124_2348",
+      "org": "Школа бизнеса и международных компетенций",
+      "place": "онлайн",
+      "online": true,
+      "note": "",
+      "cat": "talk",
+      "reg": {
+        "state": "open",
+        "url": "https://forms.yandex.ru/cloud/6ae4a4786d2d7367b98d62ca/",
+        "until": ""
+      },
+      "links": []
+    },
+    {
+      "date": "2026-11-21",
+      "end": "",
+      "time": "17:00",
+      "title": "Тайский разговорный клуб « การรู้จักกัน (Знакомство)»",
+      "title_en": "",
+      "org_en": "",
+      "place_en": "",
+      "note_en": "",
+      "url": "https://t.me/southeast_asia_mgimo/42",
+      "org": "Клуб юго-восточной Азии",
+      "place": "ауд. 130",
+      "online": false,
+      "note": "Для регистрации на мероприятие просьба писать Дарье Борисовой",
+      "cat": "other",
+      "reg": {
+        "state": "open",
+        "url": "",
+        "until": ""
+      },
+      "links": [
+        {
+          "label": "ВКонтакте",
+          "label_en": "VK",
+          "url": "https://vk.ru/id38379769"
+        }
+      ]
     }
   ]
 }
