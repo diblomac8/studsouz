@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
 <meta charset="utf-8">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-q43+E5gmFxyiLX0ydXPd7ELmS/wOwYAZy2cJ1EtsMPM=' 'sha256-c3GVrEXTH3b08NqmQ69XUYyEi3GXF+jepk8pozBG9ho=' 'sha256-7wU/AaE0JSMbZSuRAVmtwqOxyAAxngO6TnVjmKUfrLg=' 'sha256-SVr9+h5E/ySNIfDnJ3WLM39YNsZpAwDxgKtghgBYlk4=' 'sha256-x5V8EZh7RZ4rjXY9Bng01PBBsZQuyflC08l6WsGBsLg=' 'sha256-U1AwtSCjq2PmNqAIZxFXPIZP8FK3nGi9zSKTR55GEFQ='; style-src 'unsafe-inline'; img-src 'self' data:; media-src 'self'; font-src data:; connect-src 'self' https://api.github.com; base-uri 'none'; form-action 'none'; upgrade-insecure-requests">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-q43+E5gmFxyiLX0ydXPd7ELmS/wOwYAZy2cJ1EtsMPM=' 'sha256-c3GVrEXTH3b08NqmQ69XUYyEi3GXF+jepk8pozBG9ho=' 'sha256-7wU/AaE0JSMbZSuRAVmtwqOxyAAxngO6TnVjmKUfrLg=' 'sha256-hQxZe8dujo8pqwGn8cLA1qX5PjnOEDB92WnZ/0cujkM=' 'sha256-x5V8EZh7RZ4rjXY9Bng01PBBsZQuyflC08l6WsGBsLg=' 'sha256-U1AwtSCjq2PmNqAIZxFXPIZP8FK3nGi9zSKTR55GEFQ='; style-src 'unsafe-inline'; img-src 'self' data:; media-src 'self'; font-src data:; connect-src 'self' https://api.github.com; base-uri 'none'; form-action 'none'; upgrade-insecure-requests">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Дайджест мероприятий – Студенческий союз МГИМО</title>
 <meta name="description" content="Мероприятия студенческих объединений МГИМО на неделю: лекции, игры, спорт, выезды. Обновляется каждую неделю.">
@@ -592,7 +592,7 @@ html.has-cur .mv.on video,html.has-cur .lb,html.has-cur .lb *{cursor:auto!import
 .dg-stale a{color:var(--paper);text-decoration-color:var(--flare);text-underline-offset:3px}
 
 /* доска недели */
-.wb{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));border-top:2px solid var(--paper);border-bottom:1px solid var(--line)}
+.wb{display:grid;grid-template-columns:repeat(var(--n,7),minmax(0,1fr));border-top:2px solid var(--paper);border-bottom:1px solid var(--line)}
 .wb-day{display:flex;flex-direction:column;gap:14px;min-height:196px;padding:14px 14px 18px;border-left:1px solid var(--line);border-top:1px solid transparent;color:var(--paper);text-decoration:none;transition:background-color .2s}
 .wb-day:nth-child(7n+1){border-left:0}
 .wb-day:nth-child(n+8){border-top-color:var(--line)}
@@ -1713,10 +1713,11 @@ var DGV = (function () {
   /* ---------- доска недели ---------- */
   function monday(s) { var d = DG.parseISO(s); var k = (d.getDay() + 6) % 7; d.setDate(d.getDate() - k); return DG.iso(d.getFullYear(), d.getMonth() + 1, d.getDate()); }
   function board(events, L, today, byDay) {
-    var starts = events.map(function (e) { return e.date; }).sort();
-    var from = monday(starts[0]), to = starts[starts.length - 1];
-    var days = []; for (var d = from; (d <= to || days.length % 7) && days.length < 28; d = addDays(d, 1)) days.push(d);
+    var all = events.map(function (e) { return e.date; }).sort().filter(function (d, i, a) { return d !== a[i - 1]; });
+    var up = all.filter(function (d) { return d >= today; });
+    var days = (up.length ? up : all).slice(0, 14);
     var nav = el('nav', 'wb'); nav.setAttribute('aria-label', L.boardLabel);
+    nav.style.setProperty('--n', Math.max(1, Math.min(days.length, 7)));
     days.forEach(function (day) {
       var list = (byDay[day] || []).slice().sort(DG.cmp);
       var cell = el(list.length ? 'a' : 'div', 'wb-day' + (day === today ? ' today' : '') + (day < today ? ' past' : '') + (list.length ? '' : ' empty'));
