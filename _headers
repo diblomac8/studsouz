@@ -1,10 +1,11 @@
 # Защитные заголовки сайта Студенческого союза МГИМО.
 # Работают на Netlify и Cloudflare Pages: файл должен лежать в корне сайта рядом с index.html.
-# Content-Security-Policy разрешает только скрипты самого сайта (по хэшам), загрузку данных с этого же сайта и обращения редактора к api.github.com (публикация выпуска);
+# Content-Security-Policy разрешает только скрипты самого сайта (по хэшам), загрузку данных с этого же сайта, обращения редактора к api.github.com (публикация выпуска)
+# и голосования к серверу functions.yandexcloud.net и капче SmartCaptcha (smartcaptcha.cloud.yandex.ru);
 # запрещает чужие скрипты, отправку данных на другие сайты и встраивание сайта в чужие страницы.
 # После правки HTML-страниц файл нужно пересобрать (build/headers.py). Обновление digest.json его не затрагивает.
 /*
-  Content-Security-Policy: default-src 'none'; script-src 'sha256-q43+E5gmFxyiLX0ydXPd7ELmS/wOwYAZy2cJ1EtsMPM=' 'sha256-5p1U1bzQeQJ/FAFnOFeRcofw1WY4MuB+1kuTIC9azhw=' 'sha256-oAKIVuPGW83AcqdgpkDxctCPjFqJ6kSNyATZSzMQAk4=' 'sha256-mRjV0cytt2IewRV8OrVUSRDzCr5DJ+SnMnH57qREEzI=' 'sha256-hQxZe8dujo8pqwGn8cLA1qX5PjnOEDB92WnZ/0cujkM=' 'sha256-4m5nro+MMrZoDyRuDIXFDJ3ZqDGSePuhI2basOjq8I4=' 'sha256-SSgokAEO9blUa3pAFlCsxAxbSGaixIHXWchsEbOQiZk='; style-src 'unsafe-inline'; img-src 'self' data:; media-src 'self'; font-src data:; connect-src 'self' https://api.github.com; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; upgrade-insecure-requests
+  Content-Security-Policy: default-src 'none'; script-src 'sha256-q43+E5gmFxyiLX0ydXPd7ELmS/wOwYAZy2cJ1EtsMPM=' 'sha256-5p1U1bzQeQJ/FAFnOFeRcofw1WY4MuB+1kuTIC9azhw=' 'sha256-oAKIVuPGW83AcqdgpkDxctCPjFqJ6kSNyATZSzMQAk4=' 'sha256-y8+lHB/ZJRPpgedzv4Jch45N5mhVKfg0FXYTFhd+cLE=' 'sha256-mRjV0cytt2IewRV8OrVUSRDzCr5DJ+SnMnH57qREEzI=' 'sha256-gq6f2ppUcF6oze1oIaWmTJdQ7YXtvwypDmPGNXkSY4E=' 'sha256-hQxZe8dujo8pqwGn8cLA1qX5PjnOEDB92WnZ/0cujkM=' 'sha256-4m5nro+MMrZoDyRuDIXFDJ3ZqDGSePuhI2basOjq8I4=' 'sha256-SSgokAEO9blUa3pAFlCsxAxbSGaixIHXWchsEbOQiZk=' 'sha256-L86IeVMjV0md/lHozVh4U7hgiY7J3DKiELt5x4X5dC0=' 'sha256-YUsojvyMrYZYn70xoWIT1bH2FQWY6a4xBrwAa2PxTtI=' https://smartcaptcha.cloud.yandex.ru https://smartcaptcha.yandexcloud.net; style-src 'unsafe-inline'; img-src 'self' data:; media-src 'self'; font-src data:; connect-src 'self' https://api.github.com https://functions.yandexcloud.net https://smartcaptcha.cloud.yandex.ru https://smartcaptcha.yandexcloud.net; frame-src https://smartcaptcha.cloud.yandex.ru https://smartcaptcha.yandexcloud.net; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; upgrade-insecure-requests
   X-Content-Type-Options: nosniff
   X-Frame-Options: DENY
   Referrer-Policy: strict-origin-when-cross-origin
