@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src data:; font-src data:; script-src 'sha256-YUsojvyMrYZYn70xoWIT1bH2FQWY6a4xBrwAa2PxTtI='; connect-src 'self' https://functions.yandexcloud.net; base-uri 'none'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src data:; font-src data:; script-src 'sha256-6zpdpgkf1lrlrsYM5BjLbEf39g97zn6P/teygzveKUE='; connect-src 'self' https://functions.yandexcloud.net; base-uri 'none'; form-action 'none'">
 <meta name="robots" content="noindex">
 <meta name="referrer" content="no-referrer">
 <meta name="theme-color" content="#06081c">
@@ -195,7 +195,14 @@ body.screen .top,body.screen footer,body.screen .how,body.screen .links,body.scr
   var SHORT = { med: 'МЕД', odi: 'ОДИ', meo: 'МЭО', mo: 'МО', fup: 'ФУП', mp: 'МП', imtur: 'ИМТУР', mj: 'МЖ', miep: 'МИЭП', mb: 'МБ' };
   var ORDER = ['med', 'odi', 'meo', 'mo', 'fup', 'mp', 'imtur', 'mj', 'miep', 'mb'];
   var DEMO_DATA = {"v":2,"total":719,"excluded":6,"order":["mo","mp","meo","mj","odi","imtur","mb","fup","miep","med"],"place":{"mo":1,"mp":2,"meo":3,"mj":4,"odi":5,"imtur":6,"mb":7,"fup":8,"miep":9,"med":10},"raw":{"med":127,"odi":243,"meo":268,"mo":303,"fup":160,"mp":298,"imtur":185,"mj":267,"miep":134,"mb":172},"pct":{"med":17.7,"odi":33.8,"meo":37.3,"mo":42.1,"fup":22.3,"mp":41.4,"imtur":25.7,"mj":37.1,"miep":18.6,"mb":23.9},"triples":[{"p":["mo","mp","mj"],"n":22},{"p":["odi","meo","mo"],"n":18},{"p":["meo","mp","mj"],"n":18},{"p":["odi","meo","mj"],"n":17},{"p":["meo","mo","mp"],"n":17}]};
+  // файл для экрана без интернета: пульт подставляет итоги и язык вместо этих двух заглушек
+  var OFFLINE = null/*__R__*/, OFF_LANG = 'ru'/*__L__*/;
   var Q = location.search, DEMO = /[?&]demo/.test(Q), SCREEN = /[?&]screen/.test(Q);
+  if (SCREEN && !OFFLINE) {                  // экран для зала теперь отдельный, в стиле афиши
+    var lm = /[?&]lang=(en|ru)/.exec(Q);
+    location.replace('/itogi/ekran.html' + (lm ? '?lang=' + lm[1] : '') + (DEMO ? (lm ? '&' : '?') + 'demo' : ''));
+    return;
+  }
   var TOP = 3, API = '', skew = 0, ends = 0, timer = 0, poll = 0, shown = false;
   function $(id) { return document.getElementById(id); }
   function el(tag, cls, text) { var e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; }
@@ -342,7 +349,7 @@ body.screen .top,body.screen footer,body.screen .how,body.screen .links,body.scr
   var store = { get: function (k) { try { return JSON.parse(localStorage.getItem(k)); } catch (e) { return null; } }, set: function (k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} } };
   (function () {                             // ?lang=en|ru из ссылки, иначе прошлый выбор, иначе русский
     var m = /[?&]lang=(en|ru)/.exec(Q), s = store.get(LKEY);
-    LANG = m ? m[1] : (s === 'en' ? 'en' : 'ru');
+    LANG = m ? m[1] : OFFLINE ? OFF_LANG : (s === 'en' ? 'en' : 'ru');
     if (m) store.set(LKEY, LANG);
   })();
   function applyLang() {
@@ -440,6 +447,7 @@ body.screen .top,body.screen footer,body.screen .how,body.screen .links,body.scr
     $('demo').hidden = false; publish(mine && mine.order ? mine : DEMO_DATA);
   }
   applyLang();
+  if (OFFLINE) { SCREEN = true; return publish(OFFLINE); }   // ни одного запроса в сеть
   if (DEMO) return demo();
   fetch('/vote/config.json', { cache: 'no-store' }).then(function (r) { return r.json(); }).then(function (c) {
     API = typeof c.api === 'string' && /^https:\/\/|^http:\/\/127\.0\.0\.1/.test(c.api) ? c.api : '';
