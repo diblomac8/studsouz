@@ -14,6 +14,7 @@
 :root{--cream:#f6e7c6;--gold:#e2c48e;--lilac:#f1d3f6;--bg:#170a3d}
 *{box-sizing:border-box;margin:0}
 html,body{height:100%;background:#0d0626;overflow:hidden}
+body{position:fixed;inset:0}   /* сцена 1920×1080 не должна раздвигать страницу на телефоне */
 body{display:grid;place-items:center;font-family:Montserrat,system-ui,sans-serif;-webkit-font-smoothing:antialiased;color:var(--cream);cursor:default}
 body.idle{cursor:none}
 #stage{position:absolute;left:50%;top:50%;width:1920px;height:1080px;transform-origin:0 0;overflow:hidden;
