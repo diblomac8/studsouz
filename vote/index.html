@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src data: https://smartcaptcha.cloud.yandex.ru https://smartcaptcha.yandexcloud.net; font-src data:; script-src 'sha256-L86IeVMjV0md/lHozVh4U7hgiY7J3DKiELt5x4X5dC0=' https://smartcaptcha.cloud.yandex.ru https://smartcaptcha.yandexcloud.net; frame-src https://smartcaptcha.cloud.yandex.ru https://smartcaptcha.yandexcloud.net; child-src https://smartcaptcha.cloud.yandex.ru https://smartcaptcha.yandexcloud.net; connect-src 'self' https://functions.yandexcloud.net https://smartcaptcha.cloud.yandex.ru https://smartcaptcha.yandexcloud.net; base-uri 'none'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src data: https://smartcaptcha.cloud.yandex.ru https://smartcaptcha.yandexcloud.net; font-src data:; script-src 'sha256-nPDI2HQbLWWqAs92+wcwlcGRnGE4WSMJUPNDX2Mmotw=' https://smartcaptcha.cloud.yandex.ru https://smartcaptcha.yandexcloud.net; frame-src https://smartcaptcha.cloud.yandex.ru https://smartcaptcha.yandexcloud.net; child-src https://smartcaptcha.cloud.yandex.ru https://smartcaptcha.yandexcloud.net; connect-src 'self' https://functions.yandexcloud.net https://smartcaptcha.cloud.yandex.ru https://smartcaptcha.yandexcloud.net; base-uri 'none'; form-action 'none'">
 <meta name="robots" content="noindex">
 <meta name="referrer" content="no-referrer">
 <meta name="theme-color" content="#06081c">
@@ -27,6 +27,7 @@ body{margin:0;min-height:100vh;min-height:100dvh;display:flex;flex-direction:col
 main{flex:1;width:100%;max-width:560px;margin:0 auto;padding:8px clamp(16px,5vw,40px) 40px}
 .eyebrow{display:flex;align-items:center;gap:10px;margin:0;font:600 11px/1.3 Montserrat,sans-serif;letter-spacing:.18em;text-transform:uppercase}
 .eyebrow::before{content:"";flex:none;width:24px;height:1px;background:var(--bf)}
+.nd{font-style:normal;font-weight:400;opacity:.65;margin-left:.4em;white-space:nowrap}
 h1{margin:10px 0 0;font:900 clamp(26px,8.4vw,44px)/.98 Montserrat,sans-serif;letter-spacing:-.02em;text-transform:uppercase}
 h1 em{display:block;font-style:normal;color:var(--bf);text-shadow:0 0 24px rgba(234,166,255,.5)}
 .lead{margin:14px 0 0;color:var(--mute);font-size:15px;line-height:1.5}
@@ -100,7 +101,7 @@ h1 em{display:block;font-style:normal;color:var(--bf);text-shadow:0 0 24px rgba(
 .promo b{font:900 17px/1.15 Montserrat,sans-serif;text-transform:uppercase}
 .promo span{font-size:13px;line-height:1.4;color:var(--mute)}
 
-footer{padding:16px clamp(16px,5vw,40px) calc(16px + env(safe-area-inset-bottom));border-top:1px solid var(--line);color:var(--mute);font-size:12px}
+footer{padding:16px clamp(16px,5vw,40px) calc(16px + env(safe-area-inset-bottom));border-top:1px solid var(--line);color:var(--mute);font-size:12px;line-height:1.7}
 .demo{margin:26px 0 0;padding:12px 14px;border:1px dashed rgba(241,243,255,.35);font-size:12px;line-height:1.7;color:var(--mute)}
 .demo a{color:var(--paper);margin-right:8px;white-space:nowrap}
 @media (min-width:480px){.opt{min-height:84px;font-size:24px}.opt.long{font-size:17px}.row{grid-template-columns:1fr 1fr}}
@@ -116,11 +117,11 @@ footer{padding:16px clamp(16px,5vw,40px) calc(16px + env(safe-area-inset-bottom)
   </div>
 </header>
 <main>
-  <p class="eyebrow" data-i="eyebrow">Битва факультетов 2026 · 10 лет</p>
+  <p class="eyebrow" data-i="eyebrow"><span>Битва факультетов 2026 <i class="nd">10 лет</i></span></p>
   <h1 data-i="h1">Приз зрительских <em>симпатий</em></h1>
 
   <div id="v-load" class="msg"><p class="dots" data-i="load">Загружаем бюллетень</p></div>
-  <noscript><div class="msg"><h2>Нужен JavaScript · JavaScript required</h2><p>Включи JavaScript в браузере или открой ссылку в другом браузере – без него голос не отправится.</p><p>Enable JavaScript in your browser or open the link in another browser – the vote cannot be sent without it.</p></div></noscript>
+  <noscript><div class="msg"><h2>Нужен JavaScript<br>JavaScript required</h2><p>Включи JavaScript в браузере или открой ссылку в другом браузере – без него голос не отправится.</p><p>Enable JavaScript in your browser or open the link in another browser – the vote cannot be sent without it.</p></div></noscript>
 
   <section id="v-wait" hidden>
     <div class="msg"><h2 data-i="wait_h">Голосование ещё не началось</h2><p data-i="wait_p">Оно откроется по сигналу ведущих и будет идти 5 минут. Оставь страницу открытой – бюллетень появится сам.</p></div>
@@ -175,7 +176,7 @@ footer{padding:16px clamp(16px,5vw,40px) calc(16px + env(safe-area-inset-bottom)
 
   <p class="demo" id="demo" hidden></p>
 </main>
-<footer data-i="foot">© Студенческий союз МГИМО · голосование анонимное, личные данные не собираются</footer>
+<footer data-i="foot">© Студенческий союз МГИМО<br>Голосование анонимное, личные данные не собираются</footer>
 <script>
 (function () {
   'use strict';
@@ -188,7 +189,7 @@ footer{padding:16px clamp(16px,5vw,40px) calc(16px + env(safe-area-inset-bottom)
   function L(ru, en) { return LANG === 'en' ? en : ru; }
   function nm(id) { return LANG === 'en' && id === 'odi' ? 'Odintsovo Campus' : (NAME[id] || id); }   // аббревиатуры остаются как есть
   var EN = {
-    eyebrow: 'Battle of the Faculties 2026 · 10 years',
+    eyebrow: '<span>Battle of the Faculties 2026 <i class="nd">10 years</i></span>',
     h1: 'Audience Choice <em>Award</em>',
     load: 'Loading your ballot',
     wait_h: 'Voting hasn\u2019t started yet',
@@ -211,7 +212,7 @@ footer{padding:16px clamp(16px,5vw,40px) calc(16px + env(safe-area-inset-bottom)
     promo2: '<b>Weekly digest</b><span>All events of MGIMO clubs and faculties in one place.</span>',
     how_s: 'How votes are counted',
     how_p: 'Each viewer picks the three acts they liked best. The act marked in the most ballots wins. One vote per device.',
-    foot: '\u00a9 MGIMO Student Union \u00b7 voting is anonymous, no personal data is collected'
+    foot: '\u00a9 MGIMO Student Union<br>Voting is anonymous, no personal data is collected'
   };
   var EN_A = { home: 'MGIMO Student Union \u2013 home', promo: 'Student Union website' };
   var NEED = 3, KEY = 'bf26-vote';

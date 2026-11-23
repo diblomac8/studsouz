@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src data:; font-src data:; script-src 'sha256-3AZlyT3aRIMWYiXVkEd9gDF7bdq2GjTgIJnNDmYphZ8='; connect-src 'self' https://functions.yandexcloud.net; base-uri 'none'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src data:; font-src data:; script-src 'sha256-Nk81c4bqC6Dage4oV/czKJekxkyDJA4FhjDs2hlbuiY='; connect-src 'self' https://functions.yandexcloud.net; base-uri 'none'; form-action 'none'">
 <meta name="robots" content="noindex">
 <meta name="referrer" content="no-referrer">
 <meta name="theme-color" content="#1b0b45">
@@ -164,7 +164,7 @@ main{flex:1;width:100%;max-width:980px;margin:0 auto;padding:8px clamp(16px,5vw,
 .demo{margin:26px 0 0;padding:10px 12px;border:1px dashed rgba(246,231,198,.35);font-size:12px;color:var(--mute)}
 .rev{opacity:0;transform:translateY(14px);transition:opacity .7s,transform .7s cubic-bezier(.2,.8,.2,1)}
 .rev.in{opacity:1;transform:none}
-footer{border-top-color:var(--line)}
+footer{border-top-color:var(--line);line-height:1.7}
 @media (max-width:480px){
   .tiles{grid-template-columns:1fr 1fr}
   .tiles .tile:first-child{grid-column:1/-1}
@@ -223,7 +223,7 @@ footer{border-top-color:var(--line)}
   <p class="demo" id="demo" data-i="demo" hidden>Демо: показаны тестовые цифры, а не настоящие итоги.</p>
 </main>
 <div class="tip" id="tip" role="status" hidden></div>
-<footer data-i="foot">© Студенческий союз МГИМО · голосование анонимное</footer>
+<footer data-i="foot">© Студенческий союз МГИМО<br>Голосование анонимное</footer>
 <script>
 (function () {
   'use strict';
@@ -259,7 +259,7 @@ footer{border-top-color:var(--line)}
     how_h: 'How we counted', how_p1: 'Every viewer ticked the three acts they liked best. The act ticked on the most ballots wins. One vote per device.',
     how_p2: 'Votes sent by programs rather than people were not counted.',
     lnk1: 'Student Union website', lnk2: 'Weekly digest',
-    foot: '© MGIMO Student Union · voting is anonymous',
+    foot: '© MGIMO Student Union<br>Voting is anonymous',
     demo: 'Demo: test figures are shown, not the real results.'
   };
   var EN_A = { home: 'MGIMO Student Union – home' };
@@ -320,7 +320,7 @@ footer{border-top-color:var(--line)}
     var tiles = $('tiles'); tiles.textContent = '';
     [[L('Проголосовало', 'Votes cast'), num(R.total, 0), ''],
      [L('Отрыв победителя', 'Winning margin'), lead.length > 1 ? L('ничья', 'tie') : '+' + gap, lead.length > 1 ? '' : ' ' + votes(gap).replace(/^\d+ /, '')],
-     [L('Любимая тройка', 'Favourite trio'), t0 ? t0.p.map(function (f) { return SHORT[f]; }).join(' · ') : '–', '']].forEach(function (t) {
+     [L('Любимая тройка', 'Favourite trio'), t0 ? t0.p.map(function (f) { return SHORT[f]; }).join(', ') : '–', '']].forEach(function (t) {
       var d = el('div', 'tile'); d.appendChild(el('p', null, t[0])); var v = el('b', t[1].length > 9 ? 'sm' : null, t[1]);
       if (t[2]) v.appendChild(el('small', null, t[2])); d.appendChild(v); tiles.appendChild(d);
     });
@@ -337,7 +337,7 @@ footer{border-top-color:var(--line)}
       li.setAttribute('aria-label', L(P[f] + ' место, ' + NAME[f] + ': ' + votes(R.raw[f]) + ', в ' + num(R.pct[f], 0) + '% бюллетеней', placeWord(P[f]) + ', ' + nm(f) + ': ' + votes(R.raw[f]) + ', in ' + num(R.pct[f], 0) + '% of ballots'));
       tipOn(li, function (t) {
         t.appendChild(el('b', null, votes(R.raw[f])));
-        t.appendChild(document.createTextNode(nm(f) + ' · ' + placeWord(P[f])));
+        t.appendChild(document.createTextNode(nm(f) + ', ' + placeWord(P[f])));
         t.appendChild(el('br')); t.appendChild(document.createTextNode(L('Отметили в ' + num(R.pct[f], 0) + '% бюллетеней', 'Ticked in ' + num(R.pct[f], 0) + '% of ballots')));
       });
     });

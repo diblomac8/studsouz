@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
 <meta charset="utf-8">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-q43+E5gmFxyiLX0ydXPd7ELmS/wOwYAZy2cJ1EtsMPM=' 'sha256-c3GVrEXTH3b08NqmQ69XUYyEi3GXF+jepk8pozBG9ho=' 'sha256-7wU/AaE0JSMbZSuRAVmtwqOxyAAxngO6TnVjmKUfrLg=' 'sha256-SVr9+h5E/ySNIfDnJ3WLM39YNsZpAwDxgKtghgBYlk4=' 'sha256-x5V8EZh7RZ4rjXY9Bng01PBBsZQuyflC08l6WsGBsLg=' 'sha256-SSgokAEO9blUa3pAFlCsxAxbSGaixIHXWchsEbOQiZk='; style-src 'unsafe-inline'; img-src 'self' data:; media-src 'self'; font-src data:; connect-src 'self' https://api.github.com; base-uri 'none'; form-action 'none'; upgrade-insecure-requests">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-q43+E5gmFxyiLX0ydXPd7ELmS/wOwYAZy2cJ1EtsMPM=' 'sha256-c3GVrEXTH3b08NqmQ69XUYyEi3GXF+jepk8pozBG9ho=' 'sha256-7wU/AaE0JSMbZSuRAVmtwqOxyAAxngO6TnVjmKUfrLg=' 'sha256-SVr9+h5E/ySNIfDnJ3WLM39YNsZpAwDxgKtghgBYlk4=' 'sha256-x5V8EZh7RZ4rjXY9Bng01PBBsZQuyflC08l6WsGBsLg=' 'sha256-oU3t9dClPtQnX+cPXmFZYTm1nUKfMV6+Mob7wRtLICg='; style-src 'unsafe-inline'; img-src 'self' data:; media-src 'self'; font-src data:; connect-src 'self' https://api.github.com; base-uri 'none'; form-action 'none'; upgrade-insecure-requests">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Редактор дайджеста – Студсоюз МГИМО</title>
 <meta name="description" content="Редактор еженедельного дайджеста Студенческого союза МГИМО">
@@ -1977,7 +1977,7 @@ var DGV = (function () {
   function save() {
     clearTimeout(saveT);
     saveT = setTimeout(function () {
-      try { localStorage.setItem(KEY, JSON.stringify({ at: new Date().toISOString(), doc: doc })); $('ed-saved').textContent = 'Черновик сохранён в этом браузере · ' + new Date().toLocaleTimeString('ru-RU', { hour: '2-digit', minute: '2-digit' }); } catch (e) { $('ed-saved').textContent = 'Черновик не сохраняется: браузер запретил хранилище'; }
+      try { localStorage.setItem(KEY, JSON.stringify({ at: new Date().toISOString(), doc: doc })); $('ed-saved').textContent = 'Черновик сохранён в этом браузере в ' + new Date().toLocaleTimeString('ru-RU', { hour: '2-digit', minute: '2-digit' }); } catch (e) { $('ed-saved').textContent = 'Черновик не сохраняется: браузер запретил хранилище'; }
     }, 400);
   }
   function loadDraft() { try { var r = JSON.parse(localStorage.getItem(KEY) || 'null'); return r && r.doc ? r : null; } catch (e) { return null; } }
@@ -2027,7 +2027,7 @@ var DGV = (function () {
     var sd = el('span', 'ed-sd'), st = el('span', 'ed-st'), se = el('span', 'ed-se'), sw = el('span', 'ed-sw');
     sum.appendChild(sd); sum.appendChild(st); sum.appendChild(se); sum.appendChild(sw);
     function refreshSummary() {
-      sd.textContent = ev.date ? DG.shortDate(ev.date) + (ev.time ? ' · ' + ev.time.split(',')[0] : '') : '–';
+      sd.textContent = ev.date ? DG.shortDate(ev.date) + (ev.time ? ', ' + ev.time.split(',')[0] : '') : '–';
       st.textContent = ev.title || 'Без названия';
       var hasEn = !!(ev.title_en || '').trim();
       se.textContent = hasEn ? 'EN' : 'без EN'; se.classList.toggle('on', hasEn);
