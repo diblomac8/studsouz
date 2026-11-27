@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
 <meta charset="utf-8">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-q43+E5gmFxyiLX0ydXPd7ELmS/wOwYAZy2cJ1EtsMPM=' 'sha256-c3GVrEXTH3b08NqmQ69XUYyEi3GXF+jepk8pozBG9ho=' 'sha256-7wU/AaE0JSMbZSuRAVmtwqOxyAAxngO6TnVjmKUfrLg=' 'sha256-SVr9+h5E/ySNIfDnJ3WLM39YNsZpAwDxgKtghgBYlk4=' 'sha256-x5V8EZh7RZ4rjXY9Bng01PBBsZQuyflC08l6WsGBsLg=' 'sha256-oU3t9dClPtQnX+cPXmFZYTm1nUKfMV6+Mob7wRtLICg='; style-src 'unsafe-inline'; img-src 'self' data:; media-src 'self'; font-src data:; connect-src 'self' https://api.github.com; base-uri 'none'; form-action 'none'; upgrade-insecure-requests">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-q43+E5gmFxyiLX0ydXPd7ELmS/wOwYAZy2cJ1EtsMPM=' 'sha256-c3GVrEXTH3b08NqmQ69XUYyEi3GXF+jepk8pozBG9ho=' 'sha256-7wU/AaE0JSMbZSuRAVmtwqOxyAAxngO6TnVjmKUfrLg=' 'sha256-SVr9+h5E/ySNIfDnJ3WLM39YNsZpAwDxgKtghgBYlk4=' 'sha256-x5V8EZh7RZ4rjXY9Bng01PBBsZQuyflC08l6WsGBsLg=' 'sha256-k2pw00ntMiooPL/a7bdGsuLPDWnOQFAu2dP9aF9Cxps='; style-src 'unsafe-inline'; img-src 'self' data:; media-src 'self'; font-src data:; connect-src 'self' https://api.github.com; base-uri 'none'; form-action 'none'; upgrade-insecure-requests">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Редактор дайджеста – Студсоюз МГИМО</title>
 <meta name="description" content="Редактор еженедельного дайджеста Студенческого союза МГИМО">
@@ -610,7 +610,7 @@ a.wb-day:hover{background:var(--ink-2)}
 .wb-day.today li.own::after{background:var(--ink)}
 a.wb-day.today:hover{background:#6dff58}
 .wb-day.past,.wb-day.empty{color:rgba(241,243,255,.4)}
-.wb-day.past .wb-times li:not(.more){text-decoration:line-through;text-decoration-thickness:1px}
+
 
 /* фильтры */
 .dg-tools{display:flex;flex-wrap:wrap;align-items:center;gap:12px 26px;padding-top:22px}
@@ -1755,14 +1755,14 @@ var DGV = (function () {
   function monday(s) { var d = DG.parseISO(s); var k = (d.getDay() + 6) % 7; d.setDate(d.getDate() - k); return DG.iso(d.getFullYear(), d.getMonth() + 1, d.getDate()); }
   function board(events, L, today, byDay) {
     var all = events.map(function (e) { return e.date; }).sort().filter(function (d, i, a) { return d !== a[i - 1]; });
-    var up = all.filter(function (d) { return d >= today; });
-    var days = (up.length ? up : all).slice(0, 14);
+    var days = all.slice(0, 14);   // прошедшие дни остаются на доске (тусклыми), чтобы колонки не расширялись
     var nav = el('nav', 'wb'); nav.setAttribute('aria-label', L.boardLabel);
     nav.style.setProperty('--n', Math.max(1, Math.min(days.length, 7)));
     days.forEach(function (day) {
       var list = (byDay[day] || []).slice().sort(DG.cmp);
       var cell = el(list.length ? 'a' : 'div', 'wb-day' + (day === today ? ' today' : '') + (day < today ? ' past' : '') + (list.length ? '' : ' empty'));
       if (list.length) cell.href = '#d-' + day;
+      if (list.length && day < today) cell.addEventListener('click', function () { var p = document.querySelector('.dg-past'); if (p) p.open = true; });
       var hd = el('p', 'wb-hd');
       hd.appendChild(el('span', 'wb-wd', wdShort(day, L.lang)));
       hd.appendChild(el('b', 'wb-num', String(DG.parseISO(day).getDate())));
